@@ -1,0 +1,102 @@
+<div class="hero-overlay">
+  <div id="poem-box">
+    <div id="poem-text">加载中…</div>
+    <button id="refresh-poem" title="换一句">↻</button>
+  </div>
+
+  <div id="clock-box">
+    <div id="clock-time"></div>
+    <div id="clock-date"></div>
+  </div>
+</div>
+
+<style>
+.hero-overlay {
+  position: relative;
+  text-align: center;
+  padding: 8rem 1rem;
+  color: #fff;
+  text-shadow: 0 0 4px rgba(0,0,0,.6);
+}
+
+/* 诗句区域 */
+#poem-box {
+  position: absolute;
+  top: 0%;                      /* 靠上一点，给时钟留空间 */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 600px;
+}
+#poem-text {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.8;
+}
+#refresh-poem {
+  margin-top: 0.5rem;
+  background: rgba(0,0,0,.4);
+  border: 1px solid rgba(255,255,255,.5);
+  color: #fff;
+  border-radius: 50%;
+  width: 2rem; height: 2rem;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  cursor: pointer;
+  transition: .3s;
+}
+#refresh-poem:hover {
+  background: rgba(0,0,0,.6);
+  transform: rotate(180deg);
+}
+
+/* 时钟区域 */
+/* #clock-box {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#clock-time {
+  font-size: 3rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+#clock-date {
+  font-size: 1rem;
+  opacity: 0.9;
+} */
+
+@media (max-width: 600px) {
+  #poem-text { font-size: 1.2rem; }
+  #clock-time { font-size: 2rem; }
+}
+</style>
+
+<script>
+// -------- 诗句 --------
+const poemUrl = 'https://v1.jinrishici.com/all.json';
+const poemDiv = document.getElementById('poem-text');
+
+function loadPoem() {
+  poemDiv.innerHTML = '加载中…';
+  fetch(poemUrl)
+    .then(r => r.json())
+    .then(d => {
+      poemDiv.innerHTML = `<strong>${d.content}</strong><br><small>—— ${d.author}《${d.origin}》</small>`;
+    })
+    .catch(() => poemDiv.innerHTML = '一日不见，如三秋兮。');
+}
+document.getElementById('refresh-poem').addEventListener('click', loadPoem);
+loadPoem(); // 首次
+
+// -------- 时钟 --------
+// function tick() {
+//   const now = new Date();
+//   const t = now.toLocaleTimeString('zh-CN', { hour12: false });
+//   const d = now.toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' });
+//   document.getElementById('clock-time').textContent = t;
+//   document.getElementById('clock-date').textContent = d;
+// }
+// tick();
+// setInterval(tick, 1000);
+</script>

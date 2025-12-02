@@ -1,0 +1,59 @@
+{{/*  取全部文章，按时间倒序  */}}
+{{ $pages := where site.RegularPages "Section" "posts" }}
+{{ $latest := first 1 $pages }}   <!-- ✅ 取第一篇 -->
+{{ $rest   := after 1 $pages }}   <!-- ✅ 其余篇 -->
+
+<div class="split-wrap">
+  <!-- 左侧：最新文章完整卡片 -->
+  <div class="latest-post">
+    {{ with $latest }}
+      {{ range . }}
+      <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      <time>{{ .Date.Format "2006-01-02" }}</time>
+      <p>{{ .Summary | truncate 200 }}</p>
+      <a href="{{ .RelPermalink }}" class="read-more">阅读全文 →</a>
+      {{ end }}
+    {{ end }}
+  </div>
+
+<!-- 右侧：极简文字列表 -->
+<div class="side-list">
+  <h3>最新文章</h3>
+  {{ range $rest }}
+  <div class="text-card">
+    <div class="text-head">
+      <h4><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
+      <time>{{ .Date.Format "01-02" }}</time>
+    </div>
+    <div class="text-body">
+      {{ range first 5 (split .RawContent "\n") }}{{ . }}<br>{{ end }}
+    </div>
+  </div>
+  {{ end }}
+</div>
+
+<style>
+.split-wrap {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  max-width: 1200px;          /* 限制最大宽度 */
+  margin: 2rem auto;          /* 上下 2rem，左右 auto 居中 */
+  padding: 0 1rem;            /* 两侧留空（手机也会留） */
+}
+.latest-post{ flex:2; background:#fafafa; padding:1.5rem; border-left:4px solid #2c3596; }
+.latest-post h2{ margin:0 0 .5rem;font-size:1.6rem; }
+.latest-post time{ color:#666;font-size:.9rem; }
+.latest-post .read-more{ display:inline-block;margin-top:1rem;color:#4caf50;font-weight:bold; }
+
+.side-list{ flex:1; }
+.side-list h3{ margin:0 0 1rem;font-size:1.2rem; }
+.side-card{ margin-bottom:1rem;padding:.75rem 1rem;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.1); }
+.side-card h4{ margin:0 0 .3rem;font-size:1rem; }
+.side-card time{ color:#999;font-size:.8rem; }
+.side-card p{ margin:.3rem 0 0;font-size:.85rem; }
+
+@media(max-width:768px){
+  .split-wrap{ flex-direction:column; }
+}
+</style>

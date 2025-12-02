@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>文章列表 on RayChaux&#39;s Blog</title>
+    <link>http://localhost:1313/blog/posts/</link>
+    <description>Recent content in 文章列表 on RayChaux&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>© 2025 RayChaux</copyright>
+    <lastBuildDate>Sat, 29 Nov 2025 17:02:54 +0800</lastBuildDate><atom:link href="http://localhost:1313/blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>CPP学习路线</title>
+      <link>http://localhost:1313/blog/posts/cpp%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/</link>
+      <pubDate>Sat, 29 Nov 2025 17:02:54 +0800</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/cpp%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Nginx建设网站记录</title>
+      <link>http://localhost:1313/blog/posts/nginx%E5%BB%BA%E8%AE%BE%E7%BD%91%E7%AB%99%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Sat, 29 Nov 2025 17:02:54 +0800</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/nginx%E5%BB%BA%E8%AE%BE%E7%BD%91%E7%AB%99%E8%AE%B0%E5%BD%95/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>浅层神经网络</title>
+      <link>http://localhost:1313/blog/posts/%E6%B5%85%E5%B1%82%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</link>
+      <pubDate>Sat, 29 Nov 2025 17:02:54 +0800</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/%E6%B5%85%E5%B1%82%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>深层神经网络</title>
+      <link>http://localhost:1313/blog/posts/%E6%B7%B1%E5%B1%82%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</link>
+      <pubDate>Sat, 29 Nov 2025 17:02:54 +0800</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/%E6%B7%B1%E5%B1%82%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>云服务器用途开发</title>
+      <link>http://localhost:1313/blog/posts/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%94%A8%E9%80%94%E5%BC%80%E5%8F%91/</link>
+      <pubDate>Sat, 29 Nov 2025 17:02:54 +0800</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%94%A8%E9%80%94%E5%BC%80%E5%8F%91/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>
