@@ -1,1 +1,28 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url><loc>https://raychaux.space/</loc><lastmod>2025-11-29T17:02:54+08:00</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url><url><loc>https://raychaux.space/posts/nginx%E5%BB%BA%E8%AE%BE%E7%BD%91%E7%AB%99%E8%AE%B0%E5%BD%95/</loc><lastmod>2025-11-29T17:02:54+08:00</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url><url><loc>https://raychaux.space/posts/</loc><lastmod>2025-11-29T17:02:54+08:00</lastmod><changefreq>daily</changefreq><priority>0.5</priority></url><url><loc>https://raychaux.space/friends/</loc><changefreq>daily</changefreq><priority>0.5</priority></url></urlset>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>https://raychaux.space/</loc>
+    <lastmod>2025-11-29T17:02:54+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://raychaux.space/posts/nginx%E5%BB%BA%E8%AE%BE%E7%BD%91%E7%AB%99%E8%AE%B0%E5%BD%95/</loc>
+    <lastmod>2025-11-29T17:02:54+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://raychaux.space/posts/</loc>
+    <lastmod>2025-11-29T17:02:54+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://raychaux.space/friends/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+</urlset>

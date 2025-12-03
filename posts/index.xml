@@ -1,1 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>文章列表 on RayChaux's Blog</title><link>https://raychaux.space/posts/</link><description>Recent content in 文章列表 on RayChaux's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>© 2025 RayChaux</copyright><lastBuildDate>Sat, 29 Nov 2025 17:02:54 +0800</lastBuildDate><atom:link href="https://raychaux.space/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Nginx建设网站记录</title><link>https://raychaux.space/posts/nginx%E5%BB%BA%E8%AE%BE%E7%BD%91%E7%AB%99%E8%AE%B0%E5%BD%95/</link><pubDate>Sat, 29 Nov 2025 17:02:54 +0800</pubDate><guid>https://raychaux.space/posts/nginx%E5%BB%BA%E8%AE%BE%E7%BD%91%E7%AB%99%E8%AE%B0%E5%BD%95/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>文章列表 on RayChaux&#39;s Blog</title>
+    <link>https://raychaux.space/posts/</link>
+    <description>Recent content in 文章列表 on RayChaux&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>© 2025 RayChaux</copyright>
+    <lastBuildDate>Sat, 29 Nov 2025 17:02:54 +0800</lastBuildDate><atom:link href="https://raychaux.space/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Nginx建设网站记录</title>
+      <link>https://raychaux.space/posts/nginx%E5%BB%BA%E8%AE%BE%E7%BD%91%E7%AB%99%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Sat, 29 Nov 2025 17:02:54 +0800</pubDate>
+      
+      <guid>https://raychaux.space/posts/nginx%E5%BB%BA%E8%AE%BE%E7%BD%91%E7%AB%99%E8%AE%B0%E5%BD%95/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>
