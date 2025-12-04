@@ -7,7 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>© 2025 RayChaux</copyright>
-    <lastBuildDate>Sat, 29 Nov 2025 17:02:54 +0800</lastBuildDate><atom:link href="http://localhost:1313/blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 04 Dec 2025 17:02:54 +0800</lastBuildDate><atom:link href="http://localhost:1313/blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Blender</title>
+      <link>http://localhost:1313/blog/tags/blender/</link>
+      <pubDate>Thu, 04 Dec 2025 17:02:54 +0800</pubDate>
+      
+      <guid>http://localhost:1313/blog/tags/blender/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>建模</title>
+      <link>http://localhost:1313/blog/tags/%E5%BB%BA%E6%A8%A1/</link>
+      <pubDate>Thu, 04 Dec 2025 17:02:54 +0800</pubDate>
+      
+      <guid>http://localhost:1313/blog/tags/%E5%BB%BA%E6%A8%A1/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>课程笔记</title>

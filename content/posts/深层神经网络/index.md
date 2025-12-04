@@ -1,6 +1,6 @@
 +++
 date = '2025-11-29T17:02:54+08:00'
-draft = true
+draft = false
 title = '深层神经网络'
 author = 'RayChaux'
 tags = ["课程笔记", "神经网络"]
