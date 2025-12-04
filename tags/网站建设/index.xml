@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>网站建设 on RayChaux&#39;s Blog</title>
-    <link>http://localhost:1313/blog/tags/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/</link>
+    <link>https://raychaux.space/tags/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/</link>
     <description>Recent content in 网站建设 on RayChaux&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>© 2025 RayChaux</copyright>
-    <lastBuildDate>Sat, 29 Nov 2025 17:02:54 +0800</lastBuildDate><atom:link href="http://localhost:1313/blog/tags/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 29 Nov 2025 17:02:54 +0800</lastBuildDate><atom:link href="https://raychaux.space/tags/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>基于Nginx和Hugo部署博客系统</title>
-      <link>http://localhost:1313/blog/posts/hugo%E8%AE%BE%E8%AE%A1%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F/</link>
+      <link>https://raychaux.space/posts/hugo%E8%AE%BE%E8%AE%A1%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F/</link>
       <pubDate>Sat, 29 Nov 2025 17:02:54 +0800</pubDate>
       
-      <guid>http://localhost:1313/blog/posts/hugo%E8%AE%BE%E8%AE%A1%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F/</guid>
+      <guid>https://raychaux.space/posts/hugo%E8%AE%BE%E8%AE%A1%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F/</guid>
       <description></description>
       
     </item>
