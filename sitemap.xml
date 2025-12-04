@@ -27,6 +27,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://raychaux.space/posts/%E6%B7%B1%E5%B1%82%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</loc>
+    <lastmod>2025-11-29T17:02:54+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://raychaux.space/friends/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>

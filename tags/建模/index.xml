@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>建模 on RayChaux&#39;s Blog</title>
+    <link>http://localhost:1313/blog/tags/%E5%BB%BA%E6%A8%A1/</link>
+    <description>Recent content in 建模 on RayChaux&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>© 2025 RayChaux</copyright>
+    <lastBuildDate>Thu, 04 Dec 2025 17:02:54 +0800</lastBuildDate><atom:link href="http://localhost:1313/blog/tags/%E5%BB%BA%E6%A8%A1/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Blender学习记录</title>
+      <link>http://localhost:1313/blog/posts/blender%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Thu, 04 Dec 2025 17:02:54 +0800</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/blender%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>
