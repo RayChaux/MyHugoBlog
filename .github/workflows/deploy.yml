@@ -1,5 +1,4 @@
-# .github/workflows/deploy.yml
-name: Deploy
+name: Deploy to My ECS
 
 on:
   push:
@@ -12,13 +11,31 @@ jobs:
       - uses: actions/checkout@v4
         with:
           submodules: true
-      - uses: peaceiris/actions-hugo@v3
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: '0.152.2'
           extended: true
-      - run: hugo --baseURL "https://raychaux.space"
-      - uses: peaceiris/actions-gh-pages@v4
+
+      - name: Build
+        run: hugo --baseURL "https://raychaux.space"
+
+      - name: Deploy to ECS
+        uses: appleboy/scp-action@v0.1.5
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
-          cname: raychaux.space
+          host: ${{ secrets.raychaux.space }}
+          username: ${{ secrets.root }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          source: "public/*"
+          target: "/var/www/raychaux.space/blog/"
+          strip_components: 0
+
+      - name: Reload nginx
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.raychaux.space }}
+          username: ${{ secrets.root }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            nginx -t && systemctl reload nginx

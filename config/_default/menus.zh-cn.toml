@@ -38,7 +38,7 @@
 [[main]]
   identifier = "github"
   pre = "github"
-  url = "https://github.com/RayChaux"
+  url = "https://github.com/RayChaux/MyHugoBlog"
   weight = 400
 
 
