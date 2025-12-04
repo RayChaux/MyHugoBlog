@@ -35,6 +35,28 @@
   url = "https://raychaux.space/about/"
   weight = 50
 
+[[main]]
+  identifier = "github"
+  pre = "github"
+  url = "https://github.com/RayChaux"
+  weight = 400
+
+
+# -- Footer Menu --
+# The footer menu is displayed at the bottom of the page, just before
+# the copyright notice. Configure as per the main menu above.
+
+ [[footer]]
+   name = "标签"
+   pageRef = "tags"
+   weight = 10
+
+ [[footer]]
+   name = "作者"
+   pageRef = "authors"
+   weight = 20
+
+
 # [[main]]
 #   name = "父菜单"
 #   weight = 20
@@ -78,24 +100,3 @@
 #  pre = "mastodon"
 #  weight = 300
 #  url = "https://masto.ai/@blowfish"
-
-[[main]]
-  identifier = "github"
-  pre = "github"
-  url = "https://github.com/RayChaux"
-  weight = 400
-
-
-# -- Footer Menu --
-# The footer menu is displayed at the bottom of the page, just before
-# the copyright notice. Configure as per the main menu above.
-
- [[footer]]
-   name = "标签"
-   pageRef = "tags"
-   weight = 10
-
- [[footer]]
-   name = "作者"
-   pageRef = "authors"
-   weight = 20
