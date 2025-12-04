@@ -24,8 +24,8 @@ jobs:
       - name: Deploy to ECS
         uses: appleboy/scp-action@v0.1.5
         with:
-          host: ${{ secrets.raychaux.space }}
-          username: ${{ secrets.root }}
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           source: "public/*"
           target: "/var/www/raychaux.space/blog/"
@@ -34,8 +34,8 @@ jobs:
       - name: Reload nginx
         uses: appleboy/ssh-action@v1.0.0
         with:
-          host: ${{ secrets.raychaux.space }}
-          username: ${{ secrets.root }}
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             nginx -t && systemctl reload nginx
