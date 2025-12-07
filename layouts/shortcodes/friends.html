@@ -1,0 +1,49 @@
+{{/* 读取 data/friends.yaml */}}
+{{ $data := .Site.Data.friends }}
+
+<section class="grid gap-6 my-8
+                grid-cols-1
+                sm:grid-cols-2
+                lg:grid-cols-3
+                xl:grid-cols-4">
+  {{ range $data }}
+    <a  href="{{ .url | safeURL }}"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="group block rounded-xl border border-neutral-200 dark:border-neutral-700
+               bg-neutral-50 dark:bg-neutral-800
+               hover:!border-primary-500 dark:hover:!border-primary-400
+               transition-all duration-300
+               hover:shadow-xl hover:-translate-y-1
+               overflow-hidden">
+      <!-- 头像/封面 -->
+      <figure class="aspect-video w-full overflow-hidden">
+        {{ $img := .image }}
+        {{ if strings.HasPrefix $img "http" }}
+          <img src="{{ $img }}" alt="{{ .name }}" loading="lazy"
+               class="w-full h-full object-cover
+                      group-hover:scale-105 transition-transform duration-300"/>
+        {{ else }}
+          {{/* 本地图片，放在 assets/ 目录 */}}
+          {{ with resources.Get $img }}
+            {{ $web := (.Fill "600x400 webp").RelPermalink }}
+            <img src="{{ $web }}" alt="{{ .name }}" loading="lazy"
+                 class="w-full h-full object-cover
+                        group-hover:scale-105 transition-transform duration-300"/>
+          {{ end }}
+        {{ end }}
+      </figure>
+
+      <div class="p-4">
+        <h3 class="text-lg font-bold text-neutral-800 dark:text-neutral-100
+                   group-hover:text-primary-600 dark:group-hover:text-primary-400
+                   transition-colors">
+          {{ .name }}
+        </h3>
+        <p class="mt-2 text-sm text-neutral-600 dark:text-neutral-300 line-clamp-2">
+          {{ .desc }}
+        </p>
+      </div>
+    </a>
+  {{ end }}
+</section>

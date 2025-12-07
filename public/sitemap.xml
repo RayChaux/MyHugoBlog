@@ -3,61 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>http://localhost:1313/blog/posts/blender%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</loc>
+    <loc>https://raychaux.space/blog/</loc>
     <lastmod>2025-12-04T17:02:54+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/blog/</loc>
+    <loc>https://raychaux.space/blog/posts/</loc>
     <lastmod>2025-12-04T17:02:54+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/blog/posts/</loc>
-    <lastmod>2025-12-04T17:02:54+08:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/blog/posts/cpp%E5%AD%A6%E4%B9%A0%E8%B7%AF%E7%BA%BF/</loc>
+    <loc>https://raychaux.space/blog/posts/nginx%E5%BB%BA%E8%AE%BE%E7%BD%91%E7%AB%99%E8%AE%B0%E5%BD%95/</loc>
     <lastmod>2025-11-29T17:02:54+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/blog/posts/nginx%E5%BB%BA%E8%AE%BE%E7%BD%91%E7%AB%99%E8%AE%B0%E5%BD%95/</loc>
+    <loc>https://raychaux.space/blog/posts/hugo%E8%AE%BE%E8%AE%A1%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F/</loc>
     <lastmod>2025-11-29T17:02:54+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/blog/posts/hugo%E8%AE%BE%E8%AE%A1%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F/</loc>
-    <lastmod>2025-11-29T17:02:54+08:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/blog/posts/%E6%B5%85%E5%B1%82%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</loc>
-    <lastmod>2025-11-29T17:02:54+08:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/blog/posts/%E6%B7%B1%E5%B1%82%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</loc>
-    <lastmod>2025-11-29T17:02:54+08:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/blog/posts/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%94%A8%E9%80%94%E5%BC%80%E5%8F%91/</loc>
-    <lastmod>2025-11-29T17:02:54+08:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/blog/friends/</loc>
+    <loc>https://raychaux.space/blog/friends/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>

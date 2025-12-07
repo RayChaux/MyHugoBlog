@@ -2,59 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>文章标签 on RayChaux&#39;s Blog</title>
-    <link>http://localhost:1313/blog/tags/</link>
+    <link>https://raychaux.space/blog/tags/</link>
     <description>Recent content in 文章标签 on RayChaux&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>© 2025 RayChaux</copyright>
-    <lastBuildDate>Thu, 04 Dec 2025 17:02:54 +0800</lastBuildDate><atom:link href="http://localhost:1313/blog/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Blender</title>
-      <link>http://localhost:1313/blog/tags/blender/</link>
-      <pubDate>Thu, 04 Dec 2025 17:02:54 +0800</pubDate>
-      
-      <guid>http://localhost:1313/blog/tags/blender/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>建模</title>
-      <link>http://localhost:1313/blog/tags/%E5%BB%BA%E6%A8%A1/</link>
-      <pubDate>Thu, 04 Dec 2025 17:02:54 +0800</pubDate>
-      
-      <guid>http://localhost:1313/blog/tags/%E5%BB%BA%E6%A8%A1/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>课程笔记</title>
-      <link>http://localhost:1313/blog/tags/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/</link>
-      <pubDate>Sat, 29 Nov 2025 17:02:54 +0800</pubDate>
-      
-      <guid>http://localhost:1313/blog/tags/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>神经网络</title>
-      <link>http://localhost:1313/blog/tags/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</link>
-      <pubDate>Sat, 29 Nov 2025 17:02:54 +0800</pubDate>
-      
-      <guid>http://localhost:1313/blog/tags/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</guid>
-      <description></description>
-      
-    </item>
+    <lastBuildDate>Sat, 29 Nov 2025 17:02:54 +0800</lastBuildDate><atom:link href="https://raychaux.space/blog/tags/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>网站建设</title>
-      <link>http://localhost:1313/blog/tags/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/</link>
+      <link>https://raychaux.space/blog/tags/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/</link>
       <pubDate>Sat, 29 Nov 2025 17:02:54 +0800</pubDate>
       
-      <guid>http://localhost:1313/blog/tags/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/</guid>
+      <guid>https://raychaux.space/blog/tags/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/</guid>
       <description></description>
       
     </item>
