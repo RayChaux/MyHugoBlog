@@ -69,9 +69,11 @@
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2025-11-29T17:02:54+08:00">
     <meta property="article:modified_time" content="2025-11-29T17:02:54+08:00">
+    <meta property="og:image" content="https://raychaux.space/blog/posts/nginx%E5%BB%BA%E8%AE%BE%E7%BD%91%E7%AB%99%E8%AE%B0%E5%BD%95/featured.png">
 
   
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://raychaux.space/blog/posts/nginx%E5%BB%BA%E8%AE%BE%E7%BD%91%E7%AB%99%E8%AE%B0%E5%BD%95/featured.png">
   <meta name="twitter:title" content="Nginx建设网站记录">
   <meta name="twitter:description" content="Know yourself, know the world.">
 
@@ -84,15 +86,9 @@
     
   
     
-      
-    
   
     
-      
-    
   
-  
-    
   
 
   
@@ -247,7 +243,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "571"
+    "wordCount": "558"
   }]
   </script>
 
@@ -263,6 +259,8 @@
   
 
   
+  
+    
   
 
   
@@ -831,7 +829,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-11-29T17:02:54&#43;08:00">2025-11-29</time><span class="px-2 text-primary-500">&middot;</span><span>571 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">3 分钟</span><span class="px-2 text-primary-500">&middot;</span><span class="mb-[2px]">
+      <time datetime="2025-11-29T17:02:54&#43;08:00">2025-11-29</time><span class="px-2 text-primary-500">&middot;</span><span>558 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">3 分钟</span><span class="px-2 text-primary-500">&middot;</span><span class="mb-[2px]">
   <span
     id="zen-mode-button"
     class="text-lg hover:text-primary-500"
@@ -1138,12 +1136,11 @@
     </span>
     
 </h3>
-<pre tabindex="0"><code>bash
-# 文件打包
-sudo tar -czf /root/wp-files.tgz -C /var/www/html wordpress
-# 数据库导出
-sudo mysqldump -uroot -p your_wp_db &gt; /root/wp-db.sql
-</code></pre>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 文件打包</span>
+</span></span><span class="line"><span class="cl">sudo tar -czf /root/wp-files.tgz -C /var/www/html wordpress
+</span></span><span class="line"><span class="cl"><span class="c1"># 数据库导出</span>
+</span></span><span class="line"><span class="cl">sudo mysqldump -uroot -p your_wp_db &gt; /root/wp-db.sql
+</span></span></code></pre></div>
 <h3 class="relative group">1.2 删除Wordpress文件
     <div id="12-删除wordpress文件" class="anchor"></div>
     
@@ -1153,11 +1150,10 @@ sudo mysqldump -uroot -p your_wp_db &gt; /root/wp-db.sql
     </span>
     
 </h3>
-<pre tabindex="0"><code>bash
-# 进入站点根目录（路径按实际改）
-cd /var/www/html
-sudo rm -rf * .[^.]*     # 包含隐藏文件 .htaccess
-</code></pre>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 进入站点根目录（路径按实际改）</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> /var/www/html
+</span></span><span class="line"><span class="cl">sudo rm -rf * .<span class="o">[</span>^.<span class="o">]</span>*     <span class="c1"># 包含隐藏文件 .htaccess</span>
+</span></span></code></pre></div>
 <h3 class="relative group">1.3 删除数据库及用户
     <div id="13-删除数据库及用户" class="anchor"></div>
     
@@ -1167,13 +1163,12 @@ sudo rm -rf * .[^.]*     # 包含隐藏文件 .htaccess
     </span>
     
 </h3>
-<pre tabindex="0"><code>bash
-sudo mysql -uroot -p &lt;&lt;EOF
-DROP DATABASE IF EXISTS your_wp_db;
-DROP USER IF EXISTS &#39;wp_user&#39;@&#39;localhost&#39;;
-FLUSH PRIVILEGES;
-EOF
-</code></pre>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo mysql -uroot -p <span class="s">&lt;&lt;EOF
+</span></span></span><span class="line"><span class="cl"><span class="s">DROP DATABASE IF EXISTS your_wp_db;
+</span></span></span><span class="line"><span class="cl"><span class="s">DROP USER IF EXISTS &#39;wp_user&#39;@&#39;localhost&#39;;
+</span></span></span><span class="line"><span class="cl"><span class="s">FLUSH PRIVILEGES;
+</span></span></span><span class="line"><span class="cl"><span class="s">EOF</span>
+</span></span></code></pre></div>
 <h3 class="relative group">1.4 删除Nginx虚拟主机
     <div id="14-删除nginx虚拟主机" class="anchor"></div>
     
@@ -1183,10 +1178,9 @@ EOF
     </span>
     
 </h3>
-<pre tabindex="0"><code>bash
-sudo rm -f /etc/nginx/conf.d/wordpress.conf
-sudo nginx -t &amp;&amp; sudo systemctl reload nginx
-</code></pre>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo rm -f /etc/nginx/conf.d/wordpress.conf
+</span></span><span class="line"><span class="cl">sudo nginx -t <span class="o">&amp;&amp;</span> sudo systemctl reload nginx
+</span></span></code></pre></div>
 <h2 class="relative group">2. 从安装Nginx开始
     <div id="2-从安装nginx开始" class="anchor"></div>
     
@@ -1206,13 +1200,12 @@ sudo nginx -t &amp;&amp; sudo systemctl reload nginx
     </span>
     
 </h3>
-<pre tabindex="0"><code>bash
-# CentOS
-sudo yum install -y nginx
-# Ubuntu/Debian
-sudo apt update &amp;&amp; sudo apt install -y nginx
-sudo systemctl enable --now nginx
-</code></pre>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># CentOS</span>
+</span></span><span class="line"><span class="cl">sudo yum install -y nginx
+</span></span><span class="line"><span class="cl"><span class="c1"># Ubuntu/Debian</span>
+</span></span><span class="line"><span class="cl">sudo apt update <span class="o">&amp;&amp;</span> sudo apt install -y nginx
+</span></span><span class="line"><span class="cl">sudo systemctl <span class="nb">enable</span> --now nginx
+</span></span></code></pre></div>
 <h3 class="relative group">2.2 创建网站目录与权限
     <div id="22-创建网站目录与权限" class="anchor"></div>
     
@@ -1222,10 +1215,9 @@ sudo systemctl enable --now nginx
     </span>
     
 </h3>
-<pre tabindex="0"><code>bash
-sudo mkdir -p /data/www
-sudo chown -R $USER:nginx /data/www   # 以后用普通用户维护即可
-</code></pre>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo mkdir -p /data/www
+</span></span><span class="line"><span class="cl">sudo chown -R <span class="nv">$USER</span>:nginx /data/www   <span class="c1"># 以后用普通用户维护即可</span>
+</span></span></code></pre></div>
 <h3 class="relative group">2.3 简单的实践——index页面编写
     <div id="23-简单的实践index页面编写" class="anchor"></div>
     
@@ -1235,25 +1227,24 @@ sudo chown -R $USER:nginx /data/www   # 以后用普通用户维护即可
     </span>
     
 </h3>
-<pre tabindex="0"><code>bash
-sudo vim /data/www/index.html
-(vim粘贴)
-    &lt;!DOCTYPE html&gt;
-    &lt;html lang=&#34;zh-CN&#34;&gt;
-    &lt;head&gt;
-    &lt;meta charset=&#34;UTF-8&#34;&gt;
-    &lt;title&gt;我的个人页&lt;/title&gt;
-    &lt;style&gt;
-        body{font-family:Arial;background:#f5f5f5;text-align:center;margin-top:15%}
-        h1{color:#333}
-    &lt;/style&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-    &lt;h1&gt;Hello，世界！&lt;/h1&gt;
-    &lt;p&gt;这是我用 Nginx 搭建的个人网页。&lt;/p&gt;
-    &lt;/body&gt;
-    &lt;/html&gt;
-</code></pre>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo vim /data/www/index.html
+</span></span><span class="line"><span class="cl"><span class="o">(</span>vim粘贴<span class="o">)</span>
+</span></span><span class="line"><span class="cl">    &lt;!DOCTYPE html&gt;
+</span></span><span class="line"><span class="cl">    &lt;html <span class="nv">lang</span><span class="o">=</span><span class="s2">&#34;zh-CN&#34;</span>&gt;
+</span></span><span class="line"><span class="cl">    &lt;head&gt;
+</span></span><span class="line"><span class="cl">    &lt;meta <span class="nv">charset</span><span class="o">=</span><span class="s2">&#34;UTF-8&#34;</span>&gt;
+</span></span><span class="line"><span class="cl">    &lt;title&gt;我的个人页&lt;/title&gt;
+</span></span><span class="line"><span class="cl">    &lt;style&gt;
+</span></span><span class="line"><span class="cl">        body<span class="o">{</span>font-family:Arial<span class="p">;</span>background:#f5f5f5<span class="p">;</span>text-align:center<span class="p">;</span>margin-top:15%<span class="o">}</span>
+</span></span><span class="line"><span class="cl">        h1<span class="o">{</span>color:#333<span class="o">}</span>
+</span></span><span class="line"><span class="cl">    &lt;/style&gt;
+</span></span><span class="line"><span class="cl">    &lt;/head&gt;
+</span></span><span class="line"><span class="cl">    &lt;body&gt;
+</span></span><span class="line"><span class="cl">    &lt;h1&gt;Hello，世界！&lt;/h1&gt;
+</span></span><span class="line"><span class="cl">    &lt;p&gt;这是我用 Nginx 搭建的个人网页。&lt;/p&gt;
+</span></span><span class="line"><span class="cl">    &lt;/body&gt;
+</span></span><span class="line"><span class="cl">    &lt;/html&gt;
+</span></span></code></pre></div>
 <h3 class="relative group">2.4 将Nginx与域名链接
     <div id="24-将nginx与域名链接" class="anchor"></div>
     
@@ -1263,30 +1254,29 @@ sudo vim /data/www/index.html
     </span>
     
 </h3>
-<pre tabindex="0"><code>bash
-sudo vim /etc/nginx/conf.d/mysite.conf
-(vim粘贴)
-    server {
-        listen       80;
-        server_name  yourdomain.com  123.123.123.123;   # 更改域名和公网IP
-
-        root   /data/www;
-        index  index.html;
-
-        location / {
-            try_files $uri $uri/ =404;
-        }
-
-        # 可选：30 天缓存静态资源
-        location ~* \.(js|css|png|jpg|jpeg|gif|ico|svg)$ {
-            expires 30d;
-            add_header Cache-Control &#34;public&#34;;
-        }
-    }
-</code></pre><p>保存检查与重载Nginx</p>
-<pre tabindex="0"><code>sudo nginx -t
-sudo systemctl reload nginx
-</code></pre><p><strong>此时可在 http://ECS-IP 查看到示例的Index页面</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo vim /etc/nginx/conf.d/mysite.conf
+</span></span><span class="line"><span class="cl"><span class="o">(</span>vim粘贴<span class="o">)</span>
+</span></span><span class="line"><span class="cl">    server <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        listen       80<span class="p">;</span>
+</span></span><span class="line"><span class="cl">        server_name  yourdomain.com  123.123.123.123<span class="p">;</span>   <span class="c1"># 更改域名和公网IP</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        root   /data/www<span class="p">;</span>
+</span></span><span class="line"><span class="cl">        index  index.html<span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        location / <span class="o">{</span>
+</span></span><span class="line"><span class="cl">            try_files <span class="nv">$uri</span> <span class="nv">$uri</span>/ <span class="o">=</span>404<span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># 可选：30 天缓存静态资源</span>
+</span></span><span class="line"><span class="cl">        location ~* <span class="se">\.</span><span class="o">(</span>js<span class="p">|</span>css<span class="p">|</span>png<span class="p">|</span>jpg<span class="p">|</span>jpeg<span class="p">|</span>gif<span class="p">|</span>ico<span class="p">|</span>svg<span class="o">)</span>$ <span class="o">{</span>
+</span></span><span class="line"><span class="cl">            expires 30d<span class="p">;</span>
+</span></span><span class="line"><span class="cl">            add_header Cache-Control <span class="s2">&#34;public&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">}</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span></code></pre></div><p>保存检查与重载Nginx</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo nginx -t
+</span></span><span class="line"><span class="cl">sudo systemctl reload nginx
+</span></span></code></pre></div><p><strong>此时可在 http://ECS-IP 查看到示例的Index页面</strong></p>
 
 <h2 class="relative group">3. 配置动画主页
     <div id="3-配置动画主页" class="anchor"></div>
@@ -1298,12 +1288,11 @@ sudo systemctl reload nginx
     
 </h2>
 <p><strong>Nginx常用维护指令</strong></p>
-<pre tabindex="0"><code>bash
-sudo nginx -t              # 改完配置先测试
-sudo systemctl reload nginx# 平滑重载
-sudo tail -f /var/log/nginx/access.log   # 实时看访问
-sudo tail -f /var/log/nginx/error.log    # 实时看错误
-</code></pre>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo nginx -t              <span class="c1"># 改完配置先测试</span>
+</span></span><span class="line"><span class="cl">sudo systemctl reload nginx# 平滑重载
+</span></span><span class="line"><span class="cl">sudo tail -f /var/log/nginx/access.log   <span class="c1"># 实时看访问</span>
+</span></span><span class="line"><span class="cl">sudo tail -f /var/log/nginx/error.log    <span class="c1"># 实时看错误</span>
+</span></span></code></pre></div>
 <h3 class="relative group">3.1 获取配置模板
     <div id="31-获取配置模板" class="anchor"></div>
     
@@ -1317,20 +1306,18 @@ sudo tail -f /var/log/nginx/error.log    # 实时看错误
   href="https://github.com/SimonAKing/HomePage"
     target="_blank"
   >Github</a>模板配置，</p>
-<pre tabindex="0"><code>bash
-cd /var/www/raychaux.space
-git clone https://github.com/SimonAKing/HomePage.git
-sudo apt install npm
-</code></pre><p>更改<code>config.json</code>的个人信息为自己的信息(VSCode远程连接，直接编辑文件)
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> /var/www/raychaux.space
+</span></span><span class="line"><span class="cl">git clone https://github.com/SimonAKing/HomePage.git
+</span></span><span class="line"><span class="cl">sudo apt install npm
+</span></span></code></pre></div><p>更改<code>config.json</code>的个人信息为自己的信息(VSCode远程连接，直接编辑文件)
 更改<code>/etc/nginx/nginx.conf</code>的root目录改为<code>/var/www/raychaux.space/HomePag/dist</code>**
 安装依赖</p>
-<pre tabindex="0"><code>bash
-cd /var/www/raychaux.space/HomePage
-npm install --registry=https://registry.npmmirror.com
-npx gulp build      #编译文件
-sudo nginx -t               # 改完配置先测试
-sudo systemctl reload nginx # 平滑重载
-</code></pre><p>即可在网页上看到修改的主页。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">cd</span> /var/www/raychaux.space/HomePage
+</span></span><span class="line"><span class="cl">npm install --registry<span class="o">=</span>https://registry.npmmirror.com
+</span></span><span class="line"><span class="cl">npx gulp build      <span class="c1">#编译文件</span>
+</span></span><span class="line"><span class="cl">sudo nginx -t               <span class="c1"># 改完配置先测试</span>
+</span></span><span class="line"><span class="cl">sudo systemctl reload nginx <span class="c1"># 平滑重载</span>
+</span></span></code></pre></div><p>即可在网页上看到修改的主页。</p>
 
 <h2 class="relative group">4. 简单的blog页面和about页面
     <div id="4-简单的blog页面和about页面" class="anchor"></div>
@@ -1351,10 +1338,9 @@ sudo systemctl reload nginx # 平滑重载
     </span>
     
 </h3>
-<pre tabindex="0"><code>bash
-sudo mkdir -p /var/www/raychaux.space/{blog,about}
-sudo chown -R $USER:$USER /var/www/raychaux.space
-</code></pre>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo mkdir -p /var/www/raychaux.space/<span class="o">{</span>blog,about<span class="o">}</span>
+</span></span><span class="line"><span class="cl">sudo chown -R <span class="nv">$USER</span>:<span class="nv">$USER</span> /var/www/raychaux.space
+</span></span></code></pre></div>
 <h3 class="relative group">4.2 写入网页内容
     <div id="42-写入网页内容" class="anchor"></div>
     
@@ -1375,55 +1361,55 @@ sudo chown -R $USER:$USER /var/www/raychaux.space
     </span>
     
 </h4>
-<pre tabindex="0"><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&#34;zh-CN&#34;&gt;
-&lt;head&gt;
-  &lt;meta charset=&#34;UTF-8&#34; /&gt;
-  &lt;title&gt;About - RayChaux&lt;/title&gt;
-  &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1&#34; /&gt;
-  &lt;style&gt;
-    body{font-family:-apple-system,BlinkMacSystemFont,&#34;Segoe UI&#34;,Roboto,&#34;Helvetica Neue&#34;,Arial,&#34;Noto Sans&#34;,sans-serif;margin:0;background:#f5f7fa;color:#333;line-height:1.6}
-    header{background:#4caf50;color:#fff;padding:2.5rem 0;text-align:center}
-    .wrap{max-width:650px;margin:3rem auto;padding:0 1.5rem}
-    h2{margin-top:2rem}
-    footer{text-align:center;padding:2rem 0;font-size:.9rem;color:#777}
-    .avatar{width:120px;height:120px;border-radius:50%;margin:0 auto;display:block;background:#fff;padding:4px;box-shadow:0 2px 6px rgba(0,0,0,.15)}
-    .social{margin-top:1rem}
-    .social a{margin:0 .5rem;color:#4caf50;font-weight:bold}
-  &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;header&gt;
-  &lt;img class=&#34;avatar&#34; src=&#34;https://cravatar.cn/avatar/ray@chaux.space?s=120&amp;d=retro&#34; alt=&#34;avatar&#34; /&gt;
-  &lt;h1&gt;Hi, I&#39;m Ray&lt;/h1&gt;
-  &lt;p&gt;全栈开发 · 摄影爱好者 · 终身学习者&lt;/p&gt;
-&lt;/header&gt;
-
-&lt;div class=&#34;wrap&#34;&gt;
-  &lt;h2&gt;关于我&lt;/h2&gt;
-  &lt;p&gt;
-    90 后程序员，目前专注于 Web 与云原生技术栈。&lt;br&gt;
-    日常语言：TypeScript / Python / Go。&lt;br&gt;
-    相信“写代码是为了解决问题，写博客是为了解决未来的问题”。
-  &lt;/p&gt;
-
-  &lt;h2&gt;技能&lt;/h2&gt;
-  &lt;ul&gt;
-    &lt;li&gt;前端：Vue3、React、Vite、Webpack、Tailwind CSS&lt;/li&gt;
-    &lt;li&gt;后端：Node.js、NestJS、Express、Gin、Spring Boot&lt;/li&gt;
-    &lt;li&gt;运维：Linux、Docker、Kubernetes、CI/CD、阿里云&lt;/li&gt;
-  &lt;/ul&gt;
-
-  &lt;h2&gt;项目&lt;/h2&gt;
-  &lt;ul&gt;
-    &lt;li&gt;&lt;a href=&#34;https://github.com/raychaux/seed-api&#34; target=&#34;_blank&#34;&gt;seed-api&lt;/a&gt; - 轻量级 Node.js API 脚手架&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&#34;https://github.com/raychaux/image-bed&#34; target=&#34;_blank&#34;&gt;image-bed&lt;/a&gt; - 自建图床，支持 CDN 自动刷新&lt;/li&gt;
-  &lt;/ul&gt;
-
-  &lt;h2&gt;联系方式&lt;/h2&gt;
-  &lt;div class=&#34;social&#34;&gt;
-    &lt;a href=&#34;mailto:ray@raychaux.space&#34;&gt;Email&lt;/a&gt;
-</code></pre>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;zh-CN&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;UTF-8&#34;</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>About - RayChaux<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;viewport&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;width=device-width, initial-scale=1&#34;</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">body</span><span class="p">{</span><span class="k">font-family</span><span class="p">:</span><span class="o">-</span><span class="n">apple-system</span><span class="p">,</span><span class="n">BlinkMacSystemFont</span><span class="p">,</span><span class="s2">&#34;Segoe UI&#34;</span><span class="p">,</span><span class="n">Roboto</span><span class="p">,</span><span class="s2">&#34;Helvetica Neue&#34;</span><span class="p">,</span><span class="n">Arial</span><span class="p">,</span><span class="s2">&#34;Noto Sans&#34;</span><span class="p">,</span><span class="kc">sans-serif</span><span class="p">;</span><span class="k">margin</span><span class="p">:</span><span class="mi">0</span><span class="p">;</span><span class="k">background</span><span class="p">:</span><span class="mh">#f5f7fa</span><span class="p">;</span><span class="k">color</span><span class="p">:</span><span class="mh">#333</span><span class="p">;</span><span class="k">line-height</span><span class="p">:</span><span class="mf">1.6</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">header</span><span class="p">{</span><span class="k">background</span><span class="p">:</span><span class="mh">#4caf50</span><span class="p">;</span><span class="k">color</span><span class="p">:</span><span class="mh">#fff</span><span class="p">;</span><span class="k">padding</span><span class="p">:</span><span class="mf">2.5</span><span class="kt">rem</span> <span class="mi">0</span><span class="p">;</span><span class="k">text-align</span><span class="p">:</span><span class="kc">center</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nc">wrap</span><span class="p">{</span><span class="k">max-width</span><span class="p">:</span><span class="mi">650</span><span class="kt">px</span><span class="p">;</span><span class="k">margin</span><span class="p">:</span><span class="mi">3</span><span class="kt">rem</span> <span class="kc">auto</span><span class="p">;</span><span class="k">padding</span><span class="p">:</span><span class="mi">0</span> <span class="mf">1.5</span><span class="kt">rem</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">h2</span><span class="p">{</span><span class="k">margin-top</span><span class="p">:</span><span class="mi">2</span><span class="kt">rem</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">footer</span><span class="p">{</span><span class="k">text-align</span><span class="p">:</span><span class="kc">center</span><span class="p">;</span><span class="k">padding</span><span class="p">:</span><span class="mi">2</span><span class="kt">rem</span> <span class="mi">0</span><span class="p">;</span><span class="k">font-size</span><span class="p">:</span><span class="mf">.9</span><span class="kt">rem</span><span class="p">;</span><span class="k">color</span><span class="p">:</span><span class="mh">#777</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nc">avatar</span><span class="p">{</span><span class="k">width</span><span class="p">:</span><span class="mi">120</span><span class="kt">px</span><span class="p">;</span><span class="k">height</span><span class="p">:</span><span class="mi">120</span><span class="kt">px</span><span class="p">;</span><span class="k">border-radius</span><span class="p">:</span><span class="mi">50</span><span class="kt">%</span><span class="p">;</span><span class="k">margin</span><span class="p">:</span><span class="mi">0</span> <span class="kc">auto</span><span class="p">;</span><span class="k">display</span><span class="p">:</span><span class="kc">block</span><span class="p">;</span><span class="k">background</span><span class="p">:</span><span class="mh">#fff</span><span class="p">;</span><span class="k">padding</span><span class="p">:</span><span class="mi">4</span><span class="kt">px</span><span class="p">;</span><span class="k">box-shadow</span><span class="p">:</span><span class="mi">0</span> <span class="mi">2</span><span class="kt">px</span> <span class="mi">6</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.15</span><span class="p">)}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nc">social</span><span class="p">{</span><span class="k">margin-top</span><span class="p">:</span><span class="mi">1</span><span class="kt">rem</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nc">social</span> <span class="nt">a</span><span class="p">{</span><span class="k">margin</span><span class="p">:</span><span class="mi">0</span> <span class="mf">.5</span><span class="kt">rem</span><span class="p">;</span><span class="k">color</span><span class="p">:</span><span class="mh">#4caf50</span><span class="p">;</span><span class="k">font-weight</span><span class="p">:</span><span class="kc">bold</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">img</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;avatar&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cravatar.cn/avatar/ray@chaux.space?s=120&amp;d=retro&#34;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&#34;avatar&#34;</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hi, I&#39;m Ray<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>全栈开发 · 摄影爱好者 · 终身学习者<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;wrap&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>关于我<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    90 后程序员，目前专注于 Web 与云原生技术栈。<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    日常语言：TypeScript / Python / Go。<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    相信“写代码是为了解决问题，写博客是为了解决未来的问题”。
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>技能<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>前端：Vue3、React、Vite、Webpack、Tailwind CSS<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>后端：Node.js、NestJS、Express、Gin、Spring Boot<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>运维：Linux、Docker、Kubernetes、CI/CD、阿里云<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>项目<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://github.com/raychaux/seed-api&#34;</span> <span class="na">target</span><span class="o">=</span><span class="s">&#34;_blank&#34;</span><span class="p">&gt;</span>seed-api<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span> - 轻量级 Node.js API 脚手架<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://github.com/raychaux/image-bed&#34;</span> <span class="na">target</span><span class="o">=</span><span class="s">&#34;_blank&#34;</span><span class="p">&gt;</span>image-bed<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span> - 自建图床，支持 CDN 自动刷新<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>联系方式<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;social&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;mailto:ray@raychaux.space&#34;</span><span class="p">&gt;</span>Email<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span></code></pre></div>
 <h4 class="relative group">blog/index.html
     <div id="blogindexhtml" class="anchor"></div>
     
@@ -1433,56 +1419,56 @@ sudo chown -R $USER:$USER /var/www/raychaux.space
     </span>
     
 </h4>
-<pre tabindex="0"><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&#34;zh-CN&#34;&gt;
-&lt;head&gt;
-  &lt;meta charset=&#34;UTF-8&#34; /&gt;
-  &lt;title&gt;Blog - RayChaux&lt;/title&gt;
-  &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1&#34; /&gt;
-  &lt;style&gt;
-    body{font-family:-apple-system,BlinkMacSystemFont,&#34;Segoe UI&#34;,Roboto,&#34;Helvetica Neue&#34;,Arial,&#34;Noto Sans&#34;,sans-serif;margin:0;background:#f5f7fa;color:#333}
-    header{background:#0d47a1;color:#fff;padding:2rem 0;text-align:center}
-    .wrap{max-width:700px;margin:2rem auto;padding:0 1rem}
-    article{background:#fff;padding:1.5rem;margin-bottom:1.5rem;border-radius:6px;box-shadow:0 1px 3px rgba(0,0,0,.1)}
-    h2{margin-top:0;font-size:1.4rem}
-    .date{color:#999;font-size:.9rem}
-    a{color:#0d47a1;text-decoration:none}
-    a:hover{text-decoration:underline}
-    footer{text-align:center;padding:2rem 0;font-size:.9rem;color:#777}
-  &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;header&gt;
-  &lt;h1&gt;Ray&#39;s Blog&lt;/h1&gt;
-  &lt;p&gt;记录技术与生活&lt;/p&gt;
-&lt;/header&gt;
-
-&lt;div class=&#34;wrap&#34;&gt;
-  &lt;article&gt;
-    &lt;h2&gt;&lt;a href=&#34;./hello-world.html&#34;&gt;Hello World：我的第一篇博客&lt;/a&gt;&lt;/h2&gt;
-    &lt;div class=&#34;date&#34;&gt;2025-11-28&lt;/div&gt;
-    &lt;p&gt;开启博客之旅，聊一聊为什么想写博客以及未来的计划。&lt;/p&gt;
-  &lt;/article&gt;
-
-  &lt;article&gt;
-    &lt;h2&gt;&lt;a href=&#34;./nginx-notes.html&#34;&gt;Nginx 静态站点部署笔记&lt;/a&gt;&lt;/h2&gt;
-    &lt;div class=&#34;date&#34;&gt;2025-11-20&lt;/div&gt;
-    &lt;p&gt;从购买域名到 HTTPS 证书，完整记录一次阿里云 ECS 部署过程。&lt;/p&gt;
-  &lt;/article&gt;
-
-  &lt;article&gt;
-    &lt;h2&gt;&lt;a href=&#34;./vue3-script-setup.html&#34;&gt;Vue3 script setup 语法糖踩坑记录&lt;/a&gt;&lt;/h2&gt;
-    &lt;div class=&#34;date&#34;&gt;2025-11-10&lt;/div&gt;
-    &lt;p&gt;新语法糖很香，但也藏着一些小陷阱，本文一起梳理。&lt;/p&gt;
-  &lt;/article&gt;
-&lt;/div&gt;
-
-&lt;footer&gt;
-  &lt;a href=&#34;/&#34;&gt;返回首页&lt;/a&gt; · &lt;a href=&#34;/about/&#34;&gt;关于我&lt;/a&gt;
-&lt;/footer&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;zh-CN&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;UTF-8&#34;</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Blog - RayChaux<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;viewport&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;width=device-width, initial-scale=1&#34;</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">body</span><span class="p">{</span><span class="k">font-family</span><span class="p">:</span><span class="o">-</span><span class="n">apple-system</span><span class="p">,</span><span class="n">BlinkMacSystemFont</span><span class="p">,</span><span class="s2">&#34;Segoe UI&#34;</span><span class="p">,</span><span class="n">Roboto</span><span class="p">,</span><span class="s2">&#34;Helvetica Neue&#34;</span><span class="p">,</span><span class="n">Arial</span><span class="p">,</span><span class="s2">&#34;Noto Sans&#34;</span><span class="p">,</span><span class="kc">sans-serif</span><span class="p">;</span><span class="k">margin</span><span class="p">:</span><span class="mi">0</span><span class="p">;</span><span class="k">background</span><span class="p">:</span><span class="mh">#f5f7fa</span><span class="p">;</span><span class="k">color</span><span class="p">:</span><span class="mh">#333</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">header</span><span class="p">{</span><span class="k">background</span><span class="p">:</span><span class="mh">#0d47a1</span><span class="p">;</span><span class="k">color</span><span class="p">:</span><span class="mh">#fff</span><span class="p">;</span><span class="k">padding</span><span class="p">:</span><span class="mi">2</span><span class="kt">rem</span> <span class="mi">0</span><span class="p">;</span><span class="k">text-align</span><span class="p">:</span><span class="kc">center</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nc">wrap</span><span class="p">{</span><span class="k">max-width</span><span class="p">:</span><span class="mi">700</span><span class="kt">px</span><span class="p">;</span><span class="k">margin</span><span class="p">:</span><span class="mi">2</span><span class="kt">rem</span> <span class="kc">auto</span><span class="p">;</span><span class="k">padding</span><span class="p">:</span><span class="mi">0</span> <span class="mi">1</span><span class="kt">rem</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">article</span><span class="p">{</span><span class="k">background</span><span class="p">:</span><span class="mh">#fff</span><span class="p">;</span><span class="k">padding</span><span class="p">:</span><span class="mf">1.5</span><span class="kt">rem</span><span class="p">;</span><span class="k">margin-bottom</span><span class="p">:</span><span class="mf">1.5</span><span class="kt">rem</span><span class="p">;</span><span class="k">border-radius</span><span class="p">:</span><span class="mi">6</span><span class="kt">px</span><span class="p">;</span><span class="k">box-shadow</span><span class="p">:</span><span class="mi">0</span> <span class="mi">1</span><span class="kt">px</span> <span class="mi">3</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">.1</span><span class="p">)}</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">h2</span><span class="p">{</span><span class="k">margin-top</span><span class="p">:</span><span class="mi">0</span><span class="p">;</span><span class="k">font-size</span><span class="p">:</span><span class="mf">1.4</span><span class="kt">rem</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nc">date</span><span class="p">{</span><span class="k">color</span><span class="p">:</span><span class="mh">#999</span><span class="p">;</span><span class="k">font-size</span><span class="p">:</span><span class="mf">.9</span><span class="kt">rem</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">a</span><span class="p">{</span><span class="k">color</span><span class="p">:</span><span class="mh">#0d47a1</span><span class="p">;</span><span class="k">text-decoration</span><span class="p">:</span><span class="kc">none</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">a</span><span class="p">:</span><span class="nd">hover</span><span class="p">{</span><span class="k">text-decoration</span><span class="p">:</span><span class="kc">underline</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">footer</span><span class="p">{</span><span class="k">text-align</span><span class="p">:</span><span class="kc">center</span><span class="p">;</span><span class="k">padding</span><span class="p">:</span><span class="mi">2</span><span class="kt">rem</span> <span class="mi">0</span><span class="p">;</span><span class="k">font-size</span><span class="p">:</span><span class="mf">.9</span><span class="kt">rem</span><span class="p">;</span><span class="k">color</span><span class="p">:</span><span class="mh">#777</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Ray&#39;s Blog<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>记录技术与生活<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;wrap&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">article</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;./hello-world.html&#34;</span><span class="p">&gt;</span>Hello World：我的第一篇博客<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;date&#34;</span><span class="p">&gt;</span>2025-11-28<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>开启博客之旅，聊一聊为什么想写博客以及未来的计划。<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">article</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;./nginx-notes.html&#34;</span><span class="p">&gt;</span>Nginx 静态站点部署笔记<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;date&#34;</span><span class="p">&gt;</span>2025-11-20<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>从购买域名到 HTTPS 证书，完整记录一次阿里云 ECS 部署过程。<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">article</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;./vue3-script-setup.html&#34;</span><span class="p">&gt;</span>Vue3 script setup 语法糖踩坑记录<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;date&#34;</span><span class="p">&gt;</span>2025-11-10<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>新语法糖很香，但也藏着一些小陷阱，本文一起梳理。<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">footer</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;/&#34;</span><span class="p">&gt;</span>返回首页<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span> · <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;/about/&#34;</span><span class="p">&gt;</span>关于我<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span></code></pre></div>
 <h3 class="relative group">4.3 链接新页面到Nginx
     <div id="43-链接新页面到nginx" class="anchor"></div>
     
@@ -1492,39 +1478,38 @@ sudo chown -R $USER:$USER /var/www/raychaux.space
     </span>
     
 </h3>
-<pre tabindex="0"><code>bash
-sudo vim /etc/nginx/nginx.conf
-# 写入或追加
-    server {
-        listen 80;
-        server_name raychaux.space;
-
-        # 主页
-        location = / {
-            root /var/www/raychaux.space/HomePage/dist;
-            try_files $uri $uri/ /index.html;
-        }
-
-        # 所有根目录静态文件（css/js/img 等）
-        location / {
-            root /var/www/raychaux.space/HomePage/dist;
-            try_files $uri $uri/ =404;
-        }
-
-        # —— 两个子目录 —— 
-        location ^~ /blog/ {
-            alias /var/www/raychaux.space/blog/;
-            index index.html;
-            try_files $uri $uri/ /blog/index.html;
-        }
-
-        location ^~ /about/ {
-            alias /var/www/raychaux.space/about/;
-            index index.html;
-            try_files $uri $uri/ /about/index.html;
-        }
-    }
-</code></pre><p>Tips：用 alias 而不是 root，并且末尾一定要加 /，否则路径会多一层。
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo vim /etc/nginx/nginx.conf
+</span></span><span class="line"><span class="cl"><span class="c1"># 写入或追加</span>
+</span></span><span class="line"><span class="cl">    server <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        listen 80<span class="p">;</span>
+</span></span><span class="line"><span class="cl">        server_name raychaux.space<span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># 主页</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">location</span> <span class="o">=</span> / <span class="o">{</span>
+</span></span><span class="line"><span class="cl">            root /var/www/raychaux.space/HomePage/dist<span class="p">;</span>
+</span></span><span class="line"><span class="cl">            try_files <span class="nv">$uri</span> <span class="nv">$uri</span>/ /index.html<span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># 所有根目录静态文件（css/js/img 等）</span>
+</span></span><span class="line"><span class="cl">        location / <span class="o">{</span>
+</span></span><span class="line"><span class="cl">            root /var/www/raychaux.space/HomePage/dist<span class="p">;</span>
+</span></span><span class="line"><span class="cl">            try_files <span class="nv">$uri</span> <span class="nv">$uri</span>/ <span class="o">=</span>404<span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1"># —— 两个子目录 —— </span>
+</span></span><span class="line"><span class="cl">        location ^~ /blog/ <span class="o">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">alias</span> /var/www/raychaux.space/blog/<span class="p">;</span>
+</span></span><span class="line"><span class="cl">            index index.html<span class="p">;</span>
+</span></span><span class="line"><span class="cl">            try_files <span class="nv">$uri</span> <span class="nv">$uri</span>/ /blog/index.html<span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        location ^~ /about/ <span class="o">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">alias</span> /var/www/raychaux.space/about/<span class="p">;</span>
+</span></span><span class="line"><span class="cl">            index index.html<span class="p">;</span>
+</span></span><span class="line"><span class="cl">            try_files <span class="nv">$uri</span> <span class="nv">$uri</span>/ /about/index.html<span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">}</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span></code></pre></div><p>Tips：用 alias 而不是 root，并且末尾一定要加 /，否则路径会多一层。
 try_files 最后一项写 /blog/index.html 是为了刷新子页时仍返回单页。
 重载Nginx后即可看到页面。</p>
 
@@ -1628,32 +1613,56 @@ try_files 最后一项写 /blog/index.html 是为了刷新子页时仍返回单�
   </a>
 </div>
 
-      </main><footer class="site-footer">
+      </main>
+<footer class="site-footer">
   <div class="footer-row">
 
+    
     <span class="footer-item">© 2025 Ray's Blog</span>
 
-    <span class="footer-item beian">
-      <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">
-        <img src="/blog/img/beian.png" width="20" height="20" alt="备案图标">
-        湘ICP备2025149166号-1
-      </a>
-    </span>
+    
+    <i class="spacer" style="width:7rem;"></i>
 
+    
+    <a href="https://beian.mps.gov.cn/#/query/webSearch?code=43010502001935"
+      rel="noreferrer" target="_blank"
+      style="display:inline-flex;align-items:center;gap:4px;">
+      <img src="/blog/img/beian.png"
+          width="20" height="20" alt="备案图标">
+      湘公网安备43010502001935号
+    </a>
+
+    
+    <i class="spacer" style="width:2rem;"></i>
+
+    
+    <a class="footer-item" href="https://beian.miit.gov.cn/#/Integrated/index" rel="noreferrer" target="_blank">湘ICP备2025149166号</a>
+
+    
+    <i class="spacer" style="width:7rem;"></i>
+
+    
     <span class="footer-item">
-      Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/nunocoracao/blowfish" target="_blank" rel="noopener">Blowfish</a>
+      Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> &
+      <a href="https://github.com/nunocoracao/blowfish" target="_blank" rel="noopener">Blowfish</a>
     </span>
 
   </div>
 </footer>
 
+
 <style>
 .site-footer{ text-align:center;font-size:13px;color:#999;padding:1.5rem 0; }
-.footer-row{ display:flex;justify-content:center;gap:2.5rem;flex-wrap:wrap;align-items:center; }  
+.footer-row{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;}  
 .footer-item{ white-space:nowrap;line-height:20px; }  
 .beian a{ display:inline-flex;align-items:center;gap:6px;line-height:20px; }  
 .beian img{ vertical-align:middle; }
 </style>
+
+
+
+
+
 <div
   id="search-wrapper"
   class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"

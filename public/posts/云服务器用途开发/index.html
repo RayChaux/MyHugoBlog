@@ -247,7 +247,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "114"
+    "wordCount": "111"
   }]
   </script>
 
@@ -257,6 +257,8 @@
   
 
   
+  
+    
   
 
   
@@ -825,7 +827,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-11-29T17:02:54&#43;08:00">2025-11-29</time><span class="px-2 text-primary-500">&middot;</span><span>114 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">1 分钟</span><span class="px-2 text-primary-500">&middot;</span><span class="mb-[2px]">
+      <time datetime="2025-11-29T17:02:54&#43;08:00">2025-11-29</time><span class="px-2 text-primary-500">&middot;</span><span>111 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">1 分钟</span><span class="px-2 text-primary-500">&middot;</span><span class="mb-[2px]">
   <span
     id="zen-mode-button"
     class="text-lg hover:text-primary-500"
@@ -1071,13 +1073,12 @@
     </span>
     
 </h3>
-<pre tabindex="0"><code>bash
-sudo mkdir -p /var/www/raychaux.space/img
-# 年份子目录，方便管理
-sudo mkdir -p /var/www/raychaux.space/img/2025
-# 把拥有者改成自己，否则 VS Code 无法上传
-sudo chown -R $USER:$USER /var/www/raychaux.space/img
-</code></pre>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo mkdir -p /var/www/raychaux.space/img
+</span></span><span class="line"><span class="cl"><span class="c1"># 年份子目录，方便管理</span>
+</span></span><span class="line"><span class="cl">sudo mkdir -p /var/www/raychaux.space/img/2025
+</span></span><span class="line"><span class="cl"><span class="c1"># 把拥有者改成自己，否则 VS Code 无法上传</span>
+</span></span><span class="line"><span class="cl">sudo chown -R <span class="nv">$USER</span>:<span class="nv">$USER</span> /var/www/raychaux.space/img
+</span></span></code></pre></div>
 <h3 class="relative group">1.2 nginx配置文件编辑
     <div id="12-nginx配置文件编辑" class="anchor"></div>
     
@@ -1087,25 +1088,24 @@ sudo chown -R $USER:$USER /var/www/raychaux.space/img
     </span>
     
 </h3>
-<pre tabindex="0"><code>bash
-sudo vim /etc/nginx/nginx.conf
-    # —— 写入图床目录 —— 
-    location ^~ /img/ {
-            alias /var/www/raychaux.space/img/;
-            autoindex on;                   # 可选：允许浏览器列目录，方便检查
-            autoindex_exact_size off;
-            autoindex_localtime on;
-            expires 30d;                    # 缓存 30 天
-            # 只允许自己域名引用
-            valid_referers none blocked server_names
-            ~^(https?://)?(www\.)?raychaux\.space;
-            if ($invalid_referer) {
-                    return 403;
-            }
-    }
-sudo chown -R $USER:www-data /var/www/raychaux.space/img    #给予权限
-sudo nginx -t &amp;&amp; sudo systemctl reload nginx
-</code></pre>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo vim /etc/nginx/nginx.conf
+</span></span><span class="line"><span class="cl">    <span class="c1"># —— 写入图床目录 —— </span>
+</span></span><span class="line"><span class="cl">    location ^~ /img/ <span class="o">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">alias</span> /var/www/raychaux.space/img/<span class="p">;</span>
+</span></span><span class="line"><span class="cl">            autoindex on<span class="p">;</span>                   <span class="c1"># 可选：允许浏览器列目录，方便检查</span>
+</span></span><span class="line"><span class="cl">            autoindex_exact_size off<span class="p">;</span>
+</span></span><span class="line"><span class="cl">            autoindex_localtime on<span class="p">;</span>
+</span></span><span class="line"><span class="cl">            expires 30d<span class="p">;</span>                    <span class="c1"># 缓存 30 天</span>
+</span></span><span class="line"><span class="cl">            <span class="c1"># 只允许自己域名引用</span>
+</span></span><span class="line"><span class="cl">            valid_referers none blocked server_names
+</span></span><span class="line"><span class="cl">            ~^<span class="o">(</span>https?://<span class="o">)</span>?<span class="o">(</span>www<span class="se">\.</span><span class="o">)</span>?raychaux<span class="se">\.</span>space<span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="o">(</span><span class="nv">$invalid_referer</span><span class="o">)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">return</span> 403<span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="o">}</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">sudo chown -R <span class="nv">$USER</span>:www-data /var/www/raychaux.space/img    <span class="c1">#给予权限</span>
+</span></span><span class="line"><span class="cl">sudo nginx -t <span class="o">&amp;&amp;</span> sudo systemctl reload nginx
+</span></span></code></pre></div>
 <h3 class="relative group">1.3 存入文件
     <div id="13-存入文件" class="anchor"></div>
     
@@ -1117,9 +1117,8 @@ sudo nginx -t &amp;&amp; sudo systemctl reload nginx
 </h3>
 <p>直接将jpg/png/gif拖入img文件夹即可
 或者</p>
-<pre tabindex="0"><code>bash
-scp ./demo.png root@raychaux.space:/var/www/raychaux.space/img/2025/
-</code></pre><p>即可在 <a
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">scp ./demo.png root@raychaux.space:/var/www/raychaux.space/img/2025/
+</span></span></code></pre></div><p>即可在 <a
   href="https://raychaux.space/img/demo.png"
     target="_blank"
   >https://raychaux.space/img/demo.png</a> 查看文件
@@ -1246,24 +1245,43 @@ scp ./demo.png root@raychaux.space:/var/www/raychaux.space/img/2025/
   </a>
 </div>
 
-      </main><footer class="site-footer">
+      </main>
+<footer class="site-footer">
   <div class="footer-row">
 
+    
     <span class="footer-item">© 2025 Ray's Blog</span>
 
-    <span class="footer-item beian">
-      <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">
-        <img src="/blog/img/beian.png" width="20" height="20" alt="备案图标">
-        湘ICP备2025149166号-1
-      </a>
-    </span>
+    
+    <i class="spacer" style="width:3rem;"></i>
 
+    
+    <a href="https://beian.mps.gov.cn/#/query/webSearch?code=43010502001935"
+      rel="noreferrer" target="_blank"
+      style="display:inline-flex;align-items:center;gap:4px;">
+      <img src="/blog/img/beian.png"
+          width="20" height="20" alt="备案图标">
+      湘公网安备43010502001935号
+    </a>
+
+    
+    <i class="spacer" style="width:1rem;"></i>
+
+    
+    <a class="footer-item" href="https://beian.miit.gov.cn/" rel="noreferrer" target="_blank">湘ICP备2025149166号</a>
+
+    
+    <i class="spacer" style="width:3rem;"></i>
+
+    
     <span class="footer-item">
-      Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/nunocoracao/blowfish" target="_blank" rel="noopener">Blowfish</a>
+      Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> &
+      <a href="https://github.com/nunocoracao/blowfish" target="_blank" rel="noopener">Blowfish</a>
     </span>
 
   </div>
 </footer>
+
 
 <style>
 .site-footer{ text-align:center;font-size:13px;color:#999;padding:1.5rem 0; }
@@ -1272,6 +1290,11 @@ scp ./demo.png root@raychaux.space:/var/www/raychaux.space/img/2025/
 .beian a{ display:inline-flex;align-items:center;gap:6px;line-height:20px; }  
 .beian img{ vertical-align:middle; }
 </style>
+
+
+
+
+
 <div
   id="search-wrapper"
   class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"

@@ -10,23 +10,20 @@ Nginx介绍与使用：[Nginx中文手册](https://nginx.mosong.cc/guide/)。
 
 ## 1. 彻底卸载WordPress
 ### 1.1 可选备份
-```
-bash
+```bash
 # 文件打包
 sudo tar -czf /root/wp-files.tgz -C /var/www/html wordpress
 # 数据库导出
 sudo mysqldump -uroot -p your_wp_db > /root/wp-db.sql
 ```
 ### 1.2 删除Wordpress文件
-```
-bash
+```bash
 # 进入站点根目录（路径按实际改）
 cd /var/www/html
 sudo rm -rf * .[^.]*     # 包含隐藏文件 .htaccess
 ```
 ### 1.3 删除数据库及用户
-```
-bash
+```bash
 sudo mysql -uroot -p <<EOF
 DROP DATABASE IF EXISTS your_wp_db;
 DROP USER IF EXISTS 'wp_user'@'localhost';
@@ -34,15 +31,13 @@ FLUSH PRIVILEGES;
 EOF
 ```
 ### 1.4 删除Nginx虚拟主机
-```
-bash
+```bash
 sudo rm -f /etc/nginx/conf.d/wordpress.conf
 sudo nginx -t && sudo systemctl reload nginx
 ```
 ## 2. 从安装Nginx开始
 ### 2.1 安装Nginx
-```
-bash
+```bash
 # CentOS
 sudo yum install -y nginx
 # Ubuntu/Debian
@@ -50,14 +45,12 @@ sudo apt update && sudo apt install -y nginx
 sudo systemctl enable --now nginx
 ```
 ### 2.2 创建网站目录与权限
-```
-bash
+```bash
 sudo mkdir -p /data/www
 sudo chown -R $USER:nginx /data/www   # 以后用普通用户维护即可
 ```
 ### 2.3 简单的实践——index页面编写
-```
-bash
+```bash
 sudo vim /data/www/index.html
 (vim粘贴)
     <!DOCTYPE html>
@@ -77,8 +70,7 @@ sudo vim /data/www/index.html
     </html>
 ```
 ### 2.4 将Nginx与域名链接
-```
-bash
+```bash
 sudo vim /etc/nginx/conf.d/mysite.conf
 (vim粘贴)
     server {
@@ -100,7 +92,7 @@ sudo vim /etc/nginx/conf.d/mysite.conf
     }
 ```
 保存检查与重载Nginx
-```
+```bash
 sudo nginx -t
 sudo systemctl reload nginx
 ```
@@ -108,8 +100,7 @@ sudo systemctl reload nginx
 
 ## 3. 配置动画主页
 **Nginx常用维护指令**
-```
-bash
+```bash
 sudo nginx -t              # 改完配置先测试
 sudo systemctl reload nginx# 平滑重载
 sudo tail -f /var/log/nginx/access.log   # 实时看访问
@@ -117,8 +108,7 @@ sudo tail -f /var/log/nginx/error.log    # 实时看错误
 ```
 ### 3.1 获取配置模板
 使用[Github](https://github.com/SimonAKing/HomePage)模板配置，
-```
-bash
+```bash
 cd /var/www/raychaux.space
 git clone https://github.com/SimonAKing/HomePage.git
 sudo apt install npm
@@ -126,8 +116,7 @@ sudo apt install npm
 更改`config.json`的个人信息为自己的信息(VSCode远程连接，直接编辑文件)
 更改`/etc/nginx/nginx.conf`的root目录改为`/var/www/raychaux.space/HomePag/dist`**
 安装依赖
-```
-bash
+```bash
 cd /var/www/raychaux.space/HomePage
 npm install --registry=https://registry.npmmirror.com
 npx gulp build      #编译文件
@@ -137,15 +126,14 @@ sudo systemctl reload nginx # 平滑重载
 即可在网页上看到修改的主页。
 ## 4. 简单的blog页面和about页面
 ### 4.1 在服务器上新建目录
-```
-bash
+```bash
 sudo mkdir -p /var/www/raychaux.space/{blog,about}
 sudo chown -R $USER:$USER /var/www/raychaux.space
 ```
 ### 4.2 写入网页内容
 在`about`和`blog`文件夹分别写入`index.html`文件示例，内容如下：  
 #### about/index.html
-```
+```html
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -196,7 +184,7 @@ sudo chown -R $USER:$USER /var/www/raychaux.space
     <a href="mailto:ray@raychaux.space">Email</a>
 ```
 #### blog/index.html
-```
+```html
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -248,8 +236,7 @@ sudo chown -R $USER:$USER /var/www/raychaux.space
 </html>
 ```
 ### 4.3 链接新页面到Nginx
-```
-bash
+```bash
 sudo vim /etc/nginx/nginx.conf
 # 写入或追加
     server {

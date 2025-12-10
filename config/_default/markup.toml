@@ -24,3 +24,17 @@
 [tableOfContents]
   startLevel = 2
   endLevel = 4
+
+[markup]
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true              # 必须 true，否则 ```go 不识别
+    guessSyntax = false            # 不想 Hugo 猜就 false
+    hl_Lines = ""
+    lineAnchors = ""
+    lineNoStart = 1
+    lineNos = true                 # 想要行号就 true
+    lineNumbersInTable = false     # true=table 形式，false=inline
+    noClasses = false              # false=用 class，方便我们自定义颜色
+    style = "github"               # 任何 Chroma 内置主题都可，这里用 github
+    tabWidth = 4

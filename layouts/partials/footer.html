@@ -1,26 +1,50 @@
+{{/* 覆盖 Blowfish 默认 footer，仅调整间距 */}}
 <footer class="site-footer">
   <div class="footer-row">
 
+    {{/* 组件 1 */}}
     <span class="footer-item">© 2025 Ray's Blog</span>
 
-    <span class="footer-item beian">
-      <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">
-        <img src="{{ (resources.Get "img/beian.png").RelPermalink }}" width="20" height="20" alt="备案图标">
-        湘ICP备2025149166号-1
-      </a>
-    </span>
+    {{/* 间距 1 */}}
+    <i class="spacer" style="width:7rem;"></i>
 
+    {{/* 组件 2 */}}
+    <a href="https://beian.mps.gov.cn/#/query/webSearch?code=43010502001935"
+      rel="noreferrer" target="_blank"
+      style="display:inline-flex;align-items:center;gap:4px;">
+      <img src="{{ (resources.Get "img/beian.png").RelPermalink }}"
+          width="20" height="20" alt="备案图标">
+      湘公网安备43010502001935号
+    </a>
+
+    {{/* 间距 2 */}}
+    <i class="spacer" style="width:2rem;"></i>
+
+    {{/* 组件 3 */}}
+    <a class="footer-item" href="https://beian.miit.gov.cn/#/Integrated/index" rel="noreferrer" target="_blank">湘ICP备2025149166号</a>
+
+    {{/* 间距 3 */}}
+    <i class="spacer" style="width:7rem;"></i>
+
+    {{/* 组件 4 */}}
     <span class="footer-item">
-      Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/nunocoracao/blowfish" target="_blank" rel="noopener">Blowfish</a>
+      Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> &
+      <a href="https://github.com/nunocoracao/blowfish" target="_blank" rel="noopener">Blowfish</a>
     </span>
 
   </div>
 </footer>
 
+{{/* 让 spacer 不占流高度 */}}
 <style>
 .site-footer{ text-align:center;font-size:13px;color:#999;padding:1.5rem 0; }
-.footer-row{ display:flex;justify-content:center;gap:2.5rem;flex-wrap:wrap;align-items:center; } /* ← 纵向居中 */
+.footer-row{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;} /* ← 纵向居中 */
 .footer-item{ white-space:nowrap;line-height:20px; } /* ← 统一行高（=图标高度） */
 .beian a{ display:inline-flex;align-items:center;gap:6px;line-height:20px; } /* ← 图标文字同一基线 */
 .beian img{ vertical-align:middle; }
 </style>
+
+
+
+
+

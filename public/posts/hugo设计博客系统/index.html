@@ -250,7 +250,7 @@
     "keywords": ["网站建设"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "156"
+    "wordCount": "154"
   }]
   </script>
 
@@ -266,6 +266,8 @@
   
 
   
+  
+    
   
 
   
@@ -834,7 +836,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-11-29T17:02:54&#43;08:00">2025-11-29</time><span class="px-2 text-primary-500">&middot;</span><span>156 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">1 分钟</span><span class="px-2 text-primary-500">&middot;</span><span class="mb-[2px]">
+      <time datetime="2025-11-29T17:02:54&#43;08:00">2025-11-29</time><span class="px-2 text-primary-500">&middot;</span><span>154 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">1 分钟</span><span class="px-2 text-primary-500">&middot;</span><span class="mb-[2px]">
   <span
     id="zen-mode-button"
     class="text-lg hover:text-primary-500"
@@ -1063,14 +1065,14 @@
   >GitHub</a>上下载扩展版的Hugo（注意安装带extend后缀的），解压到本地，并添加到环境变量Path。
 <strong>命令行安装：（不建议）</strong>
 管理员模式打开PowerShell，不建议在C盘打开</p>
-<pre tabindex="0"><code>powershell -NoProfile -ExecutionPolicy unrestricted -Command &#34;iex ((new-object net.webclient).DownloadString(&#39;https://chocolatey.org/install.ps1&#39;))&#34;
-# 检查choco 版本 (环境变量一般会自动添加，没有就手动加)
-choco -V
-</code></pre><p>用choco安装hugo</p>
-<pre tabindex="0"><code># 安装可能较慢
-choco install hugo -confirm
-hugo version #检查安装成功
-</code></pre>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">powershell -NoProfile -ExecutionPolicy unrestricted -Command <span class="s2">&#34;iex ((new-object net.webclient).DownloadString(&#39;https://chocolatey.org/install.ps1&#39;))&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 检查choco 版本 (环境变量一般会自动添加，没有就手动加)</span>
+</span></span><span class="line"><span class="cl">choco -V
+</span></span></code></pre></div><p>用choco安装hugo</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 安装可能较慢</span>
+</span></span><span class="line"><span class="cl">choco install hugo -confirm
+</span></span><span class="line"><span class="cl">hugo version <span class="c1">#检查安装成功</span>
+</span></span></code></pre></div>
 <h2 class="relative group">2. 利用Hugo安装主题（以Blowfish为例）
     <div id="2-利用hugo安装主题以blowfish为例" class="anchor"></div>
     
@@ -1088,12 +1090,12 @@ hugo version #检查安装成功
   href="https://themes.gohugo.io/"
     target="_blank"
   >Hugo主题商店</a>中选取。</p>
-<pre tabindex="0"><code>hugo new site MyHugoBlog
-cd MyHugoBlog
-git init
-git submodule add -b main https://github.com/nunocoracao/blowfish.git themes/blowfish
-hugo new posts/first.md
-</code></pre><p>完毕后会多出一个文件夹，根据<a
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo new site MyHugoBlog
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> MyHugoBlog
+</span></span><span class="line"><span class="cl">git init
+</span></span><span class="line"><span class="cl">git submodule add -b main https://github.com/nunocoracao/blowfish.git themes/blowfish
+</span></span><span class="line"><span class="cl">hugo new posts/first.md
+</span></span></code></pre></div><p>完毕后会多出一个文件夹，根据<a
   href="https://blowfish.page/zh-cn/docs/welcome/"
     target="_blank"
   >Blowfish官方教程</a>进行网站配置。
@@ -1109,9 +1111,8 @@ hugo new posts/first.md
     
 </h2>
 <p>利用Hugo生静态文件，生成到 public/ 目录，</p>
-<pre tabindex="0"><code>bash
-hugo
-</code></pre><p>完成后的目录结构为：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo
+</span></span></code></pre></div><p>完成后的目录结构为：</p>
 <pre tabindex="0"><code>public/
 ├─ index.html
 ├─ posts/
@@ -1129,28 +1130,27 @@ hugo
     </span>
     
 </h2>
-<pre tabindex="0"><code>bash
-rsync -avz --delete public/ root@raychaux.space:/var/www/raychaux.space/blog/ 
-# 或
-scp -r public/* root@raychaux.space:/var/www/raychaux.space/blog/
-sudo nginx -t &amp;&amp; sudo systemctl reload nginx    # 重载Nginx，在ssh上操作
-</code></pre><p><strong>编写脚本文件一键上传</strong>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">rsync -avz --delete public/ root@raychaux.space:/var/www/raychaux.space/blog/ 
+</span></span><span class="line"><span class="cl"><span class="c1"># 或</span>
+</span></span><span class="line"><span class="cl">scp -r public/* root@raychaux.space:/var/www/raychaux.space/blog/
+</span></span><span class="line"><span class="cl">sudo nginx -t <span class="o">&amp;&amp;</span> sudo systemctl reload nginx    <span class="c1"># 重载Nginx，在ssh上操作</span>
+</span></span></code></pre></div><p><strong>编写脚本文件一键上传</strong>
 在根目录创建deploy.ps1文件（Windows系统，linux为deploy.sh）,写入以下命令，即可快速更新网页。</p>
-<pre tabindex="0"><code># deploy.ps1  ← 快速更新网页
-# 使用前请确保已安装 Hugo，并配置好 SSH 免密登录
-# 执行命令： ./deploy.ps1
-Write-Host &#34;Building...&#34;
-hugo
-if ($LASTEXITCODE -ne 0) { exit 1 }
-
-Write-Host &#34;Uploading...&#34;
-scp -r public/* root@yourdomain.com:/var/www/yourblog/blog
-
-Write-Host &#34;Reloading nginx...&#34;
-ssh root@yourdomain.com &#34;nginx -t &amp;&amp; systemctl reload nginx&#34;
-
-Write-Host &#34;Done!&#34;
-</code></pre>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># deploy.ps1  ← 快速更新网页</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 使用前请确保已安装 Hugo，并配置好 SSH 免密登录</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 执行命令： ./deploy.ps1</span>
+</span></span><span class="line"><span class="cl">Write-Host <span class="s2">&#34;Building...&#34;</span>
+</span></span><span class="line"><span class="cl">hugo
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">(</span><span class="nv">$LASTEXITCODE</span> -ne 0<span class="o">)</span> <span class="o">{</span> <span class="nb">exit</span> <span class="m">1</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Write-Host <span class="s2">&#34;Uploading...&#34;</span>
+</span></span><span class="line"><span class="cl">scp -r public/* root@yourdomain.com:/var/www/yourblog/blog
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Write-Host <span class="s2">&#34;Reloading nginx...&#34;</span>
+</span></span><span class="line"><span class="cl">ssh root@yourdomain.com <span class="s2">&#34;nginx -t &amp;&amp; systemctl reload nginx&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Write-Host <span class="s2">&#34;Done!&#34;</span>
+</span></span></code></pre></div>
           
           
           
@@ -1251,32 +1251,56 @@ Write-Host &#34;Done!&#34;
   </a>
 </div>
 
-      </main><footer class="site-footer">
+      </main>
+<footer class="site-footer">
   <div class="footer-row">
 
+    
     <span class="footer-item">© 2025 Ray's Blog</span>
 
-    <span class="footer-item beian">
-      <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">
-        <img src="/blog/img/beian.png" width="20" height="20" alt="备案图标">
-        湘ICP备2025149166号-1
-      </a>
-    </span>
+    
+    <i class="spacer" style="width:7rem;"></i>
 
+    
+    <a href="https://beian.mps.gov.cn/#/query/webSearch?code=43010502001935"
+      rel="noreferrer" target="_blank"
+      style="display:inline-flex;align-items:center;gap:4px;">
+      <img src="/blog/img/beian.png"
+          width="20" height="20" alt="备案图标">
+      湘公网安备43010502001935号
+    </a>
+
+    
+    <i class="spacer" style="width:2rem;"></i>
+
+    
+    <a class="footer-item" href="https://beian.miit.gov.cn/#/Integrated/index" rel="noreferrer" target="_blank">湘ICP备2025149166号</a>
+
+    
+    <i class="spacer" style="width:7rem;"></i>
+
+    
     <span class="footer-item">
-      Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/nunocoracao/blowfish" target="_blank" rel="noopener">Blowfish</a>
+      Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> &
+      <a href="https://github.com/nunocoracao/blowfish" target="_blank" rel="noopener">Blowfish</a>
     </span>
 
   </div>
 </footer>
 
+
 <style>
 .site-footer{ text-align:center;font-size:13px;color:#999;padding:1.5rem 0; }
-.footer-row{ display:flex;justify-content:center;gap:2.5rem;flex-wrap:wrap;align-items:center; }  
+.footer-row{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;}  
 .footer-item{ white-space:nowrap;line-height:20px; }  
 .beian a{ display:inline-flex;align-items:center;gap:6px;line-height:20px; }  
 .beian img{ vertical-align:middle; }
 </style>
+
+
+
+
+
 <div
   id="search-wrapper"
   class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"

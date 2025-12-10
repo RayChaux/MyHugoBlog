@@ -1,0 +1,1 @@
+(()=>{const e=e=>{if(e.querySelector(".cc-btn"))return;const t=document.createElement("button");t.className="cc-btn",t.textContent="复制",t.onclick=()=>{const n=e.querySelector("code");navigator.clipboard.writeText(n.innerText),t.textContent="复制成功",setTimeout(()=>t.textContent="复制",1200)},e.appendChild(t)};document.querySelectorAll("pre").forEach(e)})()

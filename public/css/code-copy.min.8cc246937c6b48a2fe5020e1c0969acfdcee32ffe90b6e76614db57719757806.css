@@ -1,0 +1,1 @@
+pre{position:relative}.cc-btn{position:absolute;top:6px;right:6px;opacity:0;transition:opacity .2s ease;border:0;border-radius:4px;padding:4px 8px;font-size:12px;line-height:1;color:#fff;background:#555;cursor:pointer}pre:hover .cc-btn{opacity:1}.cc-btn:hover{background:#777}

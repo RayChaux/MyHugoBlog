@@ -15,13 +15,13 @@ tags = ["网站建设"]
 在[GitHub](https://github.com/gohugoio/hugo/releases)上下载扩展版的Hugo（注意安装带extend后缀的），解压到本地，并添加到环境变量Path。
 **命令行安装：（不建议）**
 管理员模式打开PowerShell，不建议在C盘打开
-```
+```bash
 powershell -NoProfile -ExecutionPolicy unrestricted -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))"
 # 检查choco 版本 (环境变量一般会自动添加，没有就手动加)
 choco -V
 ```
 用choco安装hugo
-```
+```bash
 # 安装可能较慢
 choco install hugo -confirm
 hugo version #检查安装成功
@@ -29,7 +29,7 @@ hugo version #检查安装成功
 ## 2. 利用Hugo安装主题（以Blowfish为例）
 参考[Hugo中文文档](https://hugo.opendocs.io/getting-started/quick-start/)，在搭建博客文件夹的位置打开CMD，利用Hugo生成博客文件夹。
 示例安装的主题为Blowfish，其余主题的安装可从[Hugo主题商店](https://themes.gohugo.io/)中选取。
-```
+```bash
 hugo new site MyHugoBlog
 cd MyHugoBlog
 git init
@@ -41,8 +41,7 @@ hugo new posts/first.md
 
 ## 3. 生成静态文件
 利用Hugo生静态文件，生成到 public/ 目录，
-```
-bash
+```bash
 hugo
 ```
 完成后的目录结构为：
@@ -56,8 +55,7 @@ public/
 └─ css/...
 ```
 ## 4. 上传到服务器
-```
-bash
+```bash
 rsync -avz --delete public/ root@raychaux.space:/var/www/raychaux.space/blog/ 
 # 或
 scp -r public/* root@raychaux.space:/var/www/raychaux.space/blog/
@@ -65,7 +63,7 @@ sudo nginx -t && sudo systemctl reload nginx    # 重载Nginx，在ssh上操作
 ```
 **编写脚本文件一键上传**
 在根目录创建deploy.ps1文件（Windows系统，linux为deploy.sh）,写入以下命令，即可快速更新网页。
-```
+```sh
 # deploy.ps1  ← 快速更新网页
 # 使用前请确保已安装 Hugo，并配置好 SSH 免密登录
 # 执行命令： ./deploy.ps1

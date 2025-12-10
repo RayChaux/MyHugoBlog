@@ -8,8 +8,7 @@ author = 'RayChaux'
 **摘要：** 本文介绍了基于Unbuntu云服务器的一些用法，包括建立自用图床等……
 ## 1. 建立自用图床
 ### 1.1 新建目录
-```
-bash
+```bash
 sudo mkdir -p /var/www/raychaux.space/img
 # 年份子目录，方便管理
 sudo mkdir -p /var/www/raychaux.space/img/2025
@@ -17,8 +16,7 @@ sudo mkdir -p /var/www/raychaux.space/img/2025
 sudo chown -R $USER:$USER /var/www/raychaux.space/img
 ```
 ### 1.2 nginx配置文件编辑
-```
-bash
+```bash
 sudo vim /etc/nginx/nginx.conf
     # —— 写入图床目录 —— 
     location ^~ /img/ {
@@ -40,8 +38,7 @@ sudo nginx -t && sudo systemctl reload nginx
 ### 1.3 存入文件
 直接将jpg/png/gif拖入img文件夹即可
 或者
-```
-bash
+```bash
 scp ./demo.png root@raychaux.space:/var/www/raychaux.space/img/2025/
 ```
 即可在 https://raychaux.space/img/demo.png 查看文件
