@@ -20,6 +20,7 @@ jobs:
 
       - name: Build
         run: hugo --gc --baseURL "https://raychaux.space"
+            ls -l public/index.html        # ← 加这句
 
       - name: Deploy to ECS
         uses: appleboy/scp-action@v0.1.5
