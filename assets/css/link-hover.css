@@ -1,0 +1,39 @@
+/* ===== 悬停高亮 + 文字变色 ===== */
+a:hover {
+  background-color: var(--link-hover-bg, rgba(80, 184, 72, 0.20));
+  color: var(--link-hover-text, #2a7d2e);          /* 文字颜色（可调） */
+  border-radius: 4px;
+  transition: all 0.2s ease;                    /* 背景+文字一起过渡 */
+}
+
+/* ① 暮光蓝（万能低调）
+背景 rgba(0, 102, 204, 0.22)
+文字 #0050c7
+暗模式文字 #4db8ff
+② 芽绿（清新护眼）
+背景 rgba(80, 184, 72, 0.20)
+文字 #2a7d2e
+暗模式文字 #7dd87a
+③ 日落橘（活力点睛）
+背景 rgba(255, 140, 0, 0.20)
+文字 #d97400
+暗模式文字 #ffcc66
+④ 莓红（女性/浪漫）
+背景 rgba(220, 38, 127, 0.18)
+文字 #c10044
+暗模式文字 #ff8aab
+⑤ 薰衣紫（优雅不浮夸）
+背景 rgba(135, 96, 251, 0.18)
+文字 #6b46c1
+暗模式文字 #b7a7ff
+⑥ 极深灰（极简黑灰）
+背景 rgba(0, 0, 0, 0.08)
+文字 #222
+暗模式文字 #e1e1e1（背景同时改为 rgba(255,255,255,0.12)） */
+
+/* 暗黑模式下调淡背景、文字提亮 */
+/* =========  Blowfish 暗黑模式  ========= */
+body.dark a:hover {                /* 关键：body 带 .dark */
+  background-color: var(--link-hover-bg-dark, rgba(80, 184, 72, 0.20));
+  color: var(--link-hover-text-dark, #7dd87a);
+}

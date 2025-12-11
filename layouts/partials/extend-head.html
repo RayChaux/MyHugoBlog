@@ -1,0 +1,5 @@
+
+
+{{/* 全站链接悬停高亮 */}}
+{{ $linkHover := resources.Get "css/link-hover.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $linkHover.RelPermalink }}">

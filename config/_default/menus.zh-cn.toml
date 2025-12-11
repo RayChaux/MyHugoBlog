@@ -32,7 +32,7 @@
 
 [[main]]
   name = "关于"
-  url = "https://raychaux.space/about/"
+  pageRef = "about"
   weight = 50
 
 [[main]]

@@ -1,0 +1,1 @@
+a:hover{background-color:var(--link-hover-bg,rgba(30,126,235,.25));color:var(--link-hover-text,#f1f1f1);border-radius:2px;transition:all .2s ease}[data-theme=dark] a:hover{background-color:var(--link-hover-bg-dark,rgba(30,126,235,.18));color:var(--link-hover-text-dark,#ffd740)}
