@@ -30,7 +30,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           source: "public/."          # 整站内容
           target: "/var/www/raychaux.space/blog/"
-          strip_components: 0
+          strip_components: 1
 
       - name: Reload nginx
         uses: appleboy/ssh-action@v1.0.0
