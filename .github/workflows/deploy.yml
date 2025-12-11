@@ -28,7 +28,7 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          source: "public/*"
+          source: "public/."
           target: "/var/www/raychaux.space/blog/"
           strip_components: 0
 
