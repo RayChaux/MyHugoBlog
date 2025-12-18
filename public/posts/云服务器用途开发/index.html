@@ -24,6 +24,8 @@
     <meta name="description" content="Know yourself, know the world.">
   
   
+    <meta name="keywords" content="服务器,">
+  
   
   
   <link rel="canonical" href="http://localhost:1313/blog/posts/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%94%A8%E9%80%94%E5%BC%80%E5%8F%91/">
@@ -69,6 +71,7 @@
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2025-11-29T17:02:54+08:00">
     <meta property="article:modified_time" content="2025-11-29T17:02:54+08:00">
+    <meta property="article:tag" content="服务器">
 
   
   <meta name="twitter:card" content="summary">
@@ -244,10 +247,10 @@
     
     "dateModified": "2025-11-29T17:02:54\u002b08:00",
     
-    
+    "keywords": ["服务器"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "111"
+    "wordCount": "433"
   }]
   </script>
 
@@ -259,6 +262,11 @@
   
   
     
+
+
+
+<link rel="stylesheet" href="/blog/css/link-hover.min.9ce55fbf97693b10cdac94e13080f04c23459555e55b783d8fb3361a04f386b5.css">
+
   
 
   
@@ -436,11 +444,29 @@
       
         
   <a
+  href="https://raychaux.space/gallery/"
+  target="_blank"
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="图床"
+  title="">
+  
+  
+    <p class="text-base font-medium">
+      图床
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <a
   href="/blog/about/"
   
   class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
   aria-label="关于"
-  title="关于我">
+  title="">
   
   
     <p class="text-base font-medium">
@@ -653,11 +679,33 @@
               
   <li class="mt-1">
   <a
+    href="https://raychaux.space/gallery/"
+    
+      target="_blank"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="图床"
+    title="">
+    
+    
+      <p class="text-bg font-bg">
+        图床
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
     href="/blog/about/"
     
     class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
     aria-label="关于"
-    title="关于我">
+    title="">
     
     
       <p class="text-bg font-bg">
@@ -825,7 +873,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-11-29T17:02:54&#43;08:00">2025-11-29</time><span class="px-2 text-primary-500">&middot;</span><span>111 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">1 分钟</span><span class="px-2 text-primary-500">&middot;</span><span class="mb-[2px]">
+      <time datetime="2025-11-29T17:02:54&#43;08:00">2025-11-29</time><span class="px-2 text-primary-500">&middot;</span><span>433 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">3 分钟</span><span class="px-2 text-primary-500">&middot;</span><span class="mb-[2px]">
   <span
     id="zen-mode-button"
     class="text-lg hover:text-primary-500"
@@ -841,14 +889,6 @@
     
 
     
-    
-      <span class="ps-2"><span class="flex cursor-pointer">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    草稿
-  </span>
-</span>
-</span>
     
   </div>
 
@@ -1010,6 +1050,7 @@
         <li><a href="#12-nginx配置文件编辑">1.2 nginx配置文件编辑</a></li>
         <li><a href="#13-存入文件">1.3 存入文件</a></li>
         <li><a href="#14-注意事项">1.4 注意事项</a></li>
+        <li><a href="#15-使用图形化界面快捷管理">1.5 使用图形化界面快捷管理</a></li>
       </ul>
     </li>
   </ul>
@@ -1031,6 +1072,7 @@
         <li><a href="#12-nginx配置文件编辑">1.2 nginx配置文件编辑</a></li>
         <li><a href="#13-存入文件">1.3 存入文件</a></li>
         <li><a href="#14-注意事项">1.4 注意事项</a></li>
+        <li><a href="#15-使用图形化界面快捷管理">1.5 使用图形化界面快捷管理</a></li>
       </ul>
     </li>
   </ul>
@@ -1143,6 +1185,122 @@
   >https://raychaux.space/img/</a> 就能列出所有图片</li>
 </ul>
 
+<h3 class="relative group">1.5 使用图形化界面快捷管理
+    <div id="15-使用图形化界面快捷管理" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#15-%e4%bd%bf%e7%94%a8%e5%9b%be%e5%bd%a2%e5%8c%96%e7%95%8c%e9%9d%a2%e5%bf%ab%e6%8d%b7%e7%ae%a1%e7%90%86" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p><strong>① 安装php8.2-fpm</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 添加PHP官方PPA</span>
+</span></span><span class="line"><span class="cl">sudo apt update
+</span></span><span class="line"><span class="cl">sudo apt install software-properties-common
+</span></span><span class="line"><span class="cl">sudo add-apt-repository ppa:ondrej/php -y
+</span></span><span class="line"><span class="cl">sudo apt update
+</span></span><span class="line"><span class="cl"><span class="c1"># 安装PHP 8.2-FPM</span>
+</span></span><span class="line"><span class="cl">sudo apt install php8.2-fpm php8.2-cli php8.2-common
+</span></span><span class="line"><span class="cl">sudo systemctl <span class="nb">enable</span> --now php8.2-fpm
+</span></span><span class="line"><span class="cl"><span class="c1"># 确认安装</span>
+</span></span><span class="line"><span class="cl">ls /run/php/php8.2-fpm.sock
+</span></span><span class="line"><span class="cl"><span class="c1"># 输出/run/php/php8.2-fpm.sock为成功</span>
+</span></span></code></pre></div><p><strong>② 编写php文件</strong>
+在<code>yourdomain.com</code>下建立<code>upload.php</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="o">&lt;?</span><span class="nx">php</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$pass</span>   <span class="o">=</span> <span class="s1">&#39;YOUR_PASS&#39;</span><span class="p">;</span>                 <span class="c1">// 只有你知道的密码
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$base</span>   <span class="o">=</span> <span class="no">__DIR__</span> <span class="o">.</span> <span class="s1">&#39;/img&#39;</span><span class="p">;</span>            <span class="c1">// 图床根目录
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$max</span>    <span class="o">=</span> <span class="mi">10</span> <span class="o">*</span> <span class="mi">1024</span> <span class="o">*</span> <span class="mi">1024</span><span class="p">;</span>            <span class="c1">// 10M 单文件
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$exts</span>   <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;jpg&#39;</span><span class="p">,</span><span class="s1">&#39;jpeg&#39;</span><span class="p">,</span><span class="s1">&#39;png&#39;</span><span class="p">,</span><span class="s1">&#39;gif&#39;</span><span class="p">,</span><span class="s1">&#39;webp&#39;</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nv">$_SERVER</span><span class="p">[</span><span class="s1">&#39;REQUEST_METHOD&#39;</span><span class="p">]</span> <span class="o">===</span> <span class="s1">&#39;POST&#39;</span> <span class="o">&amp;&amp;</span> <span class="nx">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;pass&#39;</span><span class="p">]))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;pass&#39;</span><span class="p">]</span> <span class="o">!==</span> <span class="nv">$pass</span><span class="p">)</span> <span class="k">die</span><span class="p">(</span><span class="s1">&#39;❌ 密码错误&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">isset</span><span class="p">(</span><span class="nv">$_FILES</span><span class="p">[</span><span class="s1">&#39;pic&#39;</span><span class="p">]))</span>   <span class="k">die</span><span class="p">(</span><span class="s1">&#39;❌ 未选择文件&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$file</span> <span class="o">=</span> <span class="nv">$_FILES</span><span class="p">[</span><span class="s1">&#39;pic&#39;</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nv">$file</span><span class="p">[</span><span class="s1">&#39;error&#39;</span><span class="p">]</span> <span class="o">!==</span> <span class="mi">0</span><span class="p">)</span>     <span class="k">die</span><span class="p">(</span><span class="s1">&#39;❌ 上传失败&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nv">$file</span><span class="p">[</span><span class="s1">&#39;size&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="nv">$max</span><span class="p">)</span>     <span class="k">die</span><span class="p">(</span><span class="s1">&#39;❌ 文件过大（&gt;10M）&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nv">$ext</span> <span class="o">=</span> <span class="nx">strtolower</span><span class="p">(</span><span class="nx">pathinfo</span><span class="p">(</span><span class="nv">$file</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">],</span> <span class="nx">PATHINFO_EXTENSION</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">in_array</span><span class="p">(</span><span class="nv">$ext</span><span class="p">,</span> <span class="nv">$exts</span><span class="p">))</span>   <span class="k">die</span><span class="p">(</span><span class="s1">&#39;❌ 仅限图片格式&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">// 子文件夹：日期或自定义
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nv">$sub</span> <span class="o">=</span> <span class="nx">isset</span><span class="p">(</span><span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;folder&#39;</span><span class="p">])</span> <span class="o">&amp;&amp;</span> <span class="nx">preg_match</span><span class="p">(</span><span class="s1">&#39;/^\w+$/&#39;</span><span class="p">,</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;folder&#39;</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">           <span class="o">?</span> <span class="nv">$_POST</span><span class="p">[</span><span class="s1">&#39;folder&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">           <span class="o">:</span> <span class="nx">date</span><span class="p">(</span><span class="s1">&#39;Y-m&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$dir</span> <span class="o">=</span> <span class="nv">$base</span> <span class="o">.</span> <span class="s1">&#39;/&#39;</span> <span class="o">.</span> <span class="nv">$sub</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">is_dir</span><span class="p">(</span><span class="nv">$dir</span><span class="p">))</span> <span class="nx">mkdir</span><span class="p">(</span><span class="nv">$dir</span><span class="p">,</span> <span class="mo">0755</span><span class="p">,</span> <span class="k">true</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nv">$name</span> <span class="o">=</span> <span class="nx">date</span><span class="p">(</span><span class="s1">&#39;YmdHis&#39;</span><span class="p">)</span> <span class="o">.</span> <span class="s1">&#39;_&#39;</span> <span class="o">.</span> <span class="nx">bin2hex</span><span class="p">(</span><span class="nx">random_bytes</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span> <span class="o">.</span> <span class="s1">&#39;.&#39;</span> <span class="o">.</span> <span class="nv">$ext</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$path</span> <span class="o">=</span> <span class="nv">$dir</span> <span class="o">.</span> <span class="s1">&#39;/&#39;</span> <span class="o">.</span> <span class="nv">$name</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">move_uploaded_file</span><span class="p">(</span><span class="nv">$file</span><span class="p">[</span><span class="s1">&#39;tmp_name&#39;</span><span class="p">],</span> <span class="nv">$path</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$url</span> <span class="o">=</span> <span class="s1">&#39;https://raychaux.space/img/&#39;</span> <span class="o">.</span> <span class="nv">$sub</span> <span class="o">.</span> <span class="s1">&#39;/&#39;</span> <span class="o">.</span> <span class="nv">$name</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">exit</span><span class="p">(</span><span class="nv">$url</span><span class="p">);</span>   <span class="c1">// 返回直链
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="cp">?&gt;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;!doctype html&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;html lang=&#34;zh-CN&#34;&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;head&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;meta charset=&#34;utf-8&#34;&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;title&gt;图床上传&lt;/title&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;meta name=&#34;viewport&#34; content=&#34;width=device-width,initial-scale=1&#34;&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;link href=&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css&#34; rel=&#34;stylesheet&#34;&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;style&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">body{background:#f5f7fa}.card{max-width:500px;margin:2rem auto}
+</span></span></span><span class="line"><span class="cl"><span class="err">#urlBox{display:none}
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;/style&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;/head&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;body&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;div class=&#34;card shadow&#34;&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">  &lt;div class=&#34;card-body&#34;&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">    &lt;h5 class=&#34;card-title&#34;&gt;图床上传&lt;/h5&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">    &lt;input type=&#34;password&#34; id=&#34;pass&#34; class=&#34;form-control mb-2&#34; placeholder=&#34;输入密码&#34;&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">    &lt;input type=&#34;text&#34; id=&#34;folder&#34; class=&#34;form-control mb-2&#34; placeholder=&#34;子文件夹（留空=按月份）&#34;&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">    &lt;input type=&#34;file&#34; id=&#34;pic&#34; class=&#34;form-control mb-2&#34; accept=&#34;image/*&#34;&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">    &lt;button class=&#34;btn btn-primary w-100&#34; onclick=&#34;upload()&#34;&gt;上传&lt;/button&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">    &lt;div id=&#34;urlBox&#34; class=&#34;mt-3&#34;&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">      &lt;label&gt;直链（点击复制）&lt;/label&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">      &lt;input type=&#34;text&#34; id=&#34;urlOut&#34; class=&#34;form-control&#34; readonly&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">    &lt;/div&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">  &lt;/div&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;/div&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;script src=&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js&#34;&gt;&lt;/script&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;script&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">async function upload(){
+</span></span></span><span class="line"><span class="cl"><span class="err">  const pass   = document.getElementById(&#39;pass&#39;).value;
+</span></span></span><span class="line"><span class="cl"><span class="err">  const folder = document.getElementById(&#39;folder&#39;).value || &#39;&#39;;
+</span></span></span><span class="line"><span class="cl"><span class="err">  const file   = document.getElementById(&#39;pic&#39;).files[0];
+</span></span></span><span class="line"><span class="cl"><span class="err">  if(!pass||!file)return alert(&#39;请填密码并选择图片&#39;);
+</span></span></span><span class="line"><span class="cl"><span class="err">  const fd = new FormData();
+</span></span></span><span class="line"><span class="cl"><span class="err">  fd.append(&#39;pass&#39;, pass);
+</span></span></span><span class="line"><span class="cl"><span class="err">  fd.append(&#39;folder&#39;, folder);
+</span></span></span><span class="line"><span class="cl"><span class="err">  fd.append(&#39;pic&#39;, file);
+</span></span></span><span class="line"><span class="cl"><span class="err">  const res = await fetch(&#39;&#39;, {method:&#39;POST&#39;, body:fd});
+</span></span></span><span class="line"><span class="cl"><span class="err">  const url = await res.text();
+</span></span></span><span class="line"><span class="cl"><span class="err">  if(url.includes(&#39;❌&#39;)) return alert(url);
+</span></span></span><span class="line"><span class="cl"><span class="err">  document.getElementById(&#39;urlOut&#39;).value = url;
+</span></span></span><span class="line"><span class="cl"><span class="err">  document.getElementById(&#39;urlBox&#39;).style.display = &#39;block&#39;;
+</span></span></span><span class="line"><span class="cl"><span class="err">  document.getElementById(&#39;urlOut&#39;).select();
+</span></span></span><span class="line"><span class="cl"><span class="err">  document.execCommand(&#39;copy&#39;);
+</span></span></span><span class="line"><span class="cl"><span class="err">  alert(&#39;已复制到剪贴板！&#39;);
+</span></span></span><span class="line"><span class="cl"><span class="err">}
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;/script&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;/body&gt;
+</span></span></span><span class="line"><span class="cl"><span class="err">&lt;/html&gt;
+</span></span></span></code></pre></div><p>赋予权限</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo chown <span class="nv">$USER</span>:<span class="nv">$USER</span> /var/www/raychaux.space/upload.php
+</span></span><span class="line"><span class="cl">sudo chmod <span class="m">644</span> /var/www/raychaux.space/upload.php
+</span></span></code></pre></div><p><strong>③ 修改<code>nginx.conf</code>配置</strong>
+写入</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-nginx" data-lang="nginx"><span class="line"><span class="cl"><span class="k">location</span> <span class="p">~</span> <span class="sr">\.php$</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">root</span> <span class="s">/var/www/raychaux.space</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">fastcgi_pass</span> <span class="s">unix:/run/php/php8.2-fpm.sock</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">fastcgi_index</span> <span class="s">index.php</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">fastcgi_param</span> <span class="s">SCRIPT_FILENAME</span> <span class="nv">$document_root$fastcgi_script_name</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kn">include</span> <span class="s">fastcgi_params</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>重载nginx后即可在https://yourdomain.com/upload.php看到上传界面。</p>
+
           
           
           
@@ -1200,9 +1358,9 @@
           
             <a
               class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/blog/posts/hugo%E8%AE%BE%E8%AE%A1%E5%8D%9A%E5%AE%A2%E7%B3%BB%E7%BB%9F/">
+              href="/blog/posts/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/">
               <span class="leading-6">
-                基于Nginx和Hugo部署博客系统&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+                卷积神经网络&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
               </span>
             </a>
             
@@ -1246,54 +1404,145 @@
       </main>
 <footer class="site-footer">
   <div class="footer-row">
+    
+    <span class="footer-item copyright">© 2025 Ray's Blog</span>
 
     
-    <span class="footer-item">© 2025 Ray's Blog</span>
-
-    
-    <i class="spacer" style="width:7rem;"></i>
-
-    
-    <a href="https://beian.mps.gov.cn/#/query/webSearch?code=43010502001935"
-      rel="noreferrer" target="_blank"
-      style="display:inline-flex;align-items:center;gap:4px;">
-      <img src="/blog/img/beian.png"
-          width="20" height="20" alt="备案图标">
-      湘公网安备43010502001935号
+    <a class="beian footer-item"
+        href="https://beian.mps.gov.cn/#/query/webSearch?code=43010502001935"
+        rel="noreferrer" target="_blank">
+        <img src="https://raychaux.space/img/common/20251214144754_f8096af8ad53bdea.png"
+              width="20" height="20" alt="备案图标">
+        湘公网安备43010502001935号
     </a>
 
     
-    <i class="spacer" style="width:2rem;"></i>
+    <a class="footer-item icp" href="https://beian.miit.gov.cn/#/Integrated/index" rel="noreferrer" target="_blank">
+      湘ICP备2025149166号
+    </a>
 
     
-    <a class="footer-item" href="https://beian.miit.gov.cn/#/Integrated/index" rel="noreferrer" target="_blank">湘ICP备2025149166号</a>
-
-    
-    <i class="spacer" style="width:7rem;"></i>
-
-    
-    <span class="footer-item">
+    <span class="footer-item powered-by">
       Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> &
       <a href="https://github.com/nunocoracao/blowfish" target="_blank" rel="noopener">Blowfish</a>
     </span>
-
   </div>
 </footer>
 
-
 <style>
-.site-footer{ text-align:center;font-size:13px;color:#999;padding:1.5rem 0; }
-.footer-row{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;}  
-.footer-item{ white-space:nowrap;line-height:20px; }  
-.beian a{ display:inline-flex;align-items:center;gap:6px;line-height:20px; }  
-.beian img{ vertical-align:middle; }
-</style>
+ 
+.site-footer {
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+  padding: 1.5rem 0;
+}
 
+.footer-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem 2.5rem;  
+  max-width: 100%;
+}
 
+.footer-item {
+  white-space: nowrap;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
 
+ 
+.beian {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: inherit;
+}
 
+.beian img {
+  vertical-align: middle;
+}
 
-<div
+.beian:hover,
+.footer-item.icp:hover {
+  color: #666;
+  text-decoration: underline;
+}
+
+ 
+.powered-by a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.powered-by a:hover {
+  color: #666;
+  text-decoration: underline;
+}
+
+ 
+
+ 
+@media (max-width: 768px) {
+  .footer-row {
+    gap: 1.2rem 1.5rem;
+    justify-content: center;
+  }
+}
+
+ 
+@media (max-width: 480px) {
+  .footer-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .footer-item {
+    white-space: normal;
+    text-align: center;
+    justify-content: center;
+  }
+  
+   
+  @media (max-width: 360px) {
+    .site-footer {
+      font-size: 12px;
+    }
+    
+    .footer-row {
+      gap: 0.8rem;
+    }
+    
+    .beian img {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+ 
+.footer-item a {
+  color: inherit;
+}
+
+ 
+@media (max-width: 320px) {
+  .footer-row {
+    padding: 0 10px;
+  }
+  
+  .footer-item {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-break: keep-all;
+  }
+}
+</style><div
   id="search-wrapper"
   class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
   data-url="http://localhost:1313/blog/">
