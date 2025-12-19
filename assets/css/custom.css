@@ -1,0 +1,37 @@
+/* 调整文章页面的宽度，权重比工具类高 */
+.max-w-prose {
+  max-width: 960px !important;
+}
+
+/* ========== 行内公式 ========== */
+.math-inline {
+  display: inline-flex;        /* 让容器随内容伸缩 */
+  align-items: baseline;       /* 基线对齐周围文字 */
+  padding: 0 4px;              /* 只左右留 4 px 呼吸感 */
+  border-radius: 3px;
+  background: #f3f4f6;
+  color: #111827;
+  vertical-align: baseline;    /* 关键：行高不再固定 */
+}
+
+/* ========== 行间公式（整段居中） ========== */
+.math-display {
+  display: block;
+  overflow-x: auto;            /* 长公式横向滚动 */
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  background: #f9fafb;         /* 比行内再浅一点 */
+  box-shadow: 0 2px 4px rgba(0,0,0,.06);
+  text-align: center;          /* MathJax 自己会居中 */
+}
+
+/* 行内公式暗色 */
+.dark .math-inline {
+  background: #2d3d58;
+  color: #e5e7eb;
+}
+
+.dark .math-display {
+  background: #2d3d58;
+}

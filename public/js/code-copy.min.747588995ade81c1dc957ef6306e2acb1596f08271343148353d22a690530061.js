@@ -1,1 +1,0 @@
-(()=>{const e=e=>{if(e.querySelector(".cc-btn"))return;const t=document.createElement("button");t.className="cc-btn",t.textContent="Copy",t.onclick=()=>{const n=e.querySelector("code");navigator.clipboard.writeText(n.innerText),t.textContent="Copied!",setTimeout(()=>t.textContent="Copy",1200)},e.appendChild(t)};document.querySelectorAll("pre").forEach(e)})()

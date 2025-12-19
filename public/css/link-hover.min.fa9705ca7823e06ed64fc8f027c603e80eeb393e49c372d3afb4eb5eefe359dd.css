@@ -1,1 +1,0 @@
-a:hover{background-color:var(--link-hover-bg,rgba(255,200,50,.25));color:var(--link-hover-text,#c63);border-radius:2px;transition:all .2s ease}[data-theme=dark] a:hover{background-color:var(--link-hover-bg-dark,rgba(255,200,50,.18));color:var(--link-hover-text-dark,#ffd740)}

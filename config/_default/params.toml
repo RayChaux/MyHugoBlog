@@ -84,7 +84,7 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   invertPagination = false
   showReadingTime = true
   showTableOfContents = true
-  
+  showComments = false
   # showRelatedContent = false
   # relatedContentLimit = 3
   showTaxonomies = false # use showTaxonomies OR showCategoryOnly, not both
@@ -93,6 +93,7 @@ forgejoDefaultServer = "https://v11.next.forgejo.org"
   showWordCount = true
   # sharingLinks = [ "linkedin", "twitter", "bluesky", "mastodon", "reddit", "pinterest", "facebook", "email", "whatsapp", "telegram", "line"]
   showZenMode = true
+  enableMath = true 
 
 [list]
   showHero = false

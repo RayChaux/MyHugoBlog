@@ -111,6 +111,8 @@
   
   
   
+    
+  
   
     
   
@@ -118,8 +120,8 @@
   <link
     type="text/css"
     rel="stylesheet"
-    href="/blog/css/main.bundle.min.0975a8c7c266a0697f94839b45e1574c449de253527d44ed516d5c5c3c820c9389d7d86576faae12267b129f8749ecbf7581cddb636aba7690aa633b95aaa87d.css"
-    integrity="sha512-CXWox8JmoGl/lIObReFXTESd4lNSfUTtUW1cXDyCDJOJ19hldvquEiZ7Ep&#43;HSey/dYHN22NqunaQqmM7laqofQ==">
+    href="/blog/css/main.bundle.min.7c241eb9c6591dc987968955c157d0e12acda913011b7024e0416827d5a03b66027ab605b37f6690db6935cbb83393138cdebb37d0f64b8cfaca2fcc4fb7318b.css"
+    integrity="sha512-fCQeucZZHcmHlolVwVfQ4SrNqRMBG3Ak4EFoJ9WgO2YCerYFs39mkNtpNcu4M5MTjN67N9D2S4z6yi/MT7cxiw==">
 
   
   
@@ -254,8 +256,6 @@
   
     
 
-
-
 <link rel="stylesheet" href="/blog/css/link-hover.min.9ce55fbf97693b10cdac94e13080f04c23459555e55b783d8fb3361a04f386b5.css">
 
   
@@ -267,6 +267,43 @@
   
 
   
+  
+  
+  <script>
+window.MathJax = {
+  tex: {
+    inlineMath:  [['$', '$']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true
+  },
+  svg:  { fontCache: 'global' },
+  options: {
+    renderActions: {
+       
+      addInlineClass:  [155, (doc) => {
+        for (const math of doc.math) {
+          if (math.display === false) {
+            math.typesetRoot.classList.add('math-inline');
+          }
+        }
+      }],
+       
+      addDisplayClass: [155, (doc) => {
+        for (const math of doc.math) {
+          if (math.display === true) {
+            math.typesetRoot.classList.add('math-display');
+          }
+        }
+      }]
+    }
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+  <link rel="stylesheet" href="/blog/css/custom.min.css">
   
 </head>
 
@@ -833,6 +870,23 @@
   <h2 class="flex items-center">
     <a
       class="text-xl font-medium decoration-primary-500 hover:underline hover:underline-offset-2"
+      href="/blog/tags/%E5%85%89%E5%AD%A6/"
+      >光学</a
+    >
+    
+      <span class="px-2 text-base text-primary-500">&middot;</span>
+      <span class="text-base text-neutral-400">
+        1
+      </span>
+    
+  </h2>
+</article>
+
+      
+        <article class="w-full px-2 my-3 overflow-hidden sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4">
+  <h2 class="flex items-center">
+    <a
+      class="text-xl font-medium decoration-primary-500 hover:underline hover:underline-offset-2"
       href="/blog/tags/%E5%BB%BA%E6%A8%A1/"
       >建模</a
     >
@@ -891,6 +945,23 @@
       <span class="px-2 text-base text-primary-500">&middot;</span>
       <span class="text-base text-neutral-400">
         2
+      </span>
+    
+  </h2>
+</article>
+
+      
+        <article class="w-full px-2 my-3 overflow-hidden sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4">
+  <h2 class="flex items-center">
+    <a
+      class="text-xl font-medium decoration-primary-500 hover:underline hover:underline-offset-2"
+      href="/blog/tags/%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93/"
+      >课程总结</a
+    >
+    
+      <span class="px-2 text-base text-primary-500">&middot;</span>
+      <span class="text-base text-neutral-400">
+        1
       </span>
     
   </h2>

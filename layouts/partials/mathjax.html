@@ -1,0 +1,33 @@
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath:  [['$', '$']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true
+  },
+  svg:  { fontCache: 'global' },
+  options: {
+    renderActions: {
+      /* 给行内公式加 .math-inline */
+      addInlineClass:  [155, (doc) => {
+        for (const math of doc.math) {
+          if (math.display === false) {
+            math.typesetRoot.classList.add('math-inline');
+          }
+        }
+      }],
+      /* 给行间公式加 .math-display */
+      addDisplayClass: [155, (doc) => {
+        for (const math of doc.math) {
+          if (math.display === true) {
+            math.typesetRoot.classList.add('math-display');
+          }
+        }
+      }]
+    }
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
