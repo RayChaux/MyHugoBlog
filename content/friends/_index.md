@@ -8,5 +8,5 @@ showTableOfContents: false
 showSidebar: false
 ---
 
-<!-- 引入我们自定义的短代码 -->
+<!-- 引入短代码 -->
 {{< friends >}}

@@ -261,7 +261,7 @@
   
     
 
-<link rel="stylesheet" href="/blog/css/link-hover.min.9ce55fbf97693b10cdac94e13080f04c23459555e55b783d8fb3361a04f386b5.css">
+<link rel="stylesheet" href="/blog/css/link-hover.min.6b7a4d8d881fe6e2ff5b5f97e2388f1fab71e15170c64998a25ba8ddb4cd7514.css">
 
   
 
@@ -1065,7 +1065,9 @@ window.MathJax = {
         <div class="order-first lg:ml-auto px-0 lg:order-last lg:ps-8 lg:max-w-2xs">
           <div class="toc ps-5 print:hidden lg:sticky lg:top-[140px]">
             
-              <details
+              
+              
+<details
   open
   id="TOCView"
   class="toc-right mt-0 overflow-y-auto overscroll-contain scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600 rounded-lg -ms-5 ps-5 pe-2 hidden lg:block">
@@ -1123,64 +1125,39 @@ window.MathJax = {
 </nav>
   </div>
 </details>
-<details class="toc-inside mt-0 overflow-hidden rounded-lg -ms-5 ps-5 lg:hidden">
-  <summary
-    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
-    目录
-  </summary>
-  <div
-    class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
-    <nav id="TableOfContents">
-  <ul>
-    <li><a href="#0-安装nginx与wordpress">0. 安装Nginx与WordPress</a></li>
-    <li><a href="#1-彻底卸载wordpress">1. 彻底卸载WordPress</a>
-      <ul>
-        <li><a href="#11-可选备份">1.1 可选备份</a></li>
-        <li><a href="#12-删除wordpress文件">1.2 删除Wordpress文件</a></li>
-        <li><a href="#13-删除数据库及用户">1.3 删除数据库及用户</a></li>
-        <li><a href="#14-删除nginx虚拟主机">1.4 删除Nginx虚拟主机</a></li>
-      </ul>
-    </li>
-    <li><a href="#2-从安装nginx开始">2. 从安装Nginx开始</a>
-      <ul>
-        <li><a href="#21-安装nginx">2.1 安装Nginx</a></li>
-        <li><a href="#22-创建网站目录与权限">2.2 创建网站目录与权限</a></li>
-        <li><a href="#23-简单的实践index页面编写">2.3 简单的实践——index页面编写</a></li>
-        <li><a href="#24-将nginx与域名链接">2.4 将Nginx与域名链接</a></li>
-      </ul>
-    </li>
-    <li><a href="#3-配置动画主页">3. 配置动画主页</a>
-      <ul>
-        <li><a href="#31-获取配置模板">3.1 获取配置模板</a></li>
-      </ul>
-    </li>
-    <li><a href="#4-简单的blog页面和about页面">4. 简单的blog页面和about页面</a>
-      <ul>
-        <li><a href="#41-在服务器上新建目录">4.1 在服务器上新建目录</a></li>
-        <li><a href="#42-写入网页内容">4.2 写入网页内容</a>
-          <ul>
-            <li><a href="#aboutindexhtml">about/index.html</a></li>
-            <li><a href="#blogindexhtml">blog/index.html</a></li>
-          </ul>
-        </li>
-        <li><a href="#43-链接新页面到nginx">4.3 链接新页面到Nginx</a></li>
-      </ul>
-    </li>
-    <li><a href="#5-基于hugo框架开发blog页面">5. 基于Hugo框架开发blog页面</a>
-      <ul>
-        <li><a href="#51-安装hugo">5.1 安装Hugo</a></li>
-        <li><a href="#52-利用hugo安装主题以blowfish为例">5.2 利用Hugo安装主题（以Blowfish为例）</a></li>
-        <li><a href="#53-生成静态文件">5.3 生成静态文件</a></li>
-        <li><a href="#54-上传到服务器">5.4 上传到服务器</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-  </div>
-</details>
 
-
-
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const tocLinks = document.querySelectorAll('#TableOfContents a[href^="#"]');
+  
+  tocLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      
+      const targetId = this.getAttribute('href');
+      if (!targetId || targetId === '#') return;
+      
+      const targetElement = document.querySelector(targetId);
+      if (!targetElement) return;
+      
+      
+      targetElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+      
+      
+      history.replaceState(null, null, targetId);
+      
+      
+      setTimeout(() => {
+        window.dispatchEvent(new Event('hashchange'));
+      }, 100);
+    });
+  });
+});
+</script>
             
           </div>
         </div>

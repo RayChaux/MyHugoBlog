@@ -262,7 +262,7 @@
   
     
 
-<link rel="stylesheet" href="/blog/css/link-hover.min.9ce55fbf97693b10cdac94e13080f04c23459555e55b783d8fb3361a04f386b5.css">
+<link rel="stylesheet" href="/blog/css/link-hover.min.6b7a4d8d881fe6e2ff5b5f97e2388f1fab71e15170c64998a25ba8ddb4cd7514.css">
 
   
 
@@ -1066,7 +1066,9 @@ window.MathJax = {
         <div class="order-first lg:ml-auto px-0 lg:order-last lg:ps-8 lg:max-w-2xs">
           <div class="toc ps-5 print:hidden lg:sticky lg:top-[140px]">
             
-              <details
+              
+              
+<details
   open
   id="TOCView"
   class="toc-right mt-0 overflow-y-auto overscroll-contain scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600 rounded-lg -ms-5 ps-5 pe-2 hidden lg:block">
@@ -1106,46 +1108,39 @@ window.MathJax = {
 </nav>
   </div>
 </details>
-<details class="toc-inside mt-0 overflow-hidden rounded-lg -ms-5 ps-5 lg:hidden">
-  <summary
-    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
-    目录
-  </summary>
-  <div
-    class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
-    <nav id="TableOfContents">
-  <ul>
-    <li><a href="#学习资料">学习资料</a></li>
-    <li><a href="#基础操作">基础操作</a>
-      <ul>
-        <li><a href="#快捷键记录">快捷键记录</a>
-          <ul>
-            <li><a href="#主界面通用">主界面(通用)：</a></li>
-            <li><a href="#物体模式">物体模式</a></li>
-            <li><a href="#编辑模式">编辑模式：</a></li>
-          </ul>
-        </li>
-        <li><a href="#插件">插件</a></li>
-        <li><a href="#修改器">修改器</a></li>
-        <li><a href="#资产">资产</a></li>
-      </ul>
-    </li>
-    <li><a href="#基础物体">基础物体</a>
-      <ul>
-        <li>
-          <ul>
-            <li><a href="#曲线">曲线</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-  </div>
-</details>
 
-
-
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const tocLinks = document.querySelectorAll('#TableOfContents a[href^="#"]');
+  
+  tocLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      
+      const targetId = this.getAttribute('href');
+      if (!targetId || targetId === '#') return;
+      
+      const targetElement = document.querySelector(targetId);
+      if (!targetElement) return;
+      
+      
+      targetElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+      
+      
+      history.replaceState(null, null, targetId);
+      
+      
+      setTimeout(() => {
+        window.dispatchEvent(new Event('hashchange'));
+      }, 100);
+    });
+  });
+});
+</script>
             
           </div>
         </div>
@@ -1393,14 +1388,14 @@ window.MathJax = {
           
             <a
               class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/blog/posts/%E7%BD%91%E7%AB%99%E7%AE%A1%E7%90%86%E8%AE%B0%E5%BD%95/">
+              href="/blog/posts/transformer/">
               <span class="leading-6">
-                网站管理记录&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+                Transformer网络&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
               </span>
             </a>
             
               <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2025-12-11T17:02:54&#43;08:00">2025-12-11</time>
+                <time datetime="2025-12-05T17:02:54&#43;08:00">2025-12-05</time>
               </span>
             
           

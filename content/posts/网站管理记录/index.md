@@ -7,7 +7,7 @@ tags = ["网站建设"]
 
 ## 一、GitHub托管与编译上传
 ### 1.1 Github托管代码
-#### 1.1.1 在`blog`文件夹初始化git
+#### 1.1.1 初始化git
 ```bash
 # 设置git用户（全局）
 git config --global user.name "name"
@@ -95,7 +95,7 @@ ssh-keygen -t ed25519 -C "github-actions-deploy" -f deploy_key
 **② 把公钥放进 ECS（让 GitHub 能登录）**
 ```bash
 # 本地执行
-cat deploy_key.pub | ssh root@raychaux.space "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"
+cat deploy_key.pub | ssh root@yourdoamin.com "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"
 ```
 **③ 把私钥存进 GitHub Secrets**
 浏览器 → 仓库 → Settings → Secrets and variables → Actions → New repository secret  
@@ -107,9 +107,8 @@ cat deploy_key.pub | ssh root@raychaux.space "mkdir -p ~/.ssh && cat >> ~/.ssh/a
 | `SSH_USER`        | `root`                        |  
 
 除此之外，还需要修改Action的设置：  
-进入你的仓库 → Settings → Actions → General，最底部 "Workflow permissions" → 选择
-"Read and write permissions"
-✅ 同时勾选 "Allow GitHub Actions to create and approve pull requests"，点 Save保存。
+进入你的仓库 → Settings → Actions → General，最底部 "Workflow permissions" → 选择"Read and write permissions"  
+✅ 同时勾选 "Allow GitHub Actions to create and approve pull requests"，点 Save保存。  
 最后，将deploy.yml推送到Github，就可以完成第一次部署了
 ```bash
 git add .github/workflows/deploy.yml

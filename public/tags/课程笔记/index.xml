@@ -7,7 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>© 2025 RayChaux</copyright>
-    <lastBuildDate>Sat, 29 Nov 2025 17:02:54 +0800</lastBuildDate><atom:link href="http://localhost:1313/blog/tags/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 23 Dec 2025 15:28:07 +0800</lastBuildDate><atom:link href="http://localhost:1313/blog/tags/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>浅层神经网络</title>
+      <link>http://localhost:1313/blog/posts/%E6%B5%85%E5%B1%82%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</link>
+      <pubDate>Tue, 23 Dec 2025 15:28:07 +0800</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/%E6%B5%85%E5%B1%82%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Transformer网络</title>
+      <link>http://localhost:1313/blog/posts/transformer/</link>
+      <pubDate>Fri, 05 Dec 2025 17:02:54 +0800</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/transformer/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>卷积神经网络</title>
@@ -15,6 +35,16 @@
       <pubDate>Sat, 29 Nov 2025 17:02:54 +0800</pubDate>
       
       <guid>http://localhost:1313/blog/posts/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>人工神经网络(ANN)</title>
+      <link>http://localhost:1313/blog/posts/%E4%BA%BA%E5%B7%A5%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</link>
+      <pubDate>Sat, 29 Nov 2025 17:02:54 +0800</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/%E4%BA%BA%E5%B7%A5%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</guid>
       <description></description>
       
     </item>

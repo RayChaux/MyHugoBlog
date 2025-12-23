@@ -1,8 +1,8 @@
-/* ===== 悬停高亮 + 文字变色 ===== */
+/* ===== 悬停链接高亮 + 文字变色 ===== */
 a:hover {
   background-color: var(--link-hover-bg, rgba(80, 184, 72, 0.20));
   color: var(--link-hover-text, #2a7d2e);          /* 文字颜色（可调） */
-  border-radius: 4px;
+  border-radius: 5px;
   transition: all 0.2s ease;                    /* 背景+文字一起过渡 */
 }
 
@@ -33,7 +33,7 @@ a:hover {
 
 /* 暗黑模式下调淡背景、文字提亮 */
 /* =========  Blowfish 暗黑模式  ========= */
-body.dark a:hover {                /* 关键：body 带 .dark */
+.dark a:hover {                /* 关键：body 带 .dark */
   background-color: var(--link-hover-bg-dark, rgba(80, 184, 72, 0.20));
   color: var(--link-hover-text-dark, #7dd87a);
 }

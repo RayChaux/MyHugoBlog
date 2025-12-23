@@ -1,0 +1,48 @@
+<!-- layouts/partials/custom-toc.html -->
+<!-- 在layouts/_default/single.html中调用，取代原有目录 -->
+<details
+  open
+  id="TOCView"
+  class="toc-right mt-0 overflow-y-auto overscroll-contain scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600 rounded-lg -ms-5 ps-5 pe-2 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目录
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    {{ .TableOfContents | emojify }}
+  </div>
+</details>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const tocLinks = document.querySelectorAll('#TableOfContents a[href^="#"]');
+  
+  tocLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      
+      const targetId = this.getAttribute('href');
+      if (!targetId || targetId === '#') return;
+      
+      const targetElement = document.querySelector(targetId);
+      if (!targetElement) return;
+      
+      // 平滑滚动
+      targetElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+      
+      // 替换URL，不创建历史记录
+      history.replaceState(null, null, targetId);
+      
+      // 如果需要，可以手动触发hashchange事件来更新高亮
+      setTimeout(() => {
+        window.dispatchEvent(new Event('hashchange'));
+      }, 100);
+    });
+  });
+});
+</script>
