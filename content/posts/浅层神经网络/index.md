@@ -33,7 +33,7 @@ W_{j i}^{J I}(n+1)=W_{j i}^{J I}(n)-\eta_j\left(\frac{\partial E}{\partial W_{j 
 $$\begin{cases}
 -\frac{\partial E}{\partial W_{k j}^{K J}}=\left(d_k-O_k^K\right) f^{\prime}\left(n e t_k^K\right) \cdot O_j^J\\
 -\frac{\partial E}{\partial W_{j i}^{J I}}=\sum_{k=1}^K\left(d_k-O_k^K\right) f^{\prime}\left(n e t_k^K\right) W_{k j}^{K J} f^{\prime}\left(n e t_j^J\right) O_i^I
-\end{cases}$$
+\end{cases}$$  
 #### 1.2.2 BP算法的特点
 - 前馈式的：信号从前往后传播
 - 误差从后往前传播

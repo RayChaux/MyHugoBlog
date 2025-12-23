@@ -16,6 +16,35 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+  // 转义CSS选择器函数
+  function escapeSelector(selector) {
+    // 如果选择器以数字开头，需要转义
+    if (/^[0-9]/.test(selector)) {
+      // 转义规则：在数字前加上反斜杠和3位Unicode编码
+      return selector.replace(/^([0-9])/, '\\3$1 ');
+    }
+    return selector;
+  }
+  
+  // 安全的querySelector函数
+  function safeQuerySelector(selector) {
+    try {
+      // 尝试直接查询
+      const element = document.querySelector(selector);
+      if (element) return element;
+      
+      // 如果失败，尝试转义选择器
+      const escapedSelector = escapeSelector(selector);
+      return document.querySelector(escapedSelector);
+    } catch (error) {
+      console.warn('选择器查询失败:', selector, error);
+      
+      // 尝试通过其他方式查找
+      const id = selector.substring(1); // 去掉#
+      return document.getElementById(id);
+    }
+  }
+  
   const tocLinks = document.querySelectorAll('#TableOfContents a[href^="#"]');
   
   tocLinks.forEach(link => {
@@ -26,23 +55,73 @@ document.addEventListener('DOMContentLoaded', function() {
       const targetId = this.getAttribute('href');
       if (!targetId || targetId === '#') return;
       
-      const targetElement = document.querySelector(targetId);
-      if (!targetElement) return;
+      console.log('点击链接:', targetId);
       
-      // 平滑滚动
-      targetElement.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
+      // 方法1：使用安全的querySelector
+      let targetElement = safeQuerySelector(targetId);
       
-      // 替换URL，不创建历史记录
-      history.replaceState(null, null, targetId);
+      // 方法2：如果安全查询失败，尝试其他方式
+      if (!targetElement) {
+        const idWithoutHash = targetId.substring(1);
+        
+        // 尝试直接通过ID查找
+        targetElement = document.getElementById(idWithoutHash);
+        
+        // 方法3：使用属性选择器
+        if (!targetElement) {
+          targetElement = document.querySelector(`[id="${idWithoutHash}"]`);
+        }
+        
+        // 方法4：使用转义的选择器
+        if (!targetElement) {
+          try {
+            // CSS.escape 是标准方法，但需要检查浏览器支持
+            if (typeof CSS !== 'undefined' && CSS.escape) {
+              const escapedId = CSS.escape(idWithoutHash);
+              targetElement = document.querySelector(`#${escapedId}`);
+            }
+          } catch (e) {
+            console.warn('CSS.escape失败:', e);
+          }
+        }
+      }
       
-      // 如果需要，可以手动触发hashchange事件来更新高亮
-      setTimeout(() => {
-        window.dispatchEvent(new Event('hashchange'));
-      }, 100);
+      if (targetElement) {
+        console.log('找到目标元素:', targetElement.tagName, targetElement.id);
+        
+        // 平滑滚动
+        targetElement.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+        
+        // 替换URL，不创建历史记录
+        history.replaceState(null, null, targetId);
+        
+        // 手动触发hashchange事件来更新高亮
+        setTimeout(() => {
+          window.dispatchEvent(new Event('hashchange'));
+        }, 100);
+      } else {
+        console.warn('未找到目标元素，回退到默认行为:', targetId);
+        // 回退到默认行为，但使用replaceState
+        const newUrl = window.location.pathname + window.location.search + targetId;
+        history.replaceState(null, null, newUrl);
+        window.location.hash = targetId;
+      }
     });
   });
+  
+  // 如果页面加载时已经有hash，处理滚动
+  if (window.location.hash) {
+    setTimeout(() => {
+      const hash = window.location.hash;
+      const element = safeQuerySelector(hash) || 
+                      document.getElementById(hash.substring(1));
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 500);
+  }
 });
 </script>

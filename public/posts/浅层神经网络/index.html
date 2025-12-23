@@ -1072,6 +1072,7 @@ window.MathJax = {
             
               
               
+
 <details
   open
   id="TOCView"
@@ -1105,6 +1106,35 @@ window.MathJax = {
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+  
+  function escapeSelector(selector) {
+    
+    if (/^[0-9]/.test(selector)) {
+      
+      return selector.replace(/^([0-9])/, '\\3$1 ');
+    }
+    return selector;
+  }
+  
+  
+  function safeQuerySelector(selector) {
+    try {
+      
+      const element = document.querySelector(selector);
+      if (element) return element;
+      
+      
+      const escapedSelector = escapeSelector(selector);
+      return document.querySelector(escapedSelector);
+    } catch (error) {
+      console.warn('选择器查询失败:', selector, error);
+      
+      
+      const id = selector.substring(1); 
+      return document.getElementById(id);
+    }
+  }
+  
   const tocLinks = document.querySelectorAll('#TableOfContents a[href^="#"]');
   
   tocLinks.forEach(link => {
@@ -1115,24 +1145,74 @@ document.addEventListener('DOMContentLoaded', function() {
       const targetId = this.getAttribute('href');
       if (!targetId || targetId === '#') return;
       
-      const targetElement = document.querySelector(targetId);
-      if (!targetElement) return;
+      console.log('点击链接:', targetId);
       
       
-      targetElement.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
+      let targetElement = safeQuerySelector(targetId);
       
       
-      history.replaceState(null, null, targetId);
+      if (!targetElement) {
+        const idWithoutHash = targetId.substring(1);
+        
+        
+        targetElement = document.getElementById(idWithoutHash);
+        
+        
+        if (!targetElement) {
+          targetElement = document.querySelector(`[id="${idWithoutHash}"]`);
+        }
+        
+        
+        if (!targetElement) {
+          try {
+            
+            if (typeof CSS !== 'undefined' && CSS.escape) {
+              const escapedId = CSS.escape(idWithoutHash);
+              targetElement = document.querySelector(`#${escapedId}`);
+            }
+          } catch (e) {
+            console.warn('CSS.escape失败:', e);
+          }
+        }
+      }
       
-      
-      setTimeout(() => {
-        window.dispatchEvent(new Event('hashchange'));
-      }, 100);
+      if (targetElement) {
+        console.log('找到目标元素:', targetElement.tagName, targetElement.id);
+        
+        
+        targetElement.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+        
+        
+        history.replaceState(null, null, targetId);
+        
+        
+        setTimeout(() => {
+          window.dispatchEvent(new Event('hashchange'));
+        }, 100);
+      } else {
+        console.warn('未找到目标元素，回退到默认行为:', targetId);
+        
+        const newUrl = window.location.pathname + window.location.search + targetId;
+        history.replaceState(null, null, newUrl);
+        window.location.hash = targetId;
+      }
     });
   });
+  
+  
+  if (window.location.hash) {
+    setTimeout(() => {
+      const hash = window.location.hash;
+      const element = safeQuerySelector(hash) || 
+                      document.getElementById(hash.substring(1));
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 500);
+  }
 });
 </script>
             
