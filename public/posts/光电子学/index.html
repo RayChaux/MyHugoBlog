@@ -15,8 +15,8 @@
 
   
   
-    <title>光电子学 &middot; RayChaux&#39;s Blog</title>
-    <meta name="title" content="光电子学 &middot; RayChaux&#39;s Blog">
+    <title>光电子学：调制 &middot; RayChaux&#39;s Blog</title>
+    <meta name="title" content="光电子学：调制 &middot; RayChaux&#39;s Blog">
   
 
   
@@ -64,7 +64,7 @@
   
   <meta property="og:url" content="http://localhost:1313/blog/posts/%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6/">
   <meta property="og:site_name" content="RayChaux&#39;s Blog">
-  <meta property="og:title" content="光电子学">
+  <meta property="og:title" content="光电子学：调制">
   <meta property="og:description" content="Know yourself, know the world.">
   <meta property="og:locale" content="zh_cn">
   <meta property="og:type" content="article">
@@ -76,7 +76,7 @@
 
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="光电子学">
+  <meta name="twitter:title" content="光电子学：调制">
   <meta name="twitter:description" content="Know yourself, know the world.">
 
   
@@ -234,8 +234,8 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "文章列表",
-    "name": "光电子学",
-    "headline": "光电子学",
+    "name": "光电子学：调制",
+    "headline": "光电子学：调制",
     
     
     "inLanguage": "zh-cn",
@@ -253,7 +253,7 @@
     "keywords": ["课程总结","光学"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "667"
+    "wordCount": "2102"
   }]
   </script>
 
@@ -848,7 +848,7 @@ window.MathJax = {
   
   <li class="hidden">
     <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/blog/posts/%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6/"
-      >光电子学</a
+      >光电子学：调制</a
     ><span class="px-1 text-primary-500">/</span>
   </li>
 
@@ -857,7 +857,7 @@ window.MathJax = {
 
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        光电子学
+        光电子学：调制
       </h1>
       <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
         
@@ -911,7 +911,7 @@ window.MathJax = {
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-11-29T17:02:54&#43;08:00">2025-11-29</time><span class="px-2 text-primary-500">&middot;</span><span>667 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">2 分钟</span><span class="px-2 text-primary-500">&middot;</span><span class="mb-[2px]">
+      <time datetime="2025-11-29T17:02:54&#43;08:00">2025-11-29</time><span class="px-2 text-primary-500">&middot;</span><span>2102 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">5 分钟</span><span class="px-2 text-primary-500">&middot;</span><span class="mb-[2px]">
   <span
     id="zen-mode-button"
     class="text-lg hover:text-primary-500"
@@ -1085,9 +1085,19 @@ window.MathJax = {
     class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#电光调制">电光调制</a>
+    <li><a href="#一电光调制">一、电光调制</a>
       <ul>
-        <li><a href="#电光效应原理">电光效应原理</a></li>
+        <li><a href="#11-电光效应原理">1.1 电光效应原理</a>
+          <ul>
+            <li><a href="#111-理论推导">1.1.1 理论推导</a></li>
+            <li><a href="#112-一些晶体的例子">1.1.2 一些晶体的例子</a></li>
+          </ul>
+        </li>
+        <li><a href="#12-电光调制">1.2 电光调制</a>
+          <ul>
+            <li><a href="#121-四方晶系kdp晶体">1.2.1 四方晶系——KDP晶体</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
@@ -1217,26 +1227,37 @@ document.addEventListener('DOMContentLoaded', function() {
 
         <div class="article-content max-w-prose mb-20">
           
-<h2 class="relative group">电光调制
-    <div id="电光调制" class="anchor"></div>
+<h2 class="relative group">一、电光调制
+    <div id="一电光调制" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%94%b5%e5%85%89%e8%b0%83%e5%88%b6" aria-label="锚点">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%b8%80%e7%94%b5%e5%85%89%e8%b0%83%e5%88%b6" aria-label="锚点">#</a>
     </span>
     
 </h2>
 
-<h3 class="relative group">电光效应原理
-    <div id="电光效应原理" class="anchor"></div>
+<h3 class="relative group">1.1 电光效应原理
+    <div id="11-电光效应原理" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%94%b5%e5%85%89%e6%95%88%e5%ba%94%e5%8e%9f%e7%90%86" aria-label="锚点">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#11-%e7%94%b5%e5%85%89%e6%95%88%e5%ba%94%e5%8e%9f%e7%90%86" aria-label="锚点">#</a>
     </span>
     
 </h3>
-<p>麦克斯韦物质方程组有$D=\varepsilon E$，$D$实际上反映了光波在介质中的偏振方向，经过推导，有
+<p>如果在晶体中沿某一方向加一定电场E，则晶体的折射率n要发生相应的改变，因而晶体的双折射特性也要改变。</p>
+
+<h4 class="relative group">1.1.1 理论推导
+    <div id="111-理论推导" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#111-%e7%90%86%e8%ae%ba%e6%8e%a8%e5%af%bc" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<p>麦克斯韦物质方程组有电位移矢量$D=\varepsilon E$，$D$实际上反映了光波在介质中的偏振方向，经过推导，有
 </p>
 $$
 \begin{bmatrix}
@@ -1257,7 +1278,7 @@ E_z
 $$<p><br>
 在外加电场的情况下，介电张量可以以描述为：
 $\varepsilon(E_0)=\varepsilon+\Delta\varepsilon(E_0)$<br>
-其中，$\varepsilon$为无电场时的介电张量，为对角矩阵，是一个对称张量，有$\varepsilon_{ij}=\varepsilon_{ji}$和$\Delta\varepsilon_{ij}=\Delta\varepsilon_{ji}$
+其中，$\varepsilon$为无电场时的介电张量，为对角矩阵，是一个对称张量，有$\varepsilon_{ij}=\varepsilon_{ji}$和$\Delta\varepsilon_{ij}=\Delta\varepsilon_{ji}$.
 <figure><img
     class="my-0 rounded-md"
     loading="lazy"
@@ -1270,25 +1291,14 @@ $\varepsilon(E_0)=\varepsilon+\Delta\varepsilon(E_0)$<br>
     srcset="/blog/posts/%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6/image_hu_9511bc63d72da13a.png 800w, /blog/posts/%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6/image_hu_78cc9de88bd7cc21.png 1280w"
     sizes="(min-width: 768px) 50vw, 65vw"
     data-zoom-src="/blog/posts/%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6/image.png"></figure>
-
-折射率椭球的推导：
+</p>
+<!-- 折射率椭球的推导：
 晶体中光波的电磁能密度可以写为：
-$w_e=\frac{1}{2}E\cdot D=\frac{1}{2\varepsilon_0}(\frac{D^2_x}{\varepsilon_x}+\frac{D^2_y}{\varepsilon_y}+\frac{D^2_z}{\varepsilon_z})$<br>
-令$\eta=[\eta_{ij}]=(\frac{\varepsilon}{\varepsilon_0})^{-1}=\varepsilon_r^{-1}$，即，$\eta_{ij}$为相对介电常数$\varepsilon_{ij}$的倒数，使折射率椭球方程更简洁，有
-<figure><img
-    class="my-0 rounded-md"
-    loading="lazy"
-    decoding="async"
-    fetchpriority="auto"
-    alt="alt text"
-    width="1604"
-    height="143"
-    src="/blog/posts/%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6/image-1_hu_cc903e22662522ca.png"
-    srcset="/blog/posts/%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6/image-1_hu_cc903e22662522ca.png 800w, /blog/posts/%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6/image-1_hu_cc0b7c8e35fe9afc.png 1280w"
-    sizes="(min-width: 768px) 50vw, 65vw"
-    data-zoom-src="/blog/posts/%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6/image-1.png"></figure>
-
-电光效应一般是根据相对不渗透张量元素的变化来定义的<br>
+$w_e=\frac{1}{2}E\cdot D=\frac{1}{2\varepsilon_0}(\frac{D^2_x}{\varepsilon_x}+\frac{D^2_y}{\varepsilon_y}+\frac{D^2_z}{\varepsilon_z})$   -->
+<p>令$\eta=[\eta_{ij}]=(\frac{\varepsilon}{\varepsilon_0})^{-1}=\varepsilon_r^{-1}$，即，$\eta_{ij}$为相对介电常数$\varepsilon_{ij}$的倒数，使折射率椭球方程更简洁，得到
+</p>
+$$\eta_{ij}\to\sum_{i,j}x_i\eta_{ij}x_j=1\to\boxed{\eta_{11}x^2+\eta_{22}y^2+\eta_{33}z^2+2\eta_{23}yz+2\eta_{31}zx+2\eta_{12}xy=1}$$<p>
+晶体折射率可用电场E的幂级数来表示，<del>电光效应一般是根据相对不渗透张量元素的变化来定义的</del>。<br>
 <figure><img
     class="my-0 rounded-md"
     loading="lazy"
@@ -1303,6 +1313,20 @@ $w_e=\frac{1}{2}E\cdot D=\frac{1}{2\varepsilon_0}(\frac{D^2_x}{\varepsilon_x}+\f
     data-zoom-src="/blog/posts/%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6/image-3.png"></figure>
 
 其中，$\eta_{ij}=\eta_{ij}(0)$，为与电场无关项，$r_{ijk}$为与电场相关的一阶项（Pockels因子），$s_{ijkl}$为二阶项（Kerr因子）。<br>
+Pockels因子在中心对称材料中不存在，Kerr因子在所有材料中都存在，证明如下：
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="alt text"
+    width="1500"
+    height="425"
+    src="/blog/posts/%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6/image-7_hu_7abd91273ad3b982.png"
+    srcset="/blog/posts/%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6/image-7_hu_7abd91273ad3b982.png 800w, /blog/posts/%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6/image-7_hu_a0426467ec39582b.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/blog/posts/%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6/image-7.png"></figure>
+
 根据$\varepsilon$的对称性质，有$\eta_{ij}=\eta_{ji}$和$\Delta\eta_{ij}=\Delta\eta_{ji}$，将$ij$根据下面的对应关系简化为单个参数$\alpha$，得到简化后的表达式。
 <figure><img
     class="my-0 rounded-md"
@@ -1358,7 +1382,150 @@ $w_e=\frac{1}{2}E\cdot D=\frac{1}{2\varepsilon_0}(\frac{D^2_x}{\varepsilon_x}+\f
     srcset="/blog/posts/%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6/image-6_hu_a0b864efc82b7491.png 800w, /blog/posts/%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6/image-6_hu_cdf45a34e4b45e70.png 1280w"
     sizes="(min-width: 768px) 50vw, 65vw"
     data-zoom-src="/blog/posts/%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6/image-6.png"></figure>
+
+对坐标进行旋转变换得到新的主轴，用$\hat{X},\hat{Y},\hat{Z}$表示旋转后的主轴坐标，旋转后的折射率椭球为：$\frac{X^2}{{n_X}^2}+\frac{Y^2}{{n_Y}^2}+\frac{Z^2}{{n_Z}^2}=1$，其中，$n_X,n_Y,n_Z$为旋转后的主折射率。<br>
+旋转变换得到新坐标系的过程实际上是将$\eta_{ij}$矩阵对角化的过程，这个过程可以用求解特征值来解决。<br>
 </p>
+$$\begin{gathered}\eta_{ij}=\begin{bmatrix}\eta_{11}&\eta_{12}&\eta_{13}\\\eta_{21}&\eta_{22}&\eta_{23}\\\eta_{31}&\eta_{32}&\eta_{33}\end{bmatrix}=\begin{bmatrix}1/n_x^2+r_{1k}E_{0k}&r_{6k}E_{0k}&r_{5k}E_{0k}\\r_{6k}E_{0k}&1/n_y^2+r_{2k}E_{0k}&r_{4k}E_{0k}\\r_{5k}E_{0k}&r_{4k}E_{0k}&1/n_z^2+r_{3k}E_{0k}\end{bmatrix}\end{gathered}$$<p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="alt text"
+    width="1342"
+    height="212"
+    src="/blog/posts/%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6/image-8_hu_d87b5258f1d63f83.png"
+    srcset="/blog/posts/%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6/image-8_hu_d87b5258f1d63f83.png 800w, /blog/posts/%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6/image-8_hu_73e267d6de69d0a7.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/blog/posts/%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6/image-8.png"></figure>
+
+有Pockels因子$r_{ijk}=r_{jkl}=r_{\alpha k}$，得到
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="alt text"
+    width="1503"
+    height="531"
+    src="/blog/posts/%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6/image-9_hu_e15384eca2cd6b9b.png"
+    srcset="/blog/posts/%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6/image-9_hu_e15384eca2cd6b9b.png 800w, /blog/posts/%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6/image-9_hu_a7b0da6de814d414.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/blog/posts/%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6/image-9.png"></figure>
+
+说明Pockels因子只有18个独立的参数，实际中，由于晶体的对称性，矩阵中非零独立元素的数量会减少。</p>
+
+<h4 class="relative group">1.1.2 一些晶体的例子
+    <div id="112-一些晶体的例子" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#112-%e4%b8%80%e4%ba%9b%e6%99%b6%e4%bd%93%e7%9a%84%e4%be%8b%e5%ad%90" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<!-- 1. 立方晶体
+   各向同性：$n_x=n_y=n_z=n_o,X=Y=Z$
+   Pockels因子只有三个非零独立元素：
+   ![alt text](image-10.png)
+2. 四方晶体
+   如KDP晶体，
+3. 三方晶体
+   Pockels因子有8个非零独立元素：
+   ![alt text](image-11.png) -->
+
+<h3 class="relative group">1.2 电光调制
+    <div id="12-电光调制" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#12-%e7%94%b5%e5%85%89%e8%b0%83%e5%88%b6" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+
+<h4 class="relative group">1.2.1 四方晶系——KDP晶体
+    <div id="121-四方晶系kdp晶体" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#121-%e5%9b%9b%e6%96%b9%e6%99%b6%e7%b3%bbkdp%e6%99%b6%e4%bd%93" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<p>对于KDP晶体，$n_x=n_y=n_o,n_z=n_e$<br>
+</p>
+$$\begin{pmatrix}0&0&0\\0&0&0\\0&0&0\\r_{41}&0&0\\0&r_{41}&0\\0&0&r_{63}\end{pmatrix}\longrightarrow\begin{aligned}&\begin{pmatrix}\Delta\eta_1\\\Delta\eta_2\\\Delta\eta_3\\\Delta\eta_4\\\Delta\eta_5\\\Delta\eta_6\end{pmatrix}=\begin{pmatrix}0&0&0\\0&0&0\\0&0&0\\r_{41}&0&0\\0&r_{41}&0\\0&0&r_{63}\end{pmatrix}\begin{pmatrix}E_{0x}\\E_{0y}\\E_{0z}\end{pmatrix}\end{aligned}$$<p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="alt text"
+    width="1489"
+    height="429"
+    src="/blog/posts/%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6/image-12_hu_2231e865386bb979.png"
+    srcset="/blog/posts/%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6/image-12_hu_2231e865386bb979.png 800w, /blog/posts/%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6/image-12_hu_1837cad8279bfb80.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/blog/posts/%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6/image-12.png"></figure>
+</p>
+<p>在实际使用中，调制电场只有一个方向不为0，即$E_{0x},E_{0y},E_{0z}$只有一个值不为0。在此情况下，输入光波有两种调制方式，纵向调制（光波沿着与调制场平行的方向传播）和横向调制（光波沿着与调制场垂直的方向传播）。<br>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="alt text"
+    width="1426"
+    height="501"
+    src="/blog/posts/%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6/image-14_hu_fc1e1a84806bb9b6.png"
+    srcset="/blog/posts/%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6/image-14_hu_fc1e1a84806bb9b6.png 800w, /blog/posts/%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6/image-14_hu_d07dc4a93827ca29.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/blog/posts/%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6/image-14.png"></figure>
+
+当电场沿着光轴（z轴）方向施加时，$E_{0x}=E_{0y}=0$，折射率椭球变为<br>
+</p>
+$$\frac{x^{2}}{n_{o}^{2}}+\frac{y^{2}}{n_{o}^{2}}+\frac{z^{2}}{n_{e}^{2}}+2r_{63}E_{0z}xy=1$$<p>上式中，乘积项不包含z，说明变换后的$\hat{Z}$仍为原来的z轴，仅有$\hat{X},\hat{Y}$由原来的x,y旋转变换得到。<br>
+定义</p>
+$$\begin{array}{ll}x=X\cos\theta-Y\sin\theta&X=x\cos\theta+y\sin\theta\\y=X\sin\theta+Y\cos\theta&Y=-x\sin\theta+y\cos\theta\end{array}$$<p><br>
+带入折射率椭球，有<br>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="alt text"
+    width="1461"
+    height="326"
+    src="/blog/posts/%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6/image-13_hu_f5fe4c001bce2d22.png"
+    srcset="/blog/posts/%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6/image-13_hu_f5fe4c001bce2d22.png 800w, /blog/posts/%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6/image-13_hu_ab1412cd01ef23ee.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/blog/posts/%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6/image-13.png"></figure>
+
+由$cos2\theta=0$，得到$\theta=45^\circ$，即xy平面上，新的$\hat{X},\hat{Y}$由原来的xy坐标轴旋转45°得到，带入$\theta $得到折射率椭球方程<br>
+</p>
+$$\left(\frac{1}{n_o^2}+r_{63}E_{0z}\right)X^2+\left(\frac{1}{n_o^2}-r_{63}E_{0z}\right)Y^2+\frac{Z^2}{n_e^2}=1$$<p>
+以及变换关系<br>
+</p>
+$$\begin{cases}&\hat{X}=\frac{1}{\sqrt{2}}\left(\hat{x}+\hat{y}\right)\\&\hat{Y}=\frac{1}{\sqrt{2}}\left(-\hat{x}+\hat{y}\right)\\&\hat{Z}=\hat{z}&\end{cases},\begin{cases}&\frac{1}{n_{X}^{2}}=\frac{1}{n_{o}^{2}}+r_{63}E_{0z}\\&\frac{1}{n_{Y}^{2}}=\frac{1}{n_{o}^{2}}-r_{63}E_{0z}\\&\frac{1}{n_{Z}^{2}}=\frac{1}{n_{e}^{2}}\end{cases}\rightarrow\begin{cases}&n_X=n_o\left(1+n_o^2r_{63}E_{0z}\right)^{-1/2}\\&n_Y=n_o\left(1-n_o^2r_{63}E_{0z}\right)^{-1/2}\\&n_{Z}=n_{e}\end{cases}$$<p>
+根据近似关系$r_{63}\approx10^{-11}m\cdot V^{-1}\quad\longrightarrow\quad n_o^2r_{63}E_{0z}&laquo;1$,有<br>
+</p>
+$$\begin{cases}&n_X\approx n_o-\frac{1}{2}n_o^3r_{63}E_{0z}\\&n_Y\approx n_o+\frac{1}{2}n_o^3r_{63}E_{0z}\\&n_Z=n_e\end{cases}$$<p>
+KDP晶体沿z轴加电场时，由单轴晶体变成双轴晶体，折射率椭球的主轴绕z轴旋转了45°，称为感应主轴，此转角与外加电场的大小无关，其折射率变化与电场成正比，这是利用电光效应实现光调制、调Q、锁模等技术的物理基础。
+<strong>横向调制</strong></p>
+<div style="text-align: center; overflow: hidden;">
+    <img src="image-1.png" style="width: 35%; margin: 0 1%; float: left;" alt="图片1说明">
+    <img src="image-15.png" style="width: 40%; margin: 0 1%; float: left;" alt="图片2说明">
+</div>
+$$\Delta n=n_Y-n_X=\left(n_o+\frac{1}{2}n_o^3r_{63}E_{0z}\right)-\left(n_o-\frac{1}{2}n_o^3r_{63}E_{0z}\right)=n_o^3r_{63}E_{0z}=n_o^3r_{63}\frac{V}{l}$$<p>
+相移：$\varphi=\frac{2\pi}{\lambda}\Delta nl=\frac{2\pi}{\lambda}n_o^3r_{63}E_{0z}l=\frac{2\pi}{\lambda}n_o^3r_{63}V$，
+令$\phi=\pi$，得到半波电压$V_\pi=\frac{\lambda}{2n_o^3r_{63}}$。
+<strong>横向调制</strong>
+</p>
+$$\Delta n=n_Y-n_Z=\left(n_o+\frac{1}{2}n_o^3r_{63}E_{0z}\right)-n_e=\left(n_o-n_e\right)+\frac{1}{2}n_o^3r_{63}E_{0z}$$<p>
+相移：$\varphi=\frac{2\pi}{\lambda}\Delta nl=\frac{2\pi}{\lambda}(n_o-n_e)l+\frac{\pi}{\lambda}n_o^3r_{63}V\frac{l}{d}$，
+令$\phi=\pi$，得到半波电压$V_\pi=\frac{\lambda}{n_o^3r_{63}}\cdot\frac{d}{l}$。</p>
 
           
           
@@ -1367,7 +1534,7 @@ $w_e=\frac{1}{2}E\cdot D=\frac{1}{2\varepsilon_0}(\frac{D^2_x}{\varepsilon_x}+\f
               <a
                 target="_blank"
                 class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-                href="mailto:?subject=Reply%20to%20%e5%85%89%e7%94%b5%e5%ad%90%e5%ad%a6">
+                href="mailto:?subject=Reply%20to%20%e5%85%89%e7%94%b5%e5%ad%90%e5%ad%a6%ef%bc%9a%e8%b0%83%e5%88%b6">
                 通过邮件回复
               </a>
             </strong>

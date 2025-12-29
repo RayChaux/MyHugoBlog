@@ -253,7 +253,7 @@
     "keywords": ["课程笔记","神经网络"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "567"
+    "wordCount": "772"
   }]
   </script>
 
@@ -911,7 +911,7 @@ window.MathJax = {
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-12-23T15:28:07&#43;08:00">2025-12-23</time><span class="px-2 text-primary-500">&middot;</span><span>567 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">2 分钟</span><span class="px-2 text-primary-500">&middot;</span><span class="mb-[2px]">
+      <time datetime="2025-12-23T15:28:07&#43;08:00">2025-12-23</time><span class="px-2 text-primary-500">&middot;</span><span>772 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">2 分钟</span><span class="px-2 text-primary-500">&middot;</span><span class="mb-[2px]">
   <span
     id="zen-mode-button"
     class="text-lg hover:text-primary-500"
@@ -1090,7 +1090,7 @@ window.MathJax = {
         <li><a href="#11-单层感知机的问题">1.1 单层感知机的问题</a></li>
         <li><a href="#12-基本bp算法">1.2 基本BP算法</a>
           <ul>
-            <li><a href="#121-推导过程">1.2.1 推导过程</a></li>
+            <li><a href="#121-权值确定方法">1.2.1 权值确定方法</a></li>
             <li><a href="#122-bp算法的特点">1.2.2 BP算法的特点</a></li>
           </ul>
         </li>
@@ -1266,12 +1266,12 @@ MLP引入了隐藏层，和非线性激活函数，被证明具有通用逼近�
     
 </h3>
 
-<h4 class="relative group">1.2.1 推导过程
-    <div id="121-推导过程" class="anchor"></div>
+<h4 class="relative group">1.2.1 权值确定方法
+    <div id="121-权值确定方法" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#121-%e6%8e%a8%e5%af%bc%e8%bf%87%e7%a8%8b" aria-label="锚点">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#121-%e6%9d%83%e5%80%bc%e7%a1%ae%e5%ae%9a%e6%96%b9%e6%b3%95" aria-label="锚点">#</a>
     </span>
     
 </h4>
@@ -1279,8 +1279,11 @@ MLP引入了隐藏层，和非线性激活函数，被证明具有通用逼近�
 有网络输出为：$o_k^K=f(net_k^K)$；
 累加器输出为：$net_k^K=\sum\limits_{j=1}^{J}W_{kj}^{KJ}\cdot+o_j^J+b_k^K$<br>
 定义损失函数：$E=\frac{1}{2} \sum\limits_{k=1}^K\left(d_k-o_k^K\right)^2$<br>
-其中，$d_k$为输出层第k个神经元的期望输出，$o_k^K$为该神经元的实际输出。<br>
-后一个神经元与前一个神经元权值的关系如下，难点在于求出其中的微分项。<br>
+其中，$d_k$为输出层第k个神经元的期望输出，$o_k^K$为该神经元的实际输出。</p>
+<div style="text-align: center; overflow: hidden;">
+    <img src="单个神经元.png" style="width: 50%; margin: 0 1%; float: middle;" alt="图片1说明">
+</div>
+<p>后一个神经元与前一个神经元权值的关系如下，难点在于求出其中的微分项。<br>
 </p>
 $$\begin{cases}
 W_{k j}^{K J}(n+1)=W_{k j}^{K J}(n)-\eta_k\left(\frac{\partial E}{\partial W_{k j}^{K J}}\right) \\
@@ -1291,7 +1294,13 @@ W_{j i}^{J I}(n+1)=W_{j i}^{J I}(n)-\eta_j\left(\frac{\partial E}{\partial W_{j 
 $$\begin{cases}
 -\frac{\partial E}{\partial W_{k j}^{K J}}=\left(d_k-O_k^K\right) f^{\prime}\left(n e t_k^K\right) \cdot O_j^J\\
 -\frac{\partial E}{\partial W_{j i}^{J I}}=\sum_{k=1}^K\left(d_k-O_k^K\right) f^{\prime}\left(n e t_k^K\right) W_{k j}^{K J} f^{\prime}\left(n e t_j^J\right) O_i^I
-\end{cases}$$
+\end{cases}$$<p><br>
+两式对照可得，本层误差信号 = 下一层误差信号累加和 * 本层激励函数的导数。<br>
+定义输出层第k个神经元的误差信号：$\delta_k=-\frac{\partial E}{\partial n e t_k^K}=\left(d_k-O_k^K\right)f^{\prime}\left(n e t_k^K\right)$<br>
+隐含层第j个神经元的误差信号为：$\delta_j=-\frac{\partial E}{\partial n e t_j^J}$<br>
+将$\delta_k$带入$-\frac{\partial E}{\partial W_{k j}^{K J}}$，再带入$W_{k j}^{K J}(n+1)$，得到<br>
+</p>
+$$\begin{aligned} & W_{k j}^{K J}(n+1)=W_{k j}^{K J}(n)+\eta_k \cdot\delta_k O_j^J \\ & k=1,2 \cdots K ; j=1,2 \cdots J\end{aligned}$$
 <h4 class="relative group">1.2.2 BP算法的特点
     <div id="122-bp算法的特点" class="anchor"></div>
     
@@ -1405,6 +1414,19 @@ $$\begin{cases}
           
         </span>
         <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/blog/posts/%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6%E5%85%89%E6%B3%A2%E5%AF%BC/">
+              <span class="leading-6">
+                光电子学：光波导&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2025-12-28T10:48:45&#43;08:00">2025-12-28</time>
+              </span>
+            
           
         </span>
       </div>
