@@ -1,0 +1,3307 @@
+<!doctype html>
+<html
+  lang="zh-cn"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="true"><head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="zh-cn">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>光电子学：第一二章 &middot; RayChaux&#39;s Blog</title>
+    <meta name="title" content="光电子学：第一二章 &middot; RayChaux&#39;s Blog">
+  
+
+  
+  
+    <meta name="description" content="Know yourself, know the world.">
+  
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/blog/posts/%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6%E7%AC%AC%E4%B8%80%E4%BA%8C%E7%AB%A0/">
+  
+
+  
+  
+    <meta name="author" content="RayChaux">
+  
+  
+    
+      
+        
+          <link href="https://github.com/RayChaux" rel="me">
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <link href="https://raychaux.space/" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://steamcommunity.com/profiles/76561199038867003/" rel="me">
+        
+      
+    
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/blog/posts/%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6%E7%AC%AC%E4%B8%80%E4%BA%8C%E7%AB%A0/">
+  <meta property="og:site_name" content="RayChaux&#39;s Blog">
+  <meta property="og:title" content="光电子学：第一二章">
+  <meta property="og:description" content="Know yourself, know the world.">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-01-18T12:13:44+08:00">
+    <meta property="article:modified_time" content="2026-01-18T12:13:44+08:00">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="光电子学：第一二章">
+  <meta name="twitter:description" content="Know yourself, know the world.">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/blog/css/main.bundle.min.7c241eb9c6591dc987968955c157d0e12acda913011b7024e0416827d5a03b66027ab605b37f6690db6935cbb83393138cdebb37d0f64b8cfaca2fcc4fb7318b.css"
+    integrity="sha512-fCQeucZZHcmHlolVwVfQ4SrNqRMBG3Ak4EFoJ9WgO2YCerYFs39mkNtpNcu4M5MTjN67N9D2S4z6yi/MT7cxiw==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/blog/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+    
+    <script
+      type="text/javascript"
+      src="/blog/js/zen-mode.min.9814dee9614d32aeb56239d118edfe20acd6231424f9b19c2dd48835038414130a5e946c0d1c9087d60e60e31840c9babfd217e3d4b95643dc8d651a71ccdf4a.js"
+      integrity="sha512-mBTe6WFNMq61YjnRGO3&#43;IKzWIxQk&#43;bGcLdSINQOEFBMKXpRsDRyQh9YOYOMYQMm6v9IX49S5VkPcjWUacczfSg=="></script>
+  
+  
+    
+    <script src="/blog/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/blog/js/main.bundle.min.9cc802d09f28c6af56ceee7bc6e320a39251fdae98243f2a9942f221ac57a9f49c51609699a91794a7b2580ee1deaa8e4d794a68ffa94aa317c66e893ce51e02.js"
+      integrity="sha512-nMgC0J8oxq9Wzu57xuMgo5JR/a6YJD8qmULyIaxXqfScUWCWmakXlKeyWA7h3qqOTXlKaP&#43;pSqMXxm6JPOUeAg=="
+      data-copy="复制"
+      data-copied="已复制"></script>
+  
+
+  
+  
+
+<script src="/blog/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj&#43;KsslFkCOt3TvJrX2AV/Gc3wOqA=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/blog/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/blog/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/blog/favicon-16x16.png">
+    <link rel="manifest" href="/blog/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "文章列表",
+    "name": "光电子学：第一二章",
+    "headline": "光电子学：第一二章",
+    
+    
+    "inLanguage": "zh-cn",
+    "url" : "http://localhost:1313/blog/posts/%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6%E7%AC%AC%E4%B8%80%E4%BA%8C%E7%AB%A0/",
+    "author" : {
+      "@type": "Person",
+      "name": "RayChaux"
+    },
+    "copyrightYear": "2026",
+    "dateCreated": "2026-01-18T12:13:44\u002b08:00",
+    "datePublished": "2026-01-18T12:13:44\u002b08:00",
+    
+    "dateModified": "2026-01-18T12:13:44\u002b08:00",
+    
+    
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "20206"
+  }]
+  </script>
+
+
+
+  
+  
+
+  
+  
+    
+
+<link rel="stylesheet" href="/blog/css/link-hover.min.6b7a4d8d881fe6e2ff5b5f97e2388f1fab71e15170c64998a25ba8ddb4cd7514.css">
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+  
+  <script>
+window.MathJax = {
+  tex: {
+    inlineMath:  [['$', '$']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true
+  },
+  svg:  { fontCache: 'global' },
+  options: {
+    renderActions: {
+       
+      addInlineClass:  [155, (doc) => {
+        for (const math of doc.math) {
+          if (math.display === false) {
+            math.typesetRoot.classList.add('math-inline');
+          }
+        }
+      }],
+       
+      addDisplayClass: [155, (doc) => {
+        for (const math of doc.math) {
+          if (math.display === true) {
+            math.typesetRoot.classList.add('math-display');
+          }
+        }
+      }]
+    }
+  }
+};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  
+  <link rel="stylesheet" href="/blog/css/custom.min.css">
+  
+</head>
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+
+
+
+  
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        跳过正文
+      </a>
+    </div>
+    
+    
+      <div class="min-h-[148px]"></div>
+<div class="fixed inset-x-0 z-100">
+  <div
+    id="menu-blur"
+    class="absolute opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl shadow-2xl"></div>
+  <div class="relative m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div
+  class="main-menu flex items-center justify-between py-6 md:justify-start gap-x-3 pt-[2px] pr-2 md:pr-4 pb-[3px] pl-0">
+  
+  
+    
+    
+      <div>
+        <a href="/blog/" class="flex">
+          <span class="sr-only">RayChaux&rsquo;s Blog</span>
+          
+            <img
+              src="/blog/img/logo.gif"
+              width="24"
+              height="24"
+              class="logo max-h-[5rem] max-w-[5rem] object-scale-down object-left nozoom"
+              alt="">
+          
+        </a>
+      </div>
+    
+
+  <div class="flex flex-1 items-center justify-between">
+    <nav class="flex space-x-3">
+      
+        <a href="/blog/" class="text-base font-medium">
+          RayChaux&rsquo;s Blog
+        </a>
+      
+    </nav>
+    
+  <nav class="hidden md:flex items-center gap-x-5 md:ml-12 h-12">
+    
+      
+        
+  <a
+  href="https://raychaux.space/blog/"
+  target="_blank"
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="首页"
+  title="">
+  
+  
+    <p class="text-base font-medium">
+      首页
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <a
+  href="/blog/posts/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="文章"
+  title="文章列表">
+  
+  
+    <p class="text-base font-medium">
+      文章
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <a
+  href="/blog/tags/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="标签"
+  title="文章标签">
+  
+  
+    <p class="text-base font-medium">
+      标签
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <a
+  href="/blog/friends/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="友链"
+  title="朋友们">
+  
+  
+    <p class="text-base font-medium">
+      友链
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <a
+  href="https://raychaux.space/gallery/"
+  target="_blank"
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="图床"
+  title="">
+  
+  
+    <p class="text-base font-medium">
+      图床
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <a
+  href="/blog/about/"
+  
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="关于"
+  title="">
+  
+  
+    <p class="text-base font-medium">
+      关于
+    </p>
+  
+</a>
+
+
+
+      
+        
+  <a
+  href="https://github.com/RayChaux/MyHugoBlog"
+  target="_blank"
+  class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+  aria-label="github"
+  title="">
+  
+    <span >
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span>
+    </span>
+  
+  
+</a>
+
+
+
+      
+    
+
+    
+
+    
+
+    
+      <button
+        id="search-button"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="搜索 (/)">
+        <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      </button>
+    
+
+    
+      <div class=" flex items-center">
+        <button
+          id="appearance-switcher"
+          aria-label="Dark mode switcher"
+          type="button"
+          class="text-base hover:text-primary-600 dark:hover:text-primary-400">
+          <div class="flex items-center justify-center dark:hidden">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+          </div>
+          <div class="items-center justify-center hidden dark:flex">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+          </div>
+        </button>
+      </div>
+    
+  </nav>
+
+    
+  <div class="flex md:hidden items-center gap-x-5 md:ml-12 h-12">
+    <span></span>
+
+    
+
+    
+
+    
+      <button
+        id="search-button-mobile"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="搜索 (/)">
+        <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      </button>
+    
+
+    
+      <button
+        id="appearance-switcher-mobile"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400 me-1">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    
+  </div>
+
+  </div>
+  
+  <div class="-my-2 md:hidden">
+    <div id="menu-button" class="block">
+      
+        <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+        </div>
+        <div
+          id="menu-wrapper"
+          class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50 pt-[5px]">
+          <ul
+            class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none text-end max-w-7xl">
+            <li id="menu-close-button">
+              <span
+                class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
+                <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+              </span>
+            </li>
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="https://raychaux.space/blog/"
+    
+      target="_blank"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="首页"
+    title="">
+    
+    
+      <p class="text-bg font-bg">
+        首页
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/blog/posts/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="文章"
+    title="文章列表">
+    
+    
+      <p class="text-bg font-bg">
+        文章
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/blog/tags/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="标签"
+    title="文章标签">
+    
+    
+      <p class="text-bg font-bg">
+        标签
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/blog/friends/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="友链"
+    title="朋友们">
+    
+    
+      <p class="text-bg font-bg">
+        友链
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="https://raychaux.space/gallery/"
+    
+      target="_blank"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="图床"
+    title="">
+    
+    
+      <p class="text-bg font-bg">
+        图床
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/blog/about/"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="关于"
+    title="">
+    
+    
+      <p class="text-bg font-bg">
+        关于
+      </p>
+    
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="https://github.com/RayChaux/MyHugoBlog"
+    
+      target="_blank"
+    
+    class="flex items-center hover:text-primary-600 dark:hover:text-primary-400"
+    aria-label="github"
+    title="">
+    
+      <div >
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span>
+      </div>
+    
+    
+  </a>
+</li>
+
+
+
+            
+
+          </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+
+  <script>
+    (function () {
+      var $mainmenu = $(".main-menu");
+      var path = window.location.pathname;
+      $mainmenu.find('a[href="' + path + '"]').each(function (i, e) {
+        $(e).children("p").addClass("active");
+      });
+    })();
+  </script>
+
+
+  </div>
+</div>
+
+
+<script
+  type="text/javascript"
+  src="/blog/js/background-blur.min.00a57c73ea12f2cab2980c3c3d649e89f6d82f190f74bbe2b67f2f5e39ab7d032ece47086400ca05396758aace13299da49aca43ea643d2625e62c506267a169.js"
+  integrity="sha512-AKV8c&#43;oS8sqymAw8PWSeifbYLxkPdLvitn8vXjmrfQMuzkcIZADKBTlnWKrOEymdpJrKQ&#43;pkPSYl5ixQYmehaQ=="
+  data-blur-id="menu-blur"></script>
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+        <ol class="text-sm text-neutral-500 dark:text-neutral-400 print:hidden">
+  
+  
+    
+  
+    
+  
+  <li class="hidden">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/blog/"
+      ></a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="inline">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/blog/posts/"
+      >文章列表</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="hidden">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/blog/posts/%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6%E7%AC%AC%E4%B8%80%E4%BA%8C%E7%AB%A0/"
+      >光电子学：第一二章</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+</ol>
+
+
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        光电子学：第一二章
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2026-01-18T12:13:44&#43;08:00">2026-01-18</time><span class="px-2 text-primary-500">&middot;</span><span>20206 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">41 分钟</span><span class="px-2 text-primary-500">&middot;</span><span class="mb-[2px]">
+  <span
+    id="zen-mode-button"
+    class="text-lg hover:text-primary-500"
+    title="启用阅读模式"
+    data-title-i18n-disable="启用阅读模式"
+    data-title-i18n-enable="停用阅读模式">
+    <span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px" height="50px">
+    <path fill="currentColor" d="M 12.980469 4 C 9.1204688 4 5.9804688 7.14 5.9804688 11 L 6 26 L 9.9804688 26 L 9.9804688 11 C 9.9804688 9.35 11.320469 8 12.980469 8 L 40.019531 8 C 41.679531 8 43.019531 9.35 43.019531 11 L 43.019531 39 C 43.019531 40.65 41.679531 42 40.019531 42 L 29 42 C 29 43.54 28.420938 44.94 27.460938 46 L 40.019531 46 C 43.879531 46 47.019531 42.86 47.019531 39 L 47.019531 11 C 47.019531 7.14 43.879531 4 40.019531 4 L 12.980469 4 z M 7 28 C 4.794 28 3 29.794 3 32 L 3 42 C 3 44.206 4.794 46 7 46 L 23 46 C 25.206 46 27 44.206 27 42 L 27 32 C 27 29.794 25.206 28 23 28 L 7 28 z M 7 32 L 23 32 L 23.001953 42 L 7 42 L 7 32 z"/>
+</svg></span></span>
+  </span>
+</span>
+
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+    
+    
+      
+    
+    
+      
+      
+      
+        
+        
+        
+      
+      <img
+        class="!mt-0 !mb-0 h-24 w-24 rounded-full me-4"
+        width="96"
+        height="96"
+        alt="RayChaux"
+        src="/blog/img/logo_hu_fcf97e6556b0a795.gif"
+        data-zoom-src="/blog/img/logo_hu_4496b1bb67cb6d22.gif">
+    
+  
+  <div class="place-self-center">
+    
+      <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+        作者
+      </div>
+      <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+        RayChaux
+      </div>
+    
+    
+    <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://github.com/RayChaux"
+          target="_blank"
+          aria-label="Github"
+          title="Github"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span></span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="mailto:raychaux@163.com"
+          target="_blank"
+          aria-label="Email"
+          title="Email"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M207.8 20.73c-93.45 18.32-168.7 93.66-187 187.1c-27.64 140.9 68.65 266.2 199.1 285.1c19.01 2.888 36.17-12.26 36.17-31.49l.0001-.6631c0-15.74-11.44-28.88-26.84-31.24c-84.35-12.98-149.2-86.13-149.2-174.2c0-102.9 88.61-185.5 193.4-175.4c91.54 8.869 158.6 91.25 158.6 183.2l0 16.16c0 22.09-17.94 40.05-40 40.05s-40.01-17.96-40.01-40.05v-120.1c0-8.847-7.161-16.02-16.01-16.02l-31.98 .0036c-7.299 0-13.2 4.992-15.12 11.68c-24.85-12.15-54.24-16.38-86.06-5.106c-38.75 13.73-68.12 48.91-73.72 89.64c-9.483 69.01 43.81 128 110.9 128c26.44 0 50.43-9.544 69.59-24.88c24 31.3 65.23 48.69 109.4 37.49C465.2 369.3 496 324.1 495.1 277.2V256.3C495.1 107.1 361.2-9.332 207.8 20.73zM239.1 304.3c-26.47 0-48-21.56-48-48.05s21.53-48.05 48-48.05s48 21.56 48 48.05S266.5 304.3 239.1 304.3z"/></svg>
+</span></span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://raychaux.space/"
+          target="_blank"
+          aria-label="Link"
+          title="Link"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M172.5 131.1C228.1 75.51 320.5 75.51 376.1 131.1C426.1 181.1 433.5 260.8 392.4 318.3L391.3 319.9C381 334.2 361 337.6 346.7 327.3C332.3 317 328.9 297 339.2 282.7L340.3 281.1C363.2 249 359.6 205.1 331.7 177.2C300.3 145.8 249.2 145.8 217.7 177.2L105.5 289.5C73.99 320.1 73.99 372 105.5 403.5C133.3 431.4 177.3 435 209.3 412.1L210.9 410.1C225.3 400.7 245.3 404 255.5 418.4C265.8 432.8 262.5 452.8 248.1 463.1L246.5 464.2C188.1 505.3 110.2 498.7 60.21 448.8C3.741 392.3 3.741 300.7 60.21 244.3L172.5 131.1zM467.5 380C411 436.5 319.5 436.5 263 380C213 330 206.5 251.2 247.6 193.7L248.7 192.1C258.1 177.8 278.1 174.4 293.3 184.7C307.7 194.1 311.1 214.1 300.8 229.3L299.7 230.9C276.8 262.1 280.4 306.9 308.3 334.8C339.7 366.2 390.8 366.2 422.3 334.8L534.5 222.5C566 191 566 139.1 534.5 108.5C506.7 80.63 462.7 76.99 430.7 99.9L429.1 101C414.7 111.3 394.7 107.1 384.5 93.58C374.2 79.2 377.5 59.21 391.9 48.94L393.5 47.82C451 6.731 529.8 13.25 579.8 63.24C636.3 119.7 636.3 211.3 579.8 267.7L467.5 380z"/></svg>
+</span></span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://steamcommunity.com/profiles/76561199038867003/"
+          target="_blank"
+          aria-label="Steam"
+          title="Steam"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M496 256c0 137-111.2 248-248.4 248-113.8 0-209.6-76.3-239-180.4l95.2 39.3c6.4 32.1 34.9 56.4 68.9 56.4 39.2 0 71.9-32.4 70.2-73.5l84.5-60.2c52.1 1.3 95.8-40.9 95.8-93.5 0-51.6-42-93.5-93.7-93.5s-93.7 42-93.7 93.5v1.2L176.6 279c-15.5-.9-30.7 3.4-43.5 12.1L0 236.1C10.2 108.4 117.1 8 247.6 8 384.8 8 496 119 496 256zM155.7 384.3l-30.5-12.6a52.79 52.79 0 0 0 27.2 25.8c26.9 11.2 57.8-1.6 69-28.4 5.4-13 5.5-27.3.1-40.3-5.4-13-15.5-23.2-28.5-28.6-12.9-5.4-26.7-5.2-38.9-.6l31.5 13c19.8 8.2 29.2 30.9 20.9 50.7-8.3 19.9-31 29.2-50.8 21zm173.8-129.9c-34.4 0-62.4-28-62.4-62.3s28-62.3 62.4-62.3 62.4 28 62.4 62.3-27.9 62.3-62.4 62.3zm.1-15.6c25.9 0 46.9-21 46.9-46.8 0-25.9-21-46.8-46.9-46.8s-46.9 21-46.9 46.8c.1 25.8 21.1 46.8 46.9 46.8z"/></svg>
+</span></span></a
+        >
+      
+    
+  </div>
+
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+        <div class="order-first lg:ml-auto px-0 lg:order-last lg:ps-8 lg:max-w-2xs">
+          <div class="toc ps-5 print:hidden lg:sticky lg:top-[140px]">
+            
+              
+              
+
+<details
+  open
+  id="TOCView"
+  class="toc-right mt-0 overflow-y-auto overscroll-contain scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600 rounded-lg -ms-5 ps-5 pe-2 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目录
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#11-电磁相互作用简介">1.1 电磁相互作用简介</a>
+      <ul>
+        <li><a href="#111-四大基本相互作用">1.1.1 四大基本相互作用</a></li>
+        <li><a href="#112-电磁相互作用的普遍性">1.1.2 电磁相互作用的普遍性</a></li>
+      </ul>
+    </li>
+    <li><a href="#12-麦克斯韦方程组与电磁统一">1.2 麦克斯韦方程组与电磁统一</a>
+      <ul>
+        <li><a href="#121-麦克斯韦方程组的形式">1.2.1 麦克斯韦方程组的形式</a></li>
+        <li><a href="#122-各定律核心解释">1.2.2 各定律核心解释</a></li>
+        <li><a href="#123-位移电流的引入原因">1.2.3 位移电流的引入原因</a></li>
+        <li><a href="#124-麦克斯韦方程组的意义">1.2.4 麦克斯韦方程组的意义</a></li>
+        <li><a href="#125-磁单极子与超材料">1.2.5 磁单极子与超材料</a></li>
+      </ul>
+    </li>
+    <li><a href="#13-电磁场的能量和动量密度">1.3 电磁场的能量和动量密度</a>
+      <ul>
+        <li><a href="#131-能量密度与坡印廷矢量">1.3.1 能量密度与坡印廷矢量</a></li>
+        <li><a href="#132-色散介质中的有效能量密度">1.3.2 色散介质中的有效能量密度</a></li>
+        <li><a href="#133-电磁场的动量">1.3.3 电磁场的动量</a></li>
+        <li><a href="#134-电磁场的质量">1.3.4 电磁场的质量</a></li>
+      </ul>
+    </li>
+    <li><a href="#14-色散与群速度">1.4 色散与群速度</a>
+      <ul>
+        <li><a href="#141-色散的分类与本质">1.4.1 色散的分类与本质</a></li>
+        <li><a href="#142-群速度与相速度">1.4.2 群速度与相速度</a></li>
+        <li><a href="#143-群速度色散gvd">1.4.3 群速度色散（GVD）</a></li>
+        <li><a href="#144-群速度的特殊情况">1.4.4 群速度的特殊情况</a></li>
+      </ul>
+    </li>
+    <li><a href="#15-空间色散与光束扩展">1.5 空间色散与光束扩展</a>
+      <ul>
+        <li><a href="#151-空间色散的本质">1.5.1 空间色散的本质</a></li>
+        <li><a href="#152-光束的角谱表示">1.5.2 光束的角谱表示</a></li>
+        <li><a href="#153-光束扩展的原因">1.5.3 光束扩展的原因</a></li>
+        <li><a href="#154-显微镜分辨率的极限阿贝极限">1.5.4 显微镜分辨率的极限（阿贝极限）</a></li>
+        <li><a href="#155-特殊现象与应用">1.5.5 特殊现象与应用</a></li>
+      </ul>
+    </li>
+    <li><a href="#16-费马原理反射与折射">1.6 费马原理、反射与折射</a>
+      <ul>
+        <li><a href="#161-费马原理的形式">1.6.1 费马原理的形式</a></li>
+        <li><a href="#162-斯涅尔定律折射定律">1.6.2 斯涅尔定律（折射定律）</a></li>
+        <li><a href="#163-惠更斯原理">1.6.3 惠更斯原理</a></li>
+        <li><a href="#164-广义斯涅尔定律超表面应用">1.6.4 广义斯涅尔定律（超表面应用）</a></li>
+      </ul>
+    </li>
+    <li><a href="#17-电磁场的偏振">1.7 电磁场的偏振</a>
+      <ul>
+        <li><a href="#171-偏振的定义">1.7.1 偏振的定义</a></li>
+        <li><a href="#172-偏振的数学描述">1.7.2 偏振的数学描述</a></li>
+        <li><a href="#173-偏振的表示方法">1.7.3 偏振的表示方法</a></li>
+        <li><a href="#174-布儒斯特角brewster-angle">1.7.4 布儒斯特角（Brewster Angle）</a></li>
+      </ul>
+    </li>
+    <li><a href="#18-旋量与潘查拉特纳姆相位">1.8 旋量与潘查拉特纳姆相位</a>
+      <ul>
+        <li><a href="#181-旋量spinors的数学描述">1.8.1 旋量（Spinors）的数学描述</a></li>
+        <li><a href="#182-潘查拉特纳姆相位pancharatnam-phase">1.8.2 潘查拉特纳姆相位（Pancharatnam Phase）</a></li>
+        <li><a href="#183-旋量与偏振的关联">1.8.3 旋量与偏振的关联</a></li>
+      </ul>
+    </li>
+    <li><a href="#19-平行输运及应用">1.9 平行输运及应用</a>
+      <ul>
+        <li><a href="#191-列维-奇维塔平行输运levi-civita-parallel-transport">1.9.1 列维-奇维塔平行输运（Levi-Civita Parallel Transport）</a></li>
+        <li><a href="#192-应用实例">1.9.2 应用实例</a></li>
+        <li><a href="#193-高斯-博内-陈定理gauss-bonnet-chern-theorem">1.9.3 高斯-博内-陈定理（Gauss-Bonnet-Chern Theorem）</a></li>
+      </ul>
+    </li>
+    <li><a href="#110-原始麦克斯韦方程组及拓展">1.10 原始麦克斯韦方程组及拓展</a>
+      <ul>
+        <li><a href="#1101-原始麦克斯韦方程组麦克斯韦最初形式">1.10.1 原始麦克斯韦方程组（麦克斯韦最初形式）</a></li>
+        <li><a href="#1102-势函数的物理意义">1.10.2 势函数的物理意义</a></li>
+        <li><a href="#1103-洛伦兹力与协变形式">1.10.3 洛伦兹力与协变形式</a></li>
+        <li><a href="#1104-电磁场的几何化">1.10.4 电磁场的几何化</a></li>
+      </ul>
+    </li>
+    <li><a href="#111-电磁波的波粒二象性">1.11 电磁波的波粒二象性</a>
+      <ul>
+        <li><a href="#1111-波粒二象性的核心">1.11.1 波粒二象性的核心</a></li>
+        <li><a href="#1112-量子力学解释">1.11.2 量子力学解释</a></li>
+        <li><a href="#1113-关键结论">1.11.3 关键结论</a></li>
+      </ul>
+    </li>
+    <li><a href="#期末复习题">期末复习题</a>
+      <ul>
+        <li><a href="#一简答题">一、简答题</a></li>
+        <li><a href="#二计算题">二、计算题</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#21-光学谐振腔简介">2.1 光学谐振腔简介</a>
+      <ul>
+        <li><a href="#211-谐振腔的基本条件">2.1.1 谐振腔的基本条件</a></li>
+        <li><a href="#212-谐振腔的关键参数">2.1.2 谐振腔的关键参数</a></li>
+        <li><a href="#213-波导与谐振腔的关联">2.1.3 波导与谐振腔的关联</a></li>
+      </ul>
+    </li>
+    <li><a href="#22-法布里-珀罗谐振腔f-p腔">2.2 法布里-珀罗谐振腔（F-P腔）</a>
+      <ul>
+        <li><a href="#221-结构与工作原理">2.2.1 结构与工作原理</a></li>
+        <li><a href="#222-透射与反射特性">2.2.2 透射与反射特性</a></li>
+        <li><a href="#223-腔内场与群延迟">2.2.3 腔内场与群延迟</a></li>
+      </ul>
+    </li>
+    <li><a href="#23-光学谐振腔的损耗">2.3 光学谐振腔的损耗</a>
+      <ul>
+        <li><a href="#231-损耗机制">2.3.1 损耗机制</a></li>
+        <li><a href="#232-腔的寿命与线宽">2.3.2 腔的寿命与线宽</a></li>
+        <li><a href="#233-相干完美吸收cpa">2.3.3 相干完美吸收（CPA）</a></li>
+      </ul>
+    </li>
+    <li><a href="#24-多腔谐振腔">2.4 多腔谐振腔</a>
+      <ul>
+        <li><a href="#241-多层膜与增透膜">2.4.1 多层膜与增透膜</a></li>
+        <li><a href="#242-布拉格反射器bragg-grating">2.4.2 布拉格反射器（Bragg Grating）</a></li>
+        <li><a href="#243-光子晶体与安德森局域化">2.4.3 光子晶体与安德森局域化</a></li>
+      </ul>
+    </li>
+    <li><a href="#25-粒子散射基础">2.5 粒子散射基础</a>
+      <ul>
+        <li><a href="#251-散射的基本概念">2.5.1 散射的基本概念</a></li>
+        <li><a href="#252-关键物理量">2.5.2 关键物理量</a></li>
+        <li><a href="#253-光学定理">2.5.3 光学定理</a></li>
+      </ul>
+    </li>
+    <li><a href="#26-米氏理论球形粒子散射">2.6 米氏理论：球形粒子散射</a>
+      <ul>
+        <li><a href="#261-米氏理论的适用范围">2.6.1 米氏理论的适用范围</a></li>
+        <li><a href="#262-场的展开与散射矩阵">2.6.2 场的展开与散射矩阵</a></li>
+        <li><a href="#263-关键结论与特殊情况">2.6.3 关键结论与特殊情况</a></li>
+      </ul>
+    </li>
+    <li><a href="#27-金属粒子谐振的几何化">2.7 金属粒子谐振的几何化</a>
+      <ul>
+        <li><a href="#271-金属的介电特性">2.7.1 金属的介电特性</a></li>
+        <li><a href="#272-玻尔条件的几何诠释">2.7.2 玻尔条件的几何诠释</a></li>
+        <li><a href="#273-谐振频率的尺寸依赖">2.7.3 谐振频率的尺寸依赖</a></li>
+      </ul>
+    </li>
+    <li><a href="#28-弛豫全反射relaxed-tir">2.8 弛豫全反射（Relaxed TIR）</a>
+      <ul>
+        <li><a href="#281-基本原理">2.8.1 基本原理</a></li>
+        <li><a href="#282-应用场景">2.8.2 应用场景</a></li>
+      </ul>
+    </li>
+    <li><a href="#期末复习题简答计算">期末复习题（简答+计算）</a>
+      <ul>
+        <li><a href="#一简答题-1">一、简答题</a></li>
+        <li><a href="#二计算题-1">二、计算题</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  
+  function escapeSelector(selector) {
+    
+    if (/^[0-9]/.test(selector)) {
+      
+      return selector.replace(/^([0-9])/, '\\3$1 ');
+    }
+    return selector;
+  }
+  
+  
+  function safeQuerySelector(selector) {
+    try {
+      
+      const element = document.querySelector(selector);
+      if (element) return element;
+      
+      
+      const escapedSelector = escapeSelector(selector);
+      return document.querySelector(escapedSelector);
+    } catch (error) {
+      console.warn('选择器查询失败:', selector, error);
+      
+      
+      const id = selector.substring(1); 
+      return document.getElementById(id);
+    }
+  }
+  
+  const tocLinks = document.querySelectorAll('#TableOfContents a[href^="#"]');
+  
+  tocLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      
+      const targetId = this.getAttribute('href');
+      if (!targetId || targetId === '#') return;
+      
+      console.log('点击链接:', targetId);
+      
+      
+      let targetElement = safeQuerySelector(targetId);
+      
+      
+      if (!targetElement) {
+        const idWithoutHash = targetId.substring(1);
+        
+        
+        targetElement = document.getElementById(idWithoutHash);
+        
+        
+        if (!targetElement) {
+          targetElement = document.querySelector(`[id="${idWithoutHash}"]`);
+        }
+        
+        
+        if (!targetElement) {
+          try {
+            
+            if (typeof CSS !== 'undefined' && CSS.escape) {
+              const escapedId = CSS.escape(idWithoutHash);
+              targetElement = document.querySelector(`#${escapedId}`);
+            }
+          } catch (e) {
+            console.warn('CSS.escape失败:', e);
+          }
+        }
+      }
+      
+      if (targetElement) {
+        console.log('找到目标元素:', targetElement.tagName, targetElement.id);
+        
+        
+        targetElement.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+        
+        
+        history.replaceState(null, null, targetId);
+        
+        
+        setTimeout(() => {
+          window.dispatchEvent(new Event('hashchange'));
+        }, 100);
+      } else {
+        console.warn('未找到目标元素，回退到默认行为:', targetId);
+        
+        const newUrl = window.location.pathname + window.location.search + targetId;
+        history.replaceState(null, null, newUrl);
+        window.location.hash = targetId;
+      }
+    });
+  });
+  
+  
+  if (window.location.hash) {
+    setTimeout(() => {
+      const hash = window.location.hash;
+      const element = safeQuerySelector(hash) || 
+                      document.getElementById(hash.substring(1));
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 500);
+  }
+});
+</script>
+            
+          </div>
+        </div>
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          
+<h1 class="relative group">第1章 电磁理论及拓展
+    <div id="第1章-电磁理论及拓展" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%ac%ac1%e7%ab%a0-%e7%94%b5%e7%a3%81%e7%90%86%e8%ae%ba%e5%8f%8a%e6%8b%93%e5%b1%95" aria-label="锚点">#</a>
+    </span>
+    
+</h1>
+
+<h2 class="relative group">1.1 电磁相互作用简介
+    <div id="11-电磁相互作用简介" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#11-%e7%94%b5%e7%a3%81%e7%9b%b8%e4%ba%92%e4%bd%9c%e7%94%a8%e7%ae%80%e4%bb%8b" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">1.1.1 四大基本相互作用
+    <div id="111-四大基本相互作用" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#111-%e5%9b%9b%e5%a4%a7%e5%9f%ba%e6%9c%ac%e7%9b%b8%e4%ba%92%e4%bd%9c%e7%94%a8" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>自然界存在四大基本相互作用，电磁相互作用是其中之一，广泛存在于宇宙中（如电子运动、光子传播等）：</p>
+<ul>
+<li>引力相互作用</li>
+<li>电磁相互作用</li>
+<li>弱核相互作用（β衰变相关）</li>
+<li>强核相互作用</li>
+</ul>
+
+<h3 class="relative group">1.1.2 电磁相互作用的普遍性
+    <div id="112-电磁相互作用的普遍性" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#112-%e7%94%b5%e7%a3%81%e7%9b%b8%e4%ba%92%e4%bd%9c%e7%94%a8%e7%9a%84%e6%99%ae%e9%81%8d%e6%80%a7" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>电磁相互作用贯穿于微观（电子、光子相互作用）和宏观（电磁波传播、电磁设备工作）场景，是光电子学的核心相互作用基础。</p>
+
+<h2 class="relative group">1.2 麦克斯韦方程组与电磁统一
+    <div id="12-麦克斯韦方程组与电磁统一" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#12-%e9%ba%a6%e5%85%8b%e6%96%af%e9%9f%a6%e6%96%b9%e7%a8%8b%e7%bb%84%e4%b8%8e%e7%94%b5%e7%a3%81%e7%bb%9f%e4%b8%80" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">1.2.1 麦克斯韦方程组的形式
+    <div id="121-麦克斯韦方程组的形式" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#121-%e9%ba%a6%e5%85%8b%e6%96%af%e9%9f%a6%e6%96%b9%e7%a8%8b%e7%bb%84%e7%9a%84%e5%bd%a2%e5%bc%8f" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<table>
+  <thead>
+      <tr>
+          <th>名称</th>
+          <th>积分形式</th>
+          <th>微分形式</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>高斯定律（电场）</td>
+          <td>$\iint_{\partial \Omega} \vec{D} \cdot d\vec{S} = \iiint_{\Omega} \rho_f dV$</td>
+          <td>$\nabla \cdot \vec{D} = \rho_f$</td>
+      </tr>
+      <tr>
+          <td>高斯定律（磁场）</td>
+          <td>$\iint_{\partial \Omega} \vec{B} \cdot d\vec{S} = 0$</td>
+          <td>$\nabla \cdot \vec{B} = 0$</td>
+      </tr>
+      <tr>
+          <td>法拉第电磁感应定律</td>
+          <td>$\oint_{\partial \Sigma} \vec{E} \cdot d\vec{\ell} = -\frac{d}{dt} \iint_{\Sigma} \vec{B} \cdot d\vec{S}$</td>
+          <td>$\nabla \times \vec{E} = -\frac{\partial \vec{B}}{\partial t}$</td>
+      </tr>
+      <tr>
+          <td>安培-麦克斯韦定律</td>
+          <td>$\oint_{\partial \Sigma} \vec{H} \cdot d\vec{\ell} = \iint_{\Sigma} \vec{J}_f \cdot d\vec{S} + \frac{d}{dt} \iint_{\Sigma} \vec{D} \cdot d\vec{S}$</td>
+          <td>$\nabla \times \vec{H} = \vec{J}_f + \frac{\partial \vec{D}}{\partial t}$</td>
+      </tr>
+  </tbody>
+</table>
+
+<h3 class="relative group">1.2.2 各定律核心解释
+    <div id="122-各定律核心解释" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#122-%e5%90%84%e5%ae%9a%e5%be%8b%e6%a0%b8%e5%bf%83%e8%a7%a3%e9%87%8a" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ol>
+<li><strong>高斯定律（电场）</strong>：电场通量与闭合曲面内的自由电荷成正比，源于库仑定律：$|\vec{E}| = \frac{1}{4\pi\varepsilon_0} \frac{|q|}{r^2}$（点电荷电场强度公式）。</li>
+<li><strong>高斯定律（磁场）</strong>：磁场通量始终为零，表明磁场是无源场（无磁单极子），满足$\vec{B} = \nabla \times \vec{A}$（$\vec{A}$为矢量势）。</li>
+<li><strong>法拉第电磁感应定律</strong>：变化的磁场产生电场，电场的旋度等于磁感应强度的时间变化率的负值，反映磁生电的规律。</li>
+<li><strong>安培-麦克斯韦定律</strong>：磁场的旋度由传导电流和位移电流共同产生，位移电流$\vec{J}_D = \frac{\partial \vec{D}}{\partial t}$是麦克斯韦的关键补充。</li>
+</ol>
+
+<h3 class="relative group">1.2.3 位移电流的引入原因
+    <div id="123-位移电流的引入原因" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#123-%e4%bd%8d%e7%a7%bb%e7%94%b5%e6%b5%81%e7%9a%84%e5%bc%95%e5%85%a5%e5%8e%9f%e5%9b%a0" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>核心矛盾：无位移时，$\nabla \cdot \vec{J} = \nabla \cdot (\nabla \times \vec{H}) = 0$，结合电荷守恒$\nabla \cdot \vec{J} + \frac{\partial \rho}{\partial t} = 0$，会推出$\frac{\partial \rho}{\partial t} = 0$（无电荷积累），与实际矛盾（如电容器充电时极板电荷积累）。</li>
+<li>实例：电容器充电时，极板间无传导电流，但存在电场变化$\frac{\partial \vec{D}}{\partial t}$，位移电流$I_D = \frac{dQ}{dt} = S \varepsilon_0 \frac{\partial D}{\partial t}$（$S$为极板面积），保证电流连续性。</li>
+</ul>
+
+<h3 class="relative group">1.2.4 麦克斯韦方程组的意义
+    <div id="124-麦克斯韦方程组的意义" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#124-%e9%ba%a6%e5%85%8b%e6%96%af%e9%9f%a6%e6%96%b9%e7%a8%8b%e7%bb%84%e7%9a%84%e6%84%8f%e4%b9%89" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>统一电场和磁场，证明变化的电场产生磁场、变化的磁场产生电场，预言电磁波的存在。</li>
+<li>真空中电磁波速度：$v = c = \frac{1}{\sqrt{\mu_0 \varepsilon_0}} = 299792458 , \text{m/s}$（光速）。</li>
+</ul>
+
+<h3 class="relative group">1.2.5 磁单极子与超材料
+    <div id="125-磁单极子与超材料" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#125-%e7%a3%81%e5%8d%95%e6%9e%81%e5%ad%90%e4%b8%8e%e8%b6%85%e6%9d%90%e6%96%99" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>磁单极子：目前未实验证实，若存在，麦克斯韦方程组需修正（见下表）。
+<table>
+  <thead>
+      <tr>
+          <th>无磁单极子</th>
+          <th>有磁单极子（韦伯规范）</th>
+          <th>有磁单极子（安培-米规范）</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>$\nabla \cdot \vec{B} = 0$</td>
+          <td>$\nabla \cdot \vec{B} = \rho_m$</td>
+          <td>$\nabla \cdot \vec{B} = \mu_0 \rho_m$</td>
+      </tr>
+      <tr>
+          <td>$-\nabla \times \vec{E} = \frac{\partial \vec{B}}{\partial t}$</td>
+          <td>$-\nabla \times \vec{E} = \frac{\partial \vec{B}}{\partial t} + \vec{J}_m$</td>
+          <td>$-\nabla \times \vec{E} = \frac{\partial \vec{B}}{\partial t} + \mu_0 \vec{J}_m$</td>
+      </tr>
+      <tr>
+          <td>$\vec{F} = q_e (\vec{E} + \vec{v} \times \vec{B})$</td>
+          <td>$\vec{F} = q_e (\vec{E} + \vec{v} \times \vec{B}) + \frac{q_m}{\mu_0} (\vec{B} - \vec{v} \times \frac{\vec{E}}{c^2})$</td>
+          <td>$\vec{F} = q_e (\vec{E} + \vec{v} \times \vec{B}) + q_m (\vec{B} - \vec{v} \times \frac{\vec{E}}{c^2})$</td>
+      </tr>
+  </tbody>
+</table>
+</li>
+<li>超材料：人工设计的具有特殊电磁特性（如负折射率）的材料，由John Pendry等学者研究，可实现负折射、完美透镜等特殊功能。</li>
+</ul>
+
+<h2 class="relative group">1.3 电磁场的能量和动量密度
+    <div id="13-电磁场的能量和动量密度" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#13-%e7%94%b5%e7%a3%81%e5%9c%ba%e7%9a%84%e8%83%bd%e9%87%8f%e5%92%8c%e5%8a%a8%e9%87%8f%e5%af%86%e5%ba%a6" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">1.3.1 能量密度与坡印廷矢量
+    <div id="131-能量密度与坡印廷矢量" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#131-%e8%83%bd%e9%87%8f%e5%af%86%e5%ba%a6%e4%b8%8e%e5%9d%a1%e5%8d%b0%e5%bb%b7%e7%9f%a2%e9%87%8f" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ol>
+<li><strong>能量密度$U$</strong>：电磁场单位体积内的能量，定义为：
+$$U = \frac{1}{2} (\vec{E} \cdot \vec{D} + \vec{B} \cdot \vec{H})$$</li>
+<li><strong>坡印廷矢量$\vec{S}$</strong>：描述电磁场的能量流动速率，即能流密度：
+$$\vec{S} = \vec{E} \times \vec{H}$$</li>
+<li><strong>能量守恒关系</strong>：无传导电流（$\vec{J}=0$）时，$\frac{\partial U}{\partial t} + \nabla \cdot \vec{S} = 0$，表明能量在体积内的变化率等于能流的净流入率。</li>
+</ol>
+
+<h3 class="relative group">1.3.2 色散介质中的有效能量密度
+    <div id="132-色散介质中的有效能量密度" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#132-%e8%89%b2%e6%95%a3%e4%bb%8b%e8%b4%a8%e4%b8%ad%e7%9a%84%e6%9c%89%e6%95%88%e8%83%bd%e9%87%8f%e5%af%86%e5%ba%a6" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>海森堡不确定性原理：不存在单色波（$\Delta \omega \neq 0$），电场需用傅里叶变换表示：$\vec{D}(x,t) = \int_{-\infty}^{\infty} \tilde{D}(x,\omega) e^{-i\omega t} d\omega$。</li>
+<li>有效能量密度：
+$$u_{\text{eff}} = \frac{1}{2} \text{Re}\left[ \frac{d(\omega \varepsilon)}{d\omega}(\omega_0) |\tilde{D}(x,\omega_0)|^2 + \frac{d(\omega \mu)}{d\omega}(\omega_0) |\tilde{H}(x,\omega_0)|^2 \right]$$
+其中$\frac{d(\omega \varepsilon)}{d\omega}(\omega_0) = \varepsilon(\omega_0) + \omega_0 \frac{d\varepsilon}{d\omega}(\omega_0)$，体现色散对能量密度的影响。</li>
+</ul>
+
+<h3 class="relative group">1.3.3 电磁场的动量
+    <div id="133-电磁场的动量" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#133-%e7%94%b5%e7%a3%81%e5%9c%ba%e7%9a%84%e5%8a%a8%e9%87%8f" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ol>
+<li><strong>动量密度$\vec{g}$</strong>：单位体积电磁场的动量，与坡印廷矢量的关系：
+$$\vec{g} = \frac{1}{c^2} \vec{S} = \mu_0 \varepsilon_0 \vec{E} \times \vec{H}$$</li>
+<li><strong>实例应用</strong>：
+<ul>
+<li>光压：电磁波携带动量，照射物体时产生压力。</li>
+<li>光学牵引力：特殊结构下，光可对物体产生拉力（如$n_1 &lt; n_2 &lt; n_3$的介质结构）。</li>
+</ul>
+</li>
+</ol>
+
+<h3 class="relative group">1.3.4 电磁场的质量
+    <div id="134-电磁场的质量" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#134-%e7%94%b5%e7%a3%81%e5%9c%ba%e7%9a%84%e8%b4%a8%e9%87%8f" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>由相对论质能方程$E = mc^2$，电磁场总能量$E = \iiint U d^3 r$，对应等效质量$m = \frac{E}{c^2}$，表明电磁场具有惯性质量。</li>
+</ul>
+
+<h2 class="relative group">1.4 色散与群速度
+    <div id="14-色散与群速度" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#14-%e8%89%b2%e6%95%a3%e4%b8%8e%e7%be%a4%e9%80%9f%e5%ba%a6" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">1.4.1 色散的分类与本质
+    <div id="141-色散的分类与本质" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#141-%e8%89%b2%e6%95%a3%e7%9a%84%e5%88%86%e7%b1%bb%e4%b8%8e%e6%9c%ac%e8%b4%a8" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>色散：电磁波的传播速度与频率相关的现象，本质是介质的介电常数$\varepsilon(\omega)$、磁导率$\mu(\omega)$随频率变化。</li>
+<li>分类：
+<ul>
+<li>色度色散：频率导致的速度差异（本章核心）。</li>
+<li>空间色散：波矢$\vec{k}$导致的速度差异（1.5节）。</li>
+</ul>
+</li>
+</ul>
+
+<h3 class="relative group">1.4.2 群速度与相速度
+    <div id="142-群速度与相速度" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#142-%e7%be%a4%e9%80%9f%e5%ba%a6%e4%b8%8e%e7%9b%b8%e9%80%9f%e5%ba%a6" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ol>
+<li><strong>相速度$v_p$</strong>：单色波等相位面的传播速度，$v_p = \frac{\omega}{k}$。</li>
+<li><strong>群速度$v_g$</strong>：复色波包（信号）的传播速度，即能量传播速度，定义为：
+$$v_g = \left( \frac{d\omega}{dk} \right)_{\omega = \omega_0}$$</li>
+<li><strong>推导基础</strong>：
+<ul>
+<li>两列近频平面波叠加：$U(z,t) = 2A \cos\left[ \frac{1}{2}(\Delta \omega t - \Delta k z) \right] e^{-i(\omega_0 t - k_0 z)}$，包络的传播速度为$\frac{\Delta \omega}{\Delta k}$，极限情况下为$v_g$。</li>
+<li>多列波叠加：通过傅里叶变换和$k(\omega)$的泰勒展开（$k(\omega) = k_0 + k&rsquo;(\omega_0)(\omega - \omega_0) + \frac{1}{2}k&rsquo;&rsquo;(\omega_0)(\omega - \omega_0)^2$），得到包络$A(z,t) = A_0(t - k&rsquo;(\omega_0) z)$，验证$v_g = \frac{1}{k&rsquo;(\omega_0)}$。</li>
+</ul>
+</li>
+</ol>
+
+<h3 class="relative group">1.4.3 群速度色散（GVD）
+    <div id="143-群速度色散gvd" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#143-%e7%be%a4%e9%80%9f%e5%ba%a6%e8%89%b2%e6%95%a3gvd" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>定义：群速度随频率的变化，由$k(\omega)$的二阶导数描述：$D = -\frac{2\pi c}{\lambda^2} k&rsquo;&rsquo;(\omega_0)$。</li>
+<li>影响：导致脉冲展宽（如光纤中信号畸变），初始高斯脉冲$A(0,t) = e^{-at^2}$，传播后脉冲宽度随$z$增加。</li>
+</ul>
+
+<h3 class="relative group">1.4.4 群速度的特殊情况
+    <div id="144-群速度的特殊情况" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#144-%e7%be%a4%e9%80%9f%e5%ba%a6%e7%9a%84%e7%89%b9%e6%ae%8a%e6%83%85%e5%86%b5" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>$v_g &lt; c$：正常色散介质（如常规光纤）。</li>
+<li>$v_g &gt; c$：反常色散介质（如某些超材料），不违背相对论（能量速度$v_e \leq c$）。</li>
+<li>$v_g &lt; 0$：负群速度，波包传播方向与相速度相反。</li>
+<li>能量速度与群速度关系：
+<ul>
+<li>无耗介质：$v_g = v_e = \frac{c}{n_{\text{eff}}}$。</li>
+<li>弱耗介质：$v_g \approx v_e \leq \frac{c}{n_{\text{eff}}}$。</li>
+<li>强耗介质：$v_e \leq \frac{c}{n_{\text{eff}}}$，$v_g$无限制。</li>
+</ul>
+</li>
+</ul>
+
+<h2 class="relative group">1.5 空间色散与光束扩展
+    <div id="15-空间色散与光束扩展" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#15-%e7%a9%ba%e9%97%b4%e8%89%b2%e6%95%a3%e4%b8%8e%e5%85%89%e6%9d%9f%e6%89%a9%e5%b1%95" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">1.5.1 空间色散的本质
+    <div id="151-空间色散的本质" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#151-%e7%a9%ba%e9%97%b4%e8%89%b2%e6%95%a3%e7%9a%84%e6%9c%ac%e8%b4%a8" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>海森堡不确定性原理：不存在理想平面波（$\Delta k \neq 0$），光束的角谱分布导致传播时的空间色散。</li>
+<li>定义：介电常数$\varepsilon$与波矢$\vec{k}$相关（$\varepsilon = \varepsilon(\vec{k})$），导致光束传播特性依赖于空间分布。</li>
+</ul>
+
+<h3 class="relative group">1.5.2 光束的角谱表示
+    <div id="152-光束的角谱表示" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#152-%e5%85%89%e6%9d%9f%e7%9a%84%e8%a7%92%e8%b0%b1%e8%a1%a8%e7%a4%ba" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>傅里叶变换：任意光束可分解为不同方向的平面波叠加：
+$$U(x,y,0) = \int_{-\infty}^{\infty} A\left( \frac{\alpha}{\lambda}, \frac{\beta}{\lambda}, 0 \right) e^{j2\pi \left( \frac{\alpha}{\lambda}x + \frac{\beta}{\lambda}y \right)} d\frac{\alpha}{\lambda} d\frac{\beta}{\lambda}$$
+其中$\alpha, \beta$为方向余弦，传播后角谱项为$A\left( \frac{\alpha}{\lambda}, \frac{\beta}{\lambda}, z \right) = A\left( \frac{\alpha}{\lambda}, \frac{\beta}{\lambda}, 0 \right) e^{j\frac{2\pi}{\lambda} \sqrt{1 - \alpha^2 - \beta^2} z}$。</li>
+</ul>
+
+<h3 class="relative group">1.5.3 光束扩展的原因
+    <div id="153-光束扩展的原因" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#153-%e5%85%89%e6%9d%9f%e6%89%a9%e5%b1%95%e7%9a%84%e5%8e%9f%e5%9b%a0" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>动量守恒：$k_z = \sqrt{k^2 - k_x^2 - k_y^2}$，旁轴近似下$k_z \approx k - \frac{k_x^2 + k_y^2}{2k}$，不同横向波矢$k_x, k_y$对应不同$k_z$，导致光束传播时展宽。</li>
+<li>空间色散系数：$D = -\frac{\partial^2 k_z}{\partial k_x^2} = \frac{1}{k}$，定量描述扩展程度。</li>
+</ul>
+
+<h3 class="relative group">1.5.4 显微镜分辨率的极限（阿贝极限）
+    <div id="154-显微镜分辨率的极限阿贝极限" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#154-%e6%98%be%e5%be%ae%e9%95%9c%e5%88%86%e8%be%a8%e7%8e%87%e7%9a%84%e6%9e%81%e9%99%90%e9%98%bf%e8%b4%9d%e6%9e%81%e9%99%90" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>阿贝极限公式：$d = \frac{\lambda}{2n \sin\theta}$，其中$n$为介质折射率，$\theta$为物镜半孔径角。</li>
+<li>物理本质：空间色散导致光束无法聚焦到小于$\frac{\lambda}{2}$的光斑（空气介质中$n=1, \sin\theta=1$时，$d=\frac{\lambda}{2}$）。</li>
+<li>与不确定性原理的联系：$\Delta x \cdot \Delta p \geq \frac{\hbar}{2}$，$\Delta p \leq \frac{2h}{\lambda}$，推出$\Delta x \geq \frac{\lambda}{4\pi}$（近似为$\frac{\lambda}{2}$）。</li>
+</ul>
+
+<h3 class="relative group">1.5.5 特殊现象与应用
+    <div id="155-特殊现象与应用" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#155-%e7%89%b9%e6%ae%8a%e7%8e%b0%e8%b1%a1%e4%b8%8e%e5%ba%94%e7%94%a8" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>古斯-汉欣效应：全反射时，光束在介质分界面发生横向位移，源于角谱成分的相位累积。</li>
+<li>慢光/快光：通过空间色散调控光束传播速度（如结构化光子的自由空间慢光，$v_g \approx c\left(1 - \frac{\langle k_x^2 \rangle}{2k_0^2}\right)$）。</li>
+</ul>
+
+<h2 class="relative group">1.6 费马原理、反射与折射
+    <div id="16-费马原理反射与折射" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#16-%e8%b4%b9%e9%a9%ac%e5%8e%9f%e7%90%86%e5%8f%8d%e5%b0%84%e4%b8%8e%e6%8a%98%e5%b0%84" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">1.6.1 费马原理的形式
+    <div id="161-费马原理的形式" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#161-%e8%b4%b9%e9%a9%ac%e5%8e%9f%e7%90%86%e7%9a%84%e5%bd%a2%e5%bc%8f" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ol>
+<li><strong>原始形式（最小时间原理）</strong>：光线在两点间传播的路径是耗时最短的路径。
+<ul>
+<li>数学表达：$t = \frac{\sqrt{a^2 + x^2}}{v_1} + \frac{\sqrt{b^2 + (d - x)^2}}{v_2}$，对$x$求导并令$\frac{dt}{dx}=0$，得$\frac{\sin\theta_1}{v_1} = \frac{\sin\theta_2}{v_2}$。</li>
+</ul>
+</li>
+<li><strong>现代形式（稳定光程原理）</strong>：光线传播路径的光程为极值（极小、极大或恒定），光程$S = \int_A^B n(\vec{r}) dl$，满足$\delta S = 0$（$\delta$为变分）。</li>
+</ol>
+
+<h3 class="relative group">1.6.2 斯涅尔定律（折射定律）
+    <div id="162-斯涅尔定律折射定律" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#162-%e6%96%af%e6%b6%85%e5%b0%94%e5%ae%9a%e5%be%8b%e6%8a%98%e5%b0%84%e5%ae%9a%e5%be%8b" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>推导：由费马原理，结合$v = \frac{c}{n}$，得$\frac{\sin\theta_1}{\sin\theta_2} = \frac{n_2}{n_1}$，即$n_1 \sin\theta_1 = n_2 \sin\theta_2$。</li>
+<li>反射定律：$\theta_1 = \theta_{\text{反射}}$，是斯涅尔定律在$n_1 = n_2$时的特例。</li>
+</ul>
+
+<h3 class="relative group">1.6.3 惠更斯原理
+    <div id="163-惠更斯原理" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#163-%e6%83%a0%e6%9b%b4%e6%96%af%e5%8e%9f%e7%90%86" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>核心：波前上的每个点都是次级球面波源，后续波前是这些次级波的包络。</li>
+<li>应用：解释反射、折射、衍射（如圆盘衍射的泊松亮斑）。</li>
+</ul>
+
+<h3 class="relative group">1.6.4 广义斯涅尔定律（超表面应用）
+    <div id="164-广义斯涅尔定律超表面应用" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#164-%e5%b9%bf%e4%b9%89%e6%96%af%e6%b6%85%e5%b0%94%e5%ae%9a%e5%be%8b%e8%b6%85%e8%a1%a8%e9%9d%a2%e5%ba%94%e7%94%a8" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>超表面调控：通过超表面引入额外相位$\phi(x)$，修改光程$S = \int n dl + \phi(x)$，导致折射角满足$n_1 \sin\theta_1 - n_2 \sin\theta_2 = \frac{1}{k_0} \frac{d\phi}{dx}$。</li>
+<li>应用：实现负反射、负折射（波长1~1.9μm范围的超表面）。</li>
+</ul>
+
+<h2 class="relative group">1.7 电磁场的偏振
+    <div id="17-电磁场的偏振" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#17-%e7%94%b5%e7%a3%81%e5%9c%ba%e7%9a%84%e5%81%8f%e6%8c%af" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">1.7.1 偏振的定义
+    <div id="171-偏振的定义" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#171-%e5%81%8f%e6%8c%af%e7%9a%84%e5%ae%9a%e4%b9%89" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>平面电磁波的偏振：电场矢量$\vec{E}$在垂直于传播方向的平面内的振动状态（磁场$\vec{B}$与$\vec{E}$垂直，偏振状态由$\vec{E}$决定）。</li>
+<li>平面波表达式：$\vec{E} = \vec{A} e^{i(\omega t - \vec{k} \cdot \vec{r})}$，满足$\vec{k} \cdot \vec{E} = 0$（横波特性）。</li>
+</ul>
+
+<h3 class="relative group">1.7.2 偏振的数学描述
+    <div id="172-偏振的数学描述" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#172-%e5%81%8f%e6%8c%af%e7%9a%84%e6%95%b0%e5%ad%a6%e6%8f%8f%e8%bf%b0" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>设电场在$x,y$方向的分量为：
+</p>
+$$E_x = A_x \cos(\omega t + \delta_x), \quad E_y = A_y \cos(\omega t + \delta_y)$$<p>
+定义相位差$\delta = \delta_y - \delta_x$，根据$A_x, A_y$和$\delta$的不同，偏振态分为三类：</p>
+<ol>
+<li><strong>线偏振</strong>：
+<ul>
+<li>条件：$\delta = 0$或$\pi$。</li>
+<li>振动方向：$\tan\theta = \frac{A_y}{A_x}$（$\delta=0$）或$\tan\theta = -\frac{A_y}{A_x}$（$\delta=\pi$）。</li>
+</ul>
+</li>
+<li><strong>圆偏振</strong>：
+<ul>
+<li>条件：$A_x = A_y = A$，$\delta = \pm \frac{\pi}{2}$。</li>
+<li>右旋圆偏振（RHC）：$\delta = -\frac{\pi}{2}$，电场矢量逆时针旋转。</li>
+<li>左旋圆偏振（LHC）：$\delta = \frac{\pi}{2}$，电场矢量顺时针旋转。</li>
+</ul>
+</li>
+<li><strong>椭圆偏振</strong>：
+<ul>
+<li>条件：任意$A_x, A_y$和$\delta$（非线偏振、圆偏振的情况）。</li>
+<li>椭圆方程：$\left( \frac{E_x}{A_x} \right)^2 + \left( \frac{E_y}{A_y} \right)^2 - 2 \frac{E_x E_y}{A_x A_y} \cos\delta = \sin^2\delta$。</li>
+</ul>
+</li>
+</ol>
+
+<h3 class="relative group">1.7.3 偏振的表示方法
+    <div id="173-偏振的表示方法" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#173-%e5%81%8f%e6%8c%af%e7%9a%84%e8%a1%a8%e7%a4%ba%e6%96%b9%e6%b3%95" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ol>
+<li><strong>琼斯矢量（Jones Vector）</strong>：描述完全偏振光，常用形式：
+<table>
+  <thead>
+      <tr>
+          <th>偏振态</th>
+          <th>琼斯矢量</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>水平线偏振（H）</td>
+          <td>$\begin{pmatrix} 1 \ 0 \end{pmatrix}$</td>
+      </tr>
+      <tr>
+          <td>垂直线偏振（V）</td>
+          <td>$\begin{pmatrix} 0 \ 1 \end{pmatrix}$</td>
+      </tr>
+      <tr>
+          <td>右旋圆偏振（RHC）</td>
+          <td>$\frac{1}{\sqrt{2}} \begin{pmatrix} 1 \ -i \end{pmatrix}$</td>
+      </tr>
+      <tr>
+          <td>左旋圆偏振（LHC）</td>
+          <td>$\frac{1}{\sqrt{2}} \begin{pmatrix} 1 \ i \end{pmatrix}$</td>
+      </tr>
+      <tr>
+          <td>+45°线偏振</td>
+          <td>$\frac{1}{\sqrt{2}} \begin{pmatrix} 1 \ 1 \end{pmatrix}$</td>
+      </tr>
+  </tbody>
+</table>
+</li>
+<li><strong>琼斯矩阵（Jones Matrix）</strong>：描述光学元件对偏振的调制，常用元件矩阵：
+<table>
+  <thead>
+      <tr>
+          <th>光学元件</th>
+          <th>琼斯矩阵</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>水平偏振器</td>
+          <td>$\begin{pmatrix} 1 &amp; 0 \ 0 &amp; 0 \end{pmatrix}$</td>
+      </tr>
+      <tr>
+          <td>垂直偏振器</td>
+          <td>$\begin{pmatrix} 0 &amp; 0 \ 0 &amp; 1 \end{pmatrix}$</td>
+      </tr>
+      <tr>
+          <td>快轴垂直的1/4波片</td>
+          <td>$e^{i\pi/4} \begin{pmatrix} 1 &amp; 0 \ 0 &amp; i \end{pmatrix}$</td>
+      </tr>
+      <tr>
+          <td>快轴水平的1/4波片</td>
+          <td>$e^{i\pi/4} \begin{pmatrix} 1 &amp; 0 \ 0 &amp; -i \end{pmatrix}$</td>
+      </tr>
+  </tbody>
+</table>
+</li>
+<li><strong>庞加莱球（Poincaré Sphere）</strong>：几何表示偏振态，球面上任意点对应一种完全偏振光，坐标$(S_1, S_2, S_3)$满足$S_1^2 + S_2^2 + S_3^2 = S_0^2$（$S_0$为光强）：
+<ul>
+<li>$S_0 = I$（光强）</li>
+<li>$S_1 = I \cos2\psi$（$\psi$为振动方向角）</li>
+<li>$S_2 = I \sin2\psi \cos\delta$（$\delta$为相位差）</li>
+<li>$S_3 = I \sin2\psi \sin\delta$</li>
+</ul>
+</li>
+</ol>
+
+<h3 class="relative group">1.7.4 布儒斯特角（Brewster Angle）
+    <div id="174-布儒斯特角brewster-angle" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#174-%e5%b8%83%e5%84%92%e6%96%af%e7%89%b9%e8%a7%92brewster-angle" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>定义：当反射光为完全线偏振光（垂直入射面）时的入射角$\theta_B$。</li>
+<li>公式：$\tan\theta_B = \frac{n_2}{n_1}$，此时反射光与折射光垂直（$\theta_B + \theta_2 = 90^\circ$）。</li>
+</ul>
+
+<h2 class="relative group">1.8 旋量与潘查拉特纳姆相位
+    <div id="18-旋量与潘查拉特纳姆相位" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#18-%e6%97%8b%e9%87%8f%e4%b8%8e%e6%bd%98%e6%9f%a5%e6%8b%89%e7%89%b9%e7%ba%b3%e5%a7%86%e7%9b%b8%e4%bd%8d" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">1.8.1 旋量（Spinors）的数学描述
+    <div id="181-旋量spinors的数学描述" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#181-%e6%97%8b%e9%87%8fspinors%e7%9a%84%e6%95%b0%e5%ad%a6%e6%8f%8f%e8%bf%b0" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>定义：旋量是描述自旋为半整数粒子（如电子）和偏振光的数学工具，可视为“几何的平方根”。</li>
+<li>二维旋量形式：$\vec{s} = \sqrt{r} e^{-i\alpha/2} \begin{pmatrix} \cos(\theta/2) e^{-i\phi/2} \ \sin(\theta/2) e^{i\phi/2} \end{pmatrix}$，其中$r$为幅值，$\theta, \phi$为球坐标角，$\alpha$为相位。</li>
+<li>旋转特性：旋量绕$z$轴旋转$\theta_r$角后，形式为$\begin{pmatrix} e^{-i\theta_r/2} &amp; 0 \ 0 &amp; e^{i\theta_r/2} \end{pmatrix} \vec{s}$，需旋转$2\pi$才能恢复原旋量（角加倍效应）。</li>
+</ul>
+
+<h3 class="relative group">1.8.2 潘查拉特纳姆相位（Pancharatnam Phase）
+    <div id="182-潘查拉特纳姆相位pancharatnam-phase" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#182-%e6%bd%98%e6%9f%a5%e6%8b%89%e7%89%b9%e7%ba%b3%e5%a7%86%e7%9b%b8%e4%bd%8dpancharatnam-phase" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>定义：偏振光在庞加莱球上沿闭合路径传播时，因几何效应获得的额外相位，属于几何相位。</li>
+<li>计算：相位值等于闭合路径包围的球面面积的一半（$\Delta\phi = \frac{1}{2} S$，$S$为路径包围的面积）。</li>
+<li>应用：超材料中的自旋选择透射、几何相位导光。</li>
+</ul>
+
+<h3 class="relative group">1.8.3 旋量与偏振的关联
+    <div id="183-旋量与偏振的关联" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#183-%e6%97%8b%e9%87%8f%e4%b8%8e%e5%81%8f%e6%8c%af%e7%9a%84%e5%85%b3%e8%81%94" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>完全偏振光的旋量表示：旋量的模平方对应光强，相位对应偏振态的几何特性，与琼斯矢量、庞加莱球坐标满足一一对应关系（如右旋圆偏振对应旋量$\frac{1}{\sqrt{2}} \begin{pmatrix} 1 \ -i \end{pmatrix}$）。</li>
+</ul>
+
+<h2 class="relative group">1.9 平行输运及应用
+    <div id="19-平行输运及应用" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#19-%e5%b9%b3%e8%a1%8c%e8%be%93%e8%bf%90%e5%8f%8a%e5%ba%94%e7%94%a8" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">1.9.1 列维-奇维塔平行输运（Levi-Civita Parallel Transport）
+    <div id="191-列维-奇维塔平行输运levi-civita-parallel-transport" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#191-%e5%88%97%e7%bb%b4-%e5%a5%87%e7%bb%b4%e5%a1%94%e5%b9%b3%e8%a1%8c%e8%be%93%e8%bf%90levi-civita-parallel-transport" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>定义：在弯曲空间（或曲面）中，矢量沿路径传播时保持“方向不变”的输运方式，需满足协变导数为零。</li>
+<li>平面上的平行输运：矢量方向不变，闭合路径后无旋转。</li>
+<li>球面上的平行输运：沿闭合路径（如球面三角形）输运后，矢量旋转角$\varphi = \int G d\Omega = \frac{S(\Omega)}{R^2}$（高斯-博内定理），其中$G$为高斯曲率，$S(\Omega)$为路径包围的球面面积。</li>
+</ul>
+
+<h3 class="relative group">1.9.2 应用实例
+    <div id="192-应用实例" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#192-%e5%ba%94%e7%94%a8%e5%ae%9e%e4%be%8b" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ol>
+<li><strong>傅科摆（Foucault Pendulum）</strong>：地球自转导致摆平面旋转，本质是摆的振动矢量在地球表面（弯曲球面）的平行输运，旋转角$\alpha = 2\pi(1 - \sin\theta)$（$\theta$为纬度）。</li>
+<li><strong>电磁波的偏振旋转</strong>：
+<ul>
+<li>法拉第旋转：线偏振光通过法拉第活性晶体时，偏振方向旋转$\theta = V B d$（$V$为费尔德常数，$B$为磁场强度，$d$为晶体厚度），源于磁场导致的能级分裂。</li>
+<li>几何相位偏振旋转：通过超材料的平行输运调控偏振方向。</li>
+</ul>
+</li>
+</ol>
+
+<h3 class="relative group">1.9.3 高斯-博内-陈定理（Gauss-Bonnet-Chern Theorem）
+    <div id="193-高斯-博内-陈定理gauss-bonnet-chern-theorem" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#193-%e9%ab%98%e6%96%af-%e5%8d%9a%e5%86%85-%e9%99%88%e5%ae%9a%e7%90%86gauss-bonnet-chern-theorem" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>推广：将二维曲面的高斯-博内定理推广到高维黎曼流形，揭示几何曲率与拓扑性质的关联，是数学与物理（如规范场论）的重要桥梁。</li>
+</ul>
+
+<h2 class="relative group">1.10 原始麦克斯韦方程组及拓展
+    <div id="110-原始麦克斯韦方程组及拓展" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#110-%e5%8e%9f%e5%a7%8b%e9%ba%a6%e5%85%8b%e6%96%af%e9%9f%a6%e6%96%b9%e7%a8%8b%e7%bb%84%e5%8f%8a%e6%8b%93%e5%b1%95" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">1.10.1 原始麦克斯韦方程组（麦克斯韦最初形式）
+    <div id="1101-原始麦克斯韦方程组麦克斯韦最初形式" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1101-%e5%8e%9f%e5%a7%8b%e9%ba%a6%e5%85%8b%e6%96%af%e9%9f%a6%e6%96%b9%e7%a8%8b%e7%bb%84%e9%ba%a6%e5%85%8b%e6%96%af%e9%9f%a6%e6%9c%80%e5%88%9d%e5%bd%a2%e5%bc%8f" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>包含矢量势$\vec{A}$和标量势$\Phi$，原始方程通过势函数描述电磁场：
+$$\vec{B} = \nabla \times \vec{A}, \quad \vec{E} = -\nabla\Phi - \frac{\partial \vec{A}}{\partial t}$$</li>
+<li>海维赛德-赫兹形式（简化形式）：即1.2.1中的方程组，省略势函数，突出$\vec{E}$和$\vec{H}$的对称性，但掩盖了势函数的物理意义。</li>
+</ul>
+
+<h3 class="relative group">1.10.2 势函数的物理意义
+    <div id="1102-势函数的物理意义" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1102-%e5%8a%bf%e5%87%bd%e6%95%b0%e7%9a%84%e7%89%a9%e7%90%86%e6%84%8f%e4%b9%89" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>传统观点：势函数是数学工具，无直接物理意义。</li>
+<li>现代观点：势函数是真实的物理存在，如阿哈罗诺夫-玻姆效应（AB效应）：
+<ul>
+<li>现象：电子在$\vec{E} = \vec{B} = 0$的区域运动，但因矢量势$\vec{A}$存在，产生干涉条纹移动。</li>
+<li>相位差：$\Delta\phi = \frac{q}{\hbar c} \oint \vec{A} \cdot d\vec{l} = \frac{q \Phi_B}{\hbar c}$（$\Phi_B$为磁通量），证明势函数具有可观测的物理效应。</li>
+</ul>
+</li>
+</ul>
+
+<h3 class="relative group">1.10.3 洛伦兹力与协变形式
+    <div id="1103-洛伦兹力与协变形式" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1103-%e6%b4%9b%e4%bc%a6%e5%85%b9%e5%8a%9b%e4%b8%8e%e5%8d%8f%e5%8f%98%e5%bd%a2%e5%bc%8f" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ol>
+<li><strong>洛伦兹力公式</strong>：$\vec{F} = q(\vec{E} + \vec{v} \times \vec{B})$，描述带电粒子在电磁场中的受力。</li>
+<li><strong>与科里奥利力的类比</strong>：科里奥利力$\vec{F}_c = 2m \vec{v} \times \vec{\omega}$（$\vec{\omega}$为旋转角速度），与洛伦兹力形式相似，均为速度相关的横向力，体现“力是几何效应的表象”。</li>
+</ol>
+
+<h3 class="relative group">1.10.4 电磁场的几何化
+    <div id="1104-电磁场的几何化" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1104-%e7%94%b5%e7%a3%81%e5%9c%ba%e7%9a%84%e5%87%a0%e4%bd%95%e5%8c%96" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>外尔的尝试：试图将电磁场几何化，假设矢量传播时长度可变（规范变换），但被爱因斯坦质疑（尺子长度依赖历史）。</li>
+<li>量子力学的拯救：外尔的规范变换在量子力学中对应相位变换$\psi \to e^{-i\frac{q}{\hbar c} \int \vec{A} \cdot d\vec{l}} \psi$，与AB效应、潘查拉特纳姆相位一致，证明电磁场的几何本质。</li>
+</ul>
+
+<h2 class="relative group">1.11 电磁波的波粒二象性
+    <div id="111-电磁波的波粒二象性" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#111-%e7%94%b5%e7%a3%81%e6%b3%a2%e7%9a%84%e6%b3%a2%e7%b2%92%e4%ba%8c%e8%b1%a1%e6%80%a7" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">1.11.1 波粒二象性的核心
+    <div id="1111-波粒二象性的核心" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1111-%e6%b3%a2%e7%b2%92%e4%ba%8c%e8%b1%a1%e6%80%a7%e7%9a%84%e6%a0%b8%e5%bf%83" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>电磁波既具有波动性（干涉、衍射），又具有粒子性（光电效应、康普顿散射），光子是电磁场的量子化粒子。</li>
+<li>实验证据：
+<ul>
+<li>波动性：双缝干涉（即使光子逐个入射，仍出现干涉条纹）。</li>
+<li>粒子性：光电效应中，光子能量$E = h\nu$，动量$p = \frac{h}{\lambda}$，与粒子碰撞时满足能量和动量守恒。</li>
+</ul>
+</li>
+</ul>
+
+<h3 class="relative group">1.11.2 量子力学解释
+    <div id="1112-量子力学解释" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1112-%e9%87%8f%e5%ad%90%e5%8a%9b%e5%ad%a6%e8%a7%a3%e9%87%8a" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ol>
+<li><strong>哥本哈根诠释</strong>：微观粒子的状态由波函数描述，测量导致波函数坍缩，粒子从“叠加态”变为“确定态”（如薛定谔的猫思想实验）。</li>
+<li><strong>爱因斯坦的质疑</strong>：“光量子是什么？”，认为量子力学不完备，但后续实验（如贝尔不等式验证）支持量子力学的正确性。</li>
+<li><strong>玻尔的互补原理</strong>：波动性和粒子性是电磁波的互补属性，无法同时观测到（“深奥的真理，其对立面也是深奥的真理”）。</li>
+</ol>
+
+<h3 class="relative group">1.11.3 关键结论
+    <div id="1113-关键结论" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1113-%e5%85%b3%e9%94%ae%e7%bb%93%e8%ae%ba" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>观测影响现实：电磁波的状态依赖于观测方式（如双缝实验中，观测缝则干涉条纹消失）。</li>
+<li>微观与宏观的区别：原子尺度的电磁波不遵循经典力学，需用量子力学描述（“原子不是石头或树那样的东西”）。</li>
+</ul>
+<hr>
+
+<h2 class="relative group">期末复习题
+    <div id="期末复习题" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0%e9%a2%98" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">一、简答题
+    <div id="一简答题" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%b8%80%e7%ae%80%e7%ad%94%e9%a2%98" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p><strong>1. 写出麦克斯韦方程组的微分形式，并简要说明每个方程的物理意义。</strong><br>
+<strong>答案</strong>：</p>
+<ul>
+<li>$\nabla \cdot \vec{D} = \rho_f$：电场的散度与自由电荷密度成正比，描述电荷产生电场（高斯定律）。</li>
+<li>$\nabla \cdot \vec{B} = 0$：磁场的散度为零，描述磁场是无源场（无磁单极子）。</li>
+<li>$\nabla \times \vec{E} = -\frac{\partial \vec{B}}{\partial t}$：电场的旋度等于磁感应强度的时间变化率的负值，描述变化的磁场产生电场（法拉第电磁感应定律）。</li>
+<li>$\nabla \times \vec{H} = \vec{J}_f + \frac{\partial \vec{D}}{\partial t}$：磁场的旋度由传导电流和位移电流共同产生，描述电流和变化的电场产生磁场（安培-麦克斯韦定律）。</li>
+</ul>
+<p><strong>2. 简述麦克斯韦引入位移电流的原因及位移电流的物理意义。</strong><br>
+<strong>答案</strong>：</p>
+<ul>
+<li>引入原因：无位移电流时，$\nabla \cdot \vec{J}_f = 0$，结合电荷守恒$\nabla \cdot \vec{J}_f + \frac{\partial \rho_f}{\partial t} = 0$，会推出$\frac{\partial \rho_f}{\partial t} = 0$（无电荷积累），与电容器充电等实际现象矛盾，位移电流的引入解决了这一矛盾，保证电流连续性。</li>
+<li>物理意义：位移电流是电场变化率的体现（$\vec{J}_D = \frac{\partial \vec{D}}{\partial t}$），并非真实电荷流动，但能产生磁场，是电磁感应的逆过程，体现电场和磁场的对称性。</li>
+</ul>
+<p><strong>3. 什么是群速度和相速度？二者的关系是什么？群速度色散的物理意义是什么？</strong><br>
+<strong>答案</strong>：</p>
+<ul>
+<li>相速度$v_p$：单色波等相位面的传播速度，$v_p = \frac{\omega}{k}$。</li>
+<li>群速度$v_g$：复色波包（信号）的传播速度，即能量传播速度，$v_g = \left( \frac{d\omega}{dk} \right)_{\omega_0}$。</li>
+<li>关系：$v_g = v_p - \lambda \frac{dv_p}{d\lambda}$（由$\omega = k v_p$，$k = \frac{2\pi}{\lambda}$推导），正常色散时$v_g &lt; v_p$，反常色散时$v_g &gt; v_p$。</li>
+<li>群速度色散（GVD）：群速度随频率的变化（由$k&rsquo;&rsquo;(\omega_0)$描述），物理意义是导致脉冲展宽（如光纤中信号畸变），因为不同频率成分的群速度不同，传播后脉冲宽度增加。</li>
+</ul>
+<p><strong>4. 简述费马原理的两种形式及斯涅尔定律的推导过程。</strong><br>
+<strong>答案</strong>：</p>
+<ul>
+<li>费马原理形式：
+<ol>
+<li>原始形式（最小时间原理）：光线在两点间传播的路径是耗时最短的路径。</li>
+<li>现代形式（稳定光程原理）：光线传播路径的光程为极值，$\delta S = \delta \int_A^B n dl = 0$。</li>
+</ol>
+</li>
+<li>斯涅尔定律推导：
+设两点$A、B$分别在折射率为$n_1、n_2$的介质中，光线在分界面的入射点横坐标为$x$，光程$S = n_1 \sqrt{a^2 + x^2} + n_2 \sqrt{b^2 + (d - x)^2}$，对$x$求导并令$\frac{dS}{dx}=0$，得$n_1 \frac{x}{\sqrt{a^2 + x^2}} = n_2 \frac{d - x}{\sqrt{b^2 + (d - x)^2}}$，结合$\sin\theta_1 = \frac{x}{\sqrt{a^2 + x^2}}$，$\sin\theta_2 = \frac{d - x}{\sqrt{b^2 + (d - x)^2}}$，推出$n_1 \sin\theta_1 = n_2 \sin\theta_2$（斯涅尔定律）。</li>
+</ul>
+<p><strong>5. 什么是阿贝极限？其物理本质是什么？如何突破阿贝极限？</strong><br>
+<strong>答案</strong>：</p>
+<ul>
+<li>阿贝极限：显微镜的最小分辨距离，公式$d = \frac{\lambda}{2n \sin\theta}$，其中$n$为介质折射率，$\theta$为物镜半孔径角。</li>
+<li>物理本质：空间色散导致光束无法聚焦到小于$\frac{\lambda}{2}$的光斑，源于海森堡不确定性原理（$\Delta x \cdot \Delta p \geq \frac{\hbar}{2}$），横向位置不确定度受限于光的波长。</li>
+<li>突破方法：使用超材料（如负折射率材料实现完美透镜）、近场光学显微镜、受激辐射耗尽显微镜（STED）等。</li>
+</ul>
+<p><strong>6. 简述电磁波偏振的三种类型及判断条件。</strong><br>
+<strong>答案</strong>：
+设电场分量$E_x = A_x \cos(\omega t + \delta_x)$，$E_y = A_y \cos(\omega t + \delta_y)$，相位差$\delta = \delta_y - \delta_x$：</p>
+<ul>
+<li>线偏振：$\delta = 0$或$\pi$，电场矢量沿固定方向振动，$\tan\theta = \pm \frac{A_y}{A_x}$。</li>
+<li>圆偏振：$A_x = A_y$且$\delta = \pm \frac{\pi}{2}$，$\delta = -\frac{\pi}{2}$为右旋圆偏振（逆时针旋转），$\delta = \frac{\pi}{2}$为左旋圆偏振（顺时针旋转）。</li>
+<li>椭圆偏振：任意$A_x、A_y$和$\delta$（非线偏振、圆偏振条件），电场矢量轨迹为椭圆，满足椭圆方程$\left( \frac{E_x}{A_x} \right)^2 + \left( \frac{E_y}{A_y} \right)^2 - 2 \frac{E_x E_y}{A_x A_y} \cos\delta = \sin^2\delta$。</li>
+</ul>
+<p><strong>7. 什么是阿哈罗诺夫-玻姆效应？其物理意义是什么？</strong><br>
+<strong>答案</strong>：</p>
+<ul>
+<li>现象：电子在$\vec{E} = \vec{B} = 0$的区域运动，但周围存在磁场（矢量势$\vec{A} \neq 0$），电子的干涉条纹会发生移动。</li>
+<li>物理意义：证明电磁场的势函数（$\vec{A}$、$\Phi$）是真实的物理存在，而非单纯的数学工具；电磁场的物理效应不仅由$\vec{E}$和$\vec{B}$决定，还与势函数相关，支持电磁场的几何化描述。</li>
+</ul>
+<p><strong>8. 简述电磁波的波粒二象性及实验证据。</strong><br>
+<strong>答案</strong>：</p>
+<ul>
+<li>波粒二象性：电磁波既具有波动性（干涉、衍射），又具有粒子性（光电效应、康普顿散射），光子是其量子化粒子，能量$E = h\nu$，动量$p = \frac{h}{\lambda}$。</li>
+<li>实验证据：
+<ul>
+<li>波动性：双缝干涉实验（即使光子逐个入射，仍出现明暗相间的干涉条纹）、单缝衍射实验。</li>
+<li>粒子性：光电效应（光子撞击金属表面，打出光电子，能量满足$E_k = h\nu - W_0$，$W_0$为逸出功）、康普顿散射（光子与自由电子碰撞，波长变长，满足动量和能量守恒）。</li>
+</ul>
+</li>
+</ul>
+
+<h3 class="relative group">二、计算题
+    <div id="二计算题" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%ba%8c%e8%ae%a1%e7%ae%97%e9%a2%98" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p><strong>1. 已知真空中某单色光的波长$\lambda = 500 , \text{nm}$，求其频率$\nu$、角频率$\omega$和波矢$k$的大小。（真空中光速$c = 3 \times 10^8 , \text{m/s}$）</strong>
+<strong>答案</strong>：</p>
+<ul>
+<li>频率：$\nu = \frac{c}{\lambda} = \frac{3 \times 10^8}{500 \times 10^{-9}} = 6 \times 10^{14} , \text{Hz}$。</li>
+<li>角频率：$\omega = 2\pi\nu = 2\pi \times 6 \times 10^{14} = 3.77 \times 10^{15} , \text{rad/s}$。</li>
+<li>波矢大小：$k = \frac{2\pi}{\lambda} = \frac{2\pi}{500 \times 10^{-9}} = 1.26 \times 10^7 , \text{rad/m}$。</li>
+</ul>
+<p><strong>2. 一束光从空气（$n_1 = 1$）入射到玻璃（$n_2 = 1.5$）表面，入射角$\theta_1 = 30^\circ$，求折射角$\theta_2$；若入射角为布儒斯特角$\theta_B$，求$\theta_B$的大小。</strong>
+<strong>答案</strong>：</p>
+<ul>
+<li>由斯涅尔定律$n_1 \sin\theta_1 = n_2 \sin\theta_2$，得：
+$$\sin\theta_2 = \frac{n_1}{n_2} \sin\theta_1 = \frac{1}{1.5} \times \sin30^\circ = \frac{1}{1.5} \times 0.5 = \frac{1}{3} \approx 0.333$$
+$$\theta_2 = \arcsin(0.333) \approx 19.47^\circ$$</li>
+<li>布儒斯特角公式$\tan\theta_B = \frac{n_2}{n_1}$，得：
+$$\theta_B = \arctan\left( \frac{1.5}{1} \right) = \arctan(1.5) \approx 56.31^\circ$$</li>
+</ul>
+<p><strong>3. 已知某介质中电磁波的色散关系为$\omega = k c / n$（$n$为常数，无色散），求相速度$v_p$和群速度$v_g$，并说明该介质的色散特性。</strong>
+<strong>答案</strong>：</p>
+<ul>
+<li>相速度：$v_p = \frac{\omega}{k} = \frac{c}{n}$。</li>
+<li>群速度：$v_g = \frac{d\omega}{dk} = \frac{c}{n}$。</li>
+<li>色散特性：$v_p = v_g$，群速度色散$D = -\frac{2\pi c}{\lambda^2} k&rsquo;&rsquo;(\omega) = 0$，该介质为无色散介质，脉冲传播时不会展宽。</li>
+</ul>
+<p><strong>4. 一束线偏振光的琼斯矢量为$\begin{pmatrix} 1 \ 1 \end{pmatrix}$，通过快轴垂直的1/4波片（琼斯矩阵为$\begin{pmatrix} 1 &amp; 0 \ 0 &amp; i \end{pmatrix}$）后，求出射光的琼斯矢量，并判断其偏振态。</strong>
+<strong>答案</strong>：</p>
+<ul>
+<li>出射琼斯矢量：$\vec{J}_{\text{出}} = \begin{pmatrix} 1 &amp; 0 \ 0 &amp; i \end{pmatrix} \begin{pmatrix} 1 \ 1 \end{pmatrix} = \begin{pmatrix} 1 \ i \end{pmatrix}$。</li>
+<li>偏振态判断：将矢量归一化，$\frac{1}{\sqrt{2}} \begin{pmatrix} 1 \ i \end{pmatrix}$，对应左旋圆偏振光（因$E_y$分量相位比$E_x$超前$\frac{\pi}{2}$）。</li>
+</ul>
+
+<h1 class="relative group">第二章 光学谐振腔与粒子散射
+    <div id="第二章-光学谐振腔与粒子散射" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%ac%ac%e4%ba%8c%e7%ab%a0-%e5%85%89%e5%ad%a6%e8%b0%90%e6%8c%af%e8%85%94%e4%b8%8e%e7%b2%92%e5%ad%90%e6%95%a3%e5%b0%84" aria-label="锚点">#</a>
+    </span>
+    
+</h1>
+
+<h2 class="relative group">2.1 光学谐振腔简介
+    <div id="21-光学谐振腔简介" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#21-%e5%85%89%e5%ad%a6%e8%b0%90%e6%8c%af%e8%85%94%e7%ae%80%e4%bb%8b" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">2.1.1 谐振腔的基本条件
+    <div id="211-谐振腔的基本条件" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#211-%e8%b0%90%e6%8c%af%e8%85%94%e7%9a%84%e5%9f%ba%e6%9c%ac%e6%9d%a1%e4%bb%b6" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li><strong>玻尔量子化条件</strong>：谐振腔中传播的电磁波需满足相位匹配，即往返相位差为$2m\pi$（$m$为整数，量子数），数学表达为$\delta\phi = 2m\pi$。只有满足该条件的电磁波才能在腔内稳定存在，形成谐振模式。</li>
+<li><strong>拓扑特性</strong>：谐振腔的几何结构遵循欧拉示性数$V-E+F=2$（$V$为顶点数、$E$为棱数、$F$为面数），常见规则多面体（四面体、立方体、八面体等）均满足该关系，保证腔内电磁波的闭合传播路径。</li>
+</ul>
+
+<h3 class="relative group">2.1.2 谐振腔的关键参数
+    <div id="212-谐振腔的关键参数" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#212-%e8%b0%90%e6%8c%af%e8%85%94%e7%9a%84%e5%85%b3%e9%94%ae%e5%8f%82%e6%95%b0" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ol>
+<li>
+<p><strong>品质因数（Q值）</strong>：</p>
+<ul>
+<li>定义：$Q = \omega \times \frac{\text{谐振腔存储的场能量}}{\text{谐振腔损耗的功率}}$，反映谐振腔存储能量与损耗的比值。</li>
+<li>能量存储：电场能量$U_{electric} = \frac{1}{8}\varepsilon E_0^2 AL$，磁场能量$U_{magnetic} = U_{electric}$，总存储能量$U = \frac{1}{4}\varepsilon E_0^2 V$（$V$为腔体积）。</li>
+<li>物理意义：Q值越高，腔的损耗越小，谐振峰越尖锐，单色性越好（如激光腔的Q值可达$10^6$以上）。</li>
+</ul>
+</li>
+<li>
+<p><strong>模式密度</strong>：</p>
+<ul>
+<li>波矢关系：腔内电磁波满足$k_x^2 + k_y^2 + k_z^2 = \left(\frac{\omega n}{c}\right)^2$（$n$为介质折射率），谐振条件为$k_x = \frac{r\pi}{a}$、$k_y = \frac{s\pi}{b}$、$k_z = \frac{t\pi}{c}$（$r,s,t$为整数，$a,b,c$为腔的三维尺寸）。</li>
+<li>模式密度公式：单位频率间隔内的模式数$p(\nu) = \frac{8\pi\nu^2 n^3 V}{c^3}$（无色散时）；考虑色散时$p(\nu) = \frac{3\pi\nu^2 n^2 V\left(n + \nu \frac{\partial n}{\partial \nu}\right)}{c^3}$。</li>
+</ul>
+</li>
+</ol>
+
+<h3 class="relative group">2.1.3 波导与谐振腔的关联
+    <div id="213-波导与谐振腔的关联" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#213-%e6%b3%a2%e5%af%bc%e4%b8%8e%e8%b0%90%e6%8c%af%e8%85%94%e7%9a%84%e5%85%b3%e8%81%94" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>谐振腔可视为波导的“闭合版”：波导通过边界约束电磁波沿一维传播，谐振腔则通过两端反射镜（或闭合边界）使电磁波往返传播，形成驻波模式（如TE模、TM模）。</li>
+<li>模式演化：随着腔尺寸与波长比值（$t/\lambda$）增大，模式数量增多（TE0、TE1、TM0、TM1等），有效折射率$n_{eff}$呈现离散分布。</li>
+</ul>
+<p><strong>补充光学例子</strong>：</p>
+<ul>
+<li>激光谐振腔：He-Ne激光器的谐振腔由两个反射镜组成（一个全反射镜，一个部分反射镜），满足玻尔量子化条件的红光（$\lambda=632.8nm$）在腔内谐振，输出单色性极佳的激光，Q值越高，激光线宽越窄。</li>
+<li>微波炉谐振腔：微波炉的金属腔体构成谐振腔，工作频率约2.45GHz，对应的腔尺寸与波长（$\lambda≈12cm$）匹配，使微波在腔内形成驻波，集中能量加热食物，体现模式约束与能量存储特性。</li>
+</ul>
+
+<h2 class="relative group">2.2 法布里-珀罗谐振腔（F-P腔）
+    <div id="22-法布里-珀罗谐振腔f-p腔" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#22-%e6%b3%95%e5%b8%83%e9%87%8c-%e7%8f%80%e7%bd%97%e8%b0%90%e6%8c%af%e8%85%94f-p%e8%85%94" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">2.2.1 结构与工作原理
+    <div id="221-结构与工作原理" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#221-%e7%bb%93%e6%9e%84%e4%b8%8e%e5%b7%a5%e4%bd%9c%e5%8e%9f%e7%90%86" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>基本结构：由两块平行反射镜组成，中间填充折射率为$n$的介质（气体、固体或液体），镜间距为$l$，反射率分别为$R_1$和$R_2$。</li>
+<li>相位差与光程差：入射光以角度$\theta$入射时，往返光程差$\Delta L = 2l\cos\theta$，相位差$\delta = \frac{4\pi n l \cos\theta}{\lambda}$（$\lambda$为真空中波长）。</li>
+</ul>
+
+<h3 class="relative group">2.2.2 透射与反射特性
+    <div id="222-透射与反射特性" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#222-%e9%80%8f%e5%b0%84%e4%b8%8e%e5%8f%8d%e5%b0%84%e7%89%b9%e6%80%a7" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ol>
+<li><strong>透射率公式</strong>：
+$$\frac{I_t}{I_i} = \frac{(1-R)^2}{(1-R)^2 + 4R\sin^2(\delta/2)}$$
+其中$R = r^2$（$r$为振幅反射系数），$T = 1-R$为单程透射率。</li>
+<li><strong>谐振条件</strong>：当$\delta = 2m\pi$（$m$为整数）时，透射率达到最大值1（相干相长干涉），对应的谐振频率$\nu_m = m\frac{c}{2nl\cos\theta}$。</li>
+<li><strong>自由光谱范围（FSR）</strong>：相邻两个谐振峰的频率间隔$\Delta\nu = \frac{c}{2nl\cos\theta}$，反映腔的频率分辨能力。</li>
+</ol>
+
+<h3 class="relative group">2.2.3 腔内场与群延迟
+    <div id="223-腔内场与群延迟" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#223-%e8%85%94%e5%86%85%e5%9c%ba%e4%b8%8e%e7%be%a4%e5%bb%b6%e8%bf%9f" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>腔内光强：谐振时腔内平均光强$I_{ave} = \frac{1+R}{1-R}I_i$，当$R=0.99$时，$I_{ave}=199I_i$，体现腔内能量增强效应。</li>
+<li>群延迟增强：透射光的群延迟$\tau_g = \frac{1+R}{1-R}\cdot\frac{2nl\cos\theta}{c}$，高反射率下群延迟显著增大，可用于慢光器件。</li>
+</ul>
+<p><strong>补充光学例子</strong>：</p>
+<ul>
+<li>光谱分析仪：F-P腔作为核心部件，利用其高分辨率（透射峰窄）特性，可分辨原子光谱的精细结构（如氢原子的巴尔末线系），自由光谱范围决定了可测量的频率范围，分辨率由Q值决定。</li>
+<li>LIGO引力波探测器：LIGO的核心是长达4km的F-P腔，通过激光在腔内往返传播（约50次），将引力波引起的微小长度变化（$&lt;10^{-18}m$）放大，利用干涉条纹变化探测引力波，体现F-P腔的光程放大与高灵敏度特性。</li>
+<li>肥皂泡的彩色条纹：肥皂泡的前后表面构成微型F-P腔，不同波长的光满足不同的谐振条件，呈现彩色干涉条纹，当肥皂泡变薄时，光程差减小，条纹颜色随厚度变化，最终破裂前因厚度趋近于零，呈现黑色（相消干涉）。</li>
+</ul>
+
+<h2 class="relative group">2.3 光学谐振腔的损耗
+    <div id="23-光学谐振腔的损耗" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#23-%e5%85%89%e5%ad%a6%e8%b0%90%e6%8c%af%e8%85%94%e7%9a%84%e6%8d%9f%e8%80%97" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">2.3.1 损耗机制
+    <div id="231-损耗机制" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#231-%e6%8d%9f%e8%80%97%e6%9c%ba%e5%88%b6" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ol>
+<li><strong>非理想反射损耗</strong>：反射镜反射率$R&lt;1$，部分光透射或吸收，导致能量损耗，是腔的主要损耗来源之一。</li>
+<li><strong>吸收与散射损耗</strong>：腔内介质（如增益介质、空气）的吸收，以及镜面、介质中的杂质散射，使光能量转化为热能或向非指定方向传播。</li>
+<li><strong>衍射损耗</strong>：当腔尺寸与波长可比时，电磁波会发生衍射，超出腔的约束范围，造成能量泄漏（如微腔的衍射损耗显著）。</li>
+</ol>
+
+<h3 class="relative group">2.3.2 腔的寿命与线宽
+    <div id="232-腔的寿命与线宽" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#232-%e8%85%94%e7%9a%84%e5%af%bf%e5%91%bd%e4%b8%8e%e7%ba%bf%e5%ae%bd" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ol>
+<li><strong>模式寿命$\tau_c$</strong>：腔内能量衰减到初始值$1/e$的时间，公式为：
+$$\tau_c = \frac{n}{c\left[\alpha - \frac{1}{l}\ln\sqrt{R_1R_2}\right]}$$
+其中$\alpha$为介质的吸收系数，$R_1,R_2$为反射镜反射率。</li>
+<li><strong>谐振线宽$\Delta\nu_{1/2}$</strong>：与寿命满足$\Delta\nu_{1/2} = \frac{1}{2\pi\tau_c}$，Q值与线宽的关系为$Q = \frac{\nu_0}{\Delta\nu_{1/2}}$（$\nu_0$为谐振频率），Q值越高，线宽越窄。</li>
+</ol>
+
+<h3 class="relative group">2.3.3 相干完美吸收（CPA）
+    <div id="233-相干完美吸收cpa" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#233-%e7%9b%b8%e5%b9%b2%e5%ae%8c%e7%be%8e%e5%90%b8%e6%94%b6cpa" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>定义：当两束相干光入射到吸收腔时，通过相消干涉使入射光完全被吸收（$T=0$，$R=0$），能量被腔完全吸收，无反射和透射。</li>
+<li>条件：$\sqrt{R_1} = A$（$A = e^{-\alpha l}$为介质单程透射率），核心机制是相干相消干涉，而非单纯的介质吸收，体现损耗与干涉的协同作用。</li>
+</ul>
+<p><strong>补充光学例子</strong>：</p>
+<ul>
+<li>低损耗激光腔：He-Ne激光器的反射镜反射率$R≈0.999$，介质吸收系数$\alpha$极小，模式寿命$\tau_c$可达毫秒级，Q值高，输出激光线宽仅约1MHz，单色性极佳。</li>
+<li>抗激光（Anti-laser）：基于相干完美吸收原理，将激光的“受激辐射”逆转为“受激吸收”，入射激光在腔内完全吸收，可用于激光防护（如吸收特定波长的激光，保护探测器或人眼）。</li>
+<li>微腔的衍射损耗：直径为几微米的微球谐振腔，因尺寸小，衍射损耗显著，Q值相对较低（约$10^3$），但体积小、集成度高，可用于片上光子器件（如微腔激光器）。</li>
+</ul>
+
+<h2 class="relative group">2.4 多腔谐振腔
+    <div id="24-多腔谐振腔" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#24-%e5%a4%9a%e8%85%94%e8%b0%90%e6%8c%af%e8%85%94" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">2.4.1 多层膜与增透膜
+    <div id="241-多层膜与增透膜" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#241-%e5%a4%9a%e5%b1%82%e8%86%9c%e4%b8%8e%e5%a2%9e%e9%80%8f%e8%86%9c" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>结构：由多层不同折射率的介质膜组成（如两层膜$n_1-n_2-n_3$），等效于多个串联的F-P腔，利用多光束干涉实现特定光学功能。</li>
+<li>增透膜条件：当$n_2 = \sqrt{n_1n_3}$且光程差$\phi = \pi/2, 3\pi/2,&hellip;$时，反射率$R=0$，实现增透（如照相机镜头的增透膜，减少反射光，提高透光率）。</li>
+</ul>
+
+<h3 class="relative group">2.4.2 布拉格反射器（Bragg Grating）
+    <div id="242-布拉格反射器bragg-grating" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#242-%e5%b8%83%e6%8b%89%e6%a0%bc%e5%8f%8d%e5%b0%84%e5%99%a8bragg-grating" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>结构：由交替排列的高折射率（$n_2$）和低折射率（$n_1$）介质层组成，每层厚度为$\lambda/4$（中心波长），等效于周期性多腔结构。</li>
+<li>反射特性：当入射光波长满足布拉格条件$2n_d d = m\lambda$（$n_d$为平均折射率，$d$为周期厚度，$m$为整数）时，反射率接近100%，形成布拉格禁带（特定波长范围的光被强烈反射）。</li>
+</ul>
+
+<h3 class="relative group">2.4.3 光子晶体与安德森局域化
+    <div id="243-光子晶体与安德森局域化" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#243-%e5%85%89%e5%ad%90%e6%99%b6%e4%bd%93%e4%b8%8e%e5%ae%89%e5%be%b7%e6%a3%ae%e5%b1%80%e5%9f%9f%e5%8c%96" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ol>
+<li><strong>光子晶体</strong>：折射率周期性排列的人工结构（如二维光子晶体光纤），其布拉格禁带可调控光的传播，实现光的局域化或无损耗传输，是多腔谐振腔的延伸。</li>
+<li><strong>安德森局域化</strong>：在无序介质（如随机分布的散射颗粒）中，光因多重散射被局域在有限空间内，无法传播，形成随机激光（增益介质+无序散射体，无需传统反射镜）。</li>
+</ol>
+<p><strong>补充光学例子</strong>：</p>
+<ul>
+<li>光纤布拉格光栅（FBG）：在光纤纤芯中写入周期性折射率调制结构（布拉格反射器），反射特定波长的光（如1550nm通信波长），用于光纤通信中的波长选择、色散补偿，或作为传感器（通过反射波长偏移测量温度、应变）。</li>
+<li>增透膜的应用：眼镜镜片表面的增透膜（通常为$MgF_2$，折射率$n≈1.38$），满足$n_2 = \sqrt{n_{空气}n_{玻璃}}$（$n_{空气}=1$，$n_{玻璃}=1.5$），使可见光反射率从约4%降至1%以下，减少眩光，提高视觉清晰度。</li>
+<li>随机激光：在染料溶液中混入纳米颗粒（无序散射体），泵浦光激发染料产生增益，光经多重散射局域化，形成激光输出，无需传统谐振腔，可用于柔性显示、生物传感等场景。</li>
+</ul>
+
+<h2 class="relative group">2.5 粒子散射基础
+    <div id="25-粒子散射基础" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#25-%e7%b2%92%e5%ad%90%e6%95%a3%e5%b0%84%e5%9f%ba%e7%a1%80" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">2.5.1 散射的基本概念
+    <div id="251-散射的基本概念" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#251-%e6%95%a3%e5%b0%84%e7%9a%84%e5%9f%ba%e6%9c%ac%e6%a6%82%e5%bf%b5" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>定义：电磁波入射到粒子（如原子、分子、纳米颗粒）时，因粒子与电磁场的相互作用，光的传播方向改变（散射）、能量被吸收（吸收），或穿透粒子（透射），总效应为消光（消光=散射+吸收）。</li>
+<li>边界条件：粒子表面满足电场和磁场的切向分量连续（$\vec{E}_1^t = \vec{E}_2^t$，$\vec{H}_1^t = \vec{H}_2^t$），法向分量满足$\vec{D}_1^n = \vec{D}_2^n$，$\vec{B}_1^n = \vec{B}_2^n$。</li>
+</ul>
+
+<h3 class="relative group">2.5.2 关键物理量
+    <div id="252-关键物理量" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#252-%e5%85%b3%e9%94%ae%e7%89%a9%e7%90%86%e9%87%8f" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ol>
+<li><strong>截面</strong>：
+<ul>
+<li>消光截面$C_{ext}$：$\frac{W_{ext}}{I_i}$（$W_{ext}$为消光功率，$I_i$为入射光强），描述粒子对光的阻挡能力。</li>
+<li>散射截面$C_{sca}$：$\frac{W_{sca}}{I_i}$，描述散射光的总功率。</li>
+<li>吸收截面$C_{abs}$：$\frac{W_{abs}}{I_i}$，描述粒子吸收的光功率，满足$C_{ext} = C_{sca} + C_{abs}$。</li>
+</ul>
+</li>
+<li><strong>效率因子</strong>：$Q_{ext} = \frac{C_{ext}}{A}$、$Q_{sca} = \frac{C_{sca}}{A}$、$Q_{abs} = \frac{C_{abs}}{A}$（$A$为粒子的几何截面），反映粒子的散射/吸收能力相对于几何尺寸的比值。</li>
+</ol>
+
+<h3 class="relative group">2.5.3 光学定理
+    <div id="253-光学定理" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#253-%e5%85%89%e5%ad%a6%e5%ae%9a%e7%90%86" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>核心内容：消光截面仅由前向散射振幅决定，公式为：
+$$C_{ext} = \frac{4\pi}{k} \text{Re}[f(0)]$$
+其中$k = \frac{2\pi}{\lambda}$，$f(0)$为前向（$\theta=0$）散射振幅。</li>
+<li>物理意义：即使粒子对光有吸收，消光效应也可通过前向散射的干涉现象体现，揭示了散射与吸收的内在关联。</li>
+</ul>
+<p><strong>补充光学例子</strong>：</p>
+<ul>
+<li>雾霾天气的能见度下降：雾霾中的颗粒物（直径$0.1-1\mu m$）对可见光的散射截面大，$Q_{sca}$高，大量散射使光线传播方向杂乱，能见度降低，体现粒子散射对光传播的影响。</li>
+<li>太阳镜的吸收作用：太阳镜镜片中的金属离子（如铜离子、铁离子）对紫外线和部分可见光有吸收截面$C_{abs}$，吸收有害光线，保护眼睛，同时镜片表面的偏振膜利用散射原理过滤水平偏振光（眩光）。</li>
+<li>激光粒度仪：利用粒子散射光的角分布（与粒子尺寸相关），通过测量散射光强随角度的变化，反推粒子的尺寸分布，核心依据是散射截面与粒子尺寸的依赖关系。</li>
+</ul>
+
+<h2 class="relative group">2.6 米氏理论：球形粒子散射
+    <div id="26-米氏理论球形粒子散射" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#26-%e7%b1%b3%e6%b0%8f%e7%90%86%e8%ae%ba%e7%90%83%e5%bd%a2%e7%b2%92%e5%ad%90%e6%95%a3%e5%b0%84" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">2.6.1 米氏理论的适用范围
+    <div id="261-米氏理论的适用范围" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#261-%e7%b1%b3%e6%b0%8f%e7%90%86%e8%ae%ba%e7%9a%84%e9%80%82%e7%94%a8%e8%8c%83%e5%9b%b4" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>核心：描述任意尺寸的球形粒子对电磁波的散射，当粒子尺寸参数$x = \frac{2\pi a}{\lambda}$（$a$为粒子半径）满足任意值（$x\ll1$为瑞利散射，$x≈1$为米氏散射，$x\gg1$为几何散射）。</li>
+<li>特殊情况：瑞利散射（$x\ll1$，如空气分子、纳米颗粒），米氏散射（$x≈1$，如云层中的小水滴、花粉），几何散射（$x\gg1$，如雨滴、玻璃球）。</li>
+</ul>
+
+<h3 class="relative group">2.6.2 场的展开与散射矩阵
+    <div id="262-场的展开与散射矩阵" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#262-%e5%9c%ba%e7%9a%84%e5%b1%95%e5%bc%80%e4%b8%8e%e6%95%a3%e5%b0%84%e7%9f%a9%e9%98%b5" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ol>
+<li><strong>场的表达式</strong>：入射光、散射光和粒子内部的场均用球谐函数和球汉克尔函数展开，满足边界条件后，得到散射振幅系数$a_n$和$b_n$（$n$为多极子阶数，$n=1$为偶极子，$n=2$为四极子，$n=3$为六极子）。</li>
+<li><strong>散射矩阵</strong>：描述入射光偏振态与散射光偏振态的关系，形式为：
+$$\begin{pmatrix} E_{\parallel s} \\ E_{\perp s} \end{pmatrix} = \frac{e^{ik(r - z)}}{-ikr} \begin{pmatrix} S_2 & 0 \\ 0 & S_1 \end{pmatrix} \begin{pmatrix} E_{\parallel i} \\ E_{\perp i} \end{pmatrix}$$
+其中$S_1 = \sum_{n=1}^{\infty} \frac{2n+1}{n(n+1)}(a_n u_n + b_n \tau_n)$，$S_2 = \sum_{n=1}^{\infty} \frac{2n+1}{n(n+1)}(a_n \tau_n + b_n u_n)$（$u_n$、$\tau_n$为角相关函数）。</li>
+</ol>
+
+<h3 class="relative group">2.6.3 关键结论与特殊情况
+    <div id="263-关键结论与特殊情况" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#263-%e5%85%b3%e9%94%ae%e7%bb%93%e8%ae%ba%e4%b8%8e%e7%89%b9%e6%ae%8a%e6%83%85%e5%86%b5" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ol>
+<li><strong>瑞利散射（$x\ll1$）</strong>：
+<ul>
+<li>散射振幅系数：$a_1 ≈ -\frac{2x^3}{3}\frac{m^2 - 1}{m^2 + 2}$，$b_1 ≈ -\frac{x^3}{45}(m^2 - 1)$（$m = \frac{n_{粒子}}{n_{介质}}$为相对折射率）。</li>
+<li>散射光强：$I_s ∝ \frac{1}{\lambda^4}$（瑞利散射定律），无偏振入射时$I_s = \frac{8\pi^4 N a^6}{\lambda^4 r^2} \left|\frac{m^2 - 1}{m^2 + 2}\right|^2 (1 + \cos^2\theta) I_i$（$N$为粒子数密度）。</li>
+</ul>
+</li>
+<li><strong>米氏散射（$x≈1$）</strong>：
+<ul>
+<li>散射光强与$\lambda$无明显依赖关系（$I_s ∝ \lambda^0$），散射图案呈前后不对称分布，前向散射强于后向散射。</li>
+</ul>
+</li>
+<li><strong>多极子贡献</strong>：小粒子（$x\ll1$）以偶极子散射为主，大粒子（$x\gg1$）需考虑四极子、六极子等高阶多极子散射。</li>
+</ol>
+<p><strong>补充光学例子</strong>：</p>
+<ul>
+<li>天空的蓝色与日出的红色：空气分子（$a≈0.1nm$，$x\ll1$）对可见光的瑞利散射，蓝光（$\lambda≈450nm$）散射强度是红光（$\lambda≈650nm$）的$(\frac{650}{450})^4≈6$倍，故天空呈蓝色；日出/日落时，太阳光穿过更长路径的大气层，蓝光被大量散射，剩余红光主导，呈现红色。</li>
+<li>云的白色：云层中的小水滴（$a≈10\mu m$，$x≈10$）属于米氏散射，散射光强与波长无关，所有颜色的光被均匀散射，故云呈白色；乌云因水滴浓度高，光线被多次散射和吸收，透射光减少，呈现黑色。</li>
+<li>金属纳米颗粒的表面等离激元共振：银纳米颗粒（$a≈50nm$）在可见光波段（$\lambda≈400-500nm$）发生偶极子共振，散射截面$C_{sca}$显著增大，呈现强烈的黄色，可用于生物标记（通过散射光识别纳米颗粒的位置）或表面增强拉曼散射（SERS）基底。</li>
+<li>等离子体癌症治疗：将金纳米壳（硅芯+金壳，$a≈100nm$）注入肿瘤组织，金纳米壳在近红外激光（$\lambda≈800nm$）照射下发生等离激元共振，强烈吸收光能量并转化为热能，加热杀死肿瘤细胞，而健康组织不受影响，体现米氏散射中吸收与共振的协同作用。</li>
+</ul>
+
+<h2 class="relative group">2.7 金属粒子谐振的几何化
+    <div id="27-金属粒子谐振的几何化" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#27-%e9%87%91%e5%b1%9e%e7%b2%92%e5%ad%90%e8%b0%90%e6%8c%af%e7%9a%84%e5%87%a0%e4%bd%95%e5%8c%96" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">2.7.1 金属的介电特性
+    <div id="271-金属的介电特性" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#271-%e9%87%91%e5%b1%9e%e7%9a%84%e4%bb%8b%e7%94%b5%e7%89%b9%e6%80%a7" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>金属的相对介电常数$\varepsilon_m$具有负的实部（$\text{Re}[\varepsilon_m] &lt; 0$），源于自由电子的集体振荡（等离子体振荡），如银在可见光波段$\text{Re}[\varepsilon_m]≈-10$，$\text{Im}[\varepsilon_m]$较小（低损耗）。</li>
+<li>表面等离激元（SPP）：金属与介质界面处的自由电子振荡与电磁波耦合形成的表面模式，波矢$k_{spp} = \frac{2\pi}{\lambda}\sqrt{\frac{\varepsilon_m \varepsilon_d}{\varepsilon_m + \varepsilon_d}}$（$\varepsilon_d$为介质介电常数），具有局域场增强效应。</li>
+</ul>
+
+<h3 class="relative group">2.7.2 玻尔条件的几何诠释
+    <div id="272-玻尔条件的几何诠释" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#272-%e7%8e%bb%e5%b0%94%e6%9d%a1%e4%bb%b6%e7%9a%84%e5%87%a0%e4%bd%95%e8%af%a0%e9%87%8a" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>金属粒子的谐振满足几何化的玻尔条件：$\oint k(r) dr = 2m\pi$（$m$为整数），其中$k(r)$为粒子内的有效波矢，与表面等离激元的传播路径相关。</li>
+<li>谐振模式：$m=1$为偶极子模式，$m=2$为四极子模式，$m=3$为六极子模式，高阶模式的谐振频率高于低阶模式（蓝移），且Q值更高（损耗更小）。</li>
+</ul>
+
+<h3 class="relative group">2.7.3 谐振频率的尺寸依赖
+    <div id="273-谐振频率的尺寸依赖" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#273-%e8%b0%90%e6%8c%af%e9%a2%91%e7%8e%87%e7%9a%84%e5%b0%ba%e5%af%b8%e4%be%9d%e8%b5%96" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>尺寸效应：金属粒子半径$a$减小，谐振频率蓝移（如银纳米颗粒，$a$从100nm减小到50nm，谐振波长从500nm蓝移到400nm）；半径增大，谐振频率红移，源于表面等离激元的传播路径长度变化。</li>
+<li>模式重叠与平坦带：当粒子结构对称时，不同阶数的模式可能发生重叠（平坦带，$d\omega/dk=0$），导致散射图案重构；反向模式（$d\omega/dk&lt;0$）则会产生异常散射（如后向散射增强）。</li>
+</ul>
+<p><strong>补充光学例子</strong>：</p>
+<ul>
+<li>彩色金属纳米颗粒溶液：不同尺寸的金纳米颗粒溶液呈现不同颜色，$a=10nm$时呈红色，$a=50nm$时呈紫色，$a=100nm$时呈蓝色，源于谐振频率的尺寸依赖，可用于彩色显示、防伪标记。</li>
+<li>表面增强拉曼散射（SERS）：金纳米颗粒聚集时，颗粒间隙处的表面等离激元共振使局域电场增强$10^4-10^6$倍，吸附在间隙处的分子的拉曼散射信号显著增强，可用于单分子检测（如生物分子、环境污染物），核心是金属粒子谐振的局域场增强效应。</li>
+<li>等离激元波导：由金属纳米线（如银纳米线，$a=50nm$）构成的波导，表面等离激元沿纳米线传播，模式尺寸小于衍射极限（$\lambda/10$），可用于片上高密度光互连，突破传统光纤的衍射极限限制。</li>
+</ul>
+
+<h2 class="relative group">2.8 弛豫全反射（Relaxed TIR）
+    <div id="28-弛豫全反射relaxed-tir" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#28-%e5%bc%9b%e8%b1%ab%e5%85%a8%e5%8f%8d%e5%b0%84relaxed-tir" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">2.8.1 基本原理
+    <div id="281-基本原理" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#281-%e5%9f%ba%e6%9c%ac%e5%8e%9f%e7%90%86" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>传统全反射（TIR）：当光从光密介质（$n_1$）入射到光疏介质（$n_2$），且入射角$\theta &gt; \theta_c = \arcsin(n_2/n_1)$时，发生全反射，光场在光疏介质中形成倏逝波（穿透深度$\approx\lambda$）。</li>
+<li>弛豫全反射：通过引入各向异性介质或亚波长结构，放松全反射的条件（$\theta \leq \theta_c$也可实现强局域），使光场局域在介质界面，局域尺寸突破衍射极限（$\lambda/10$以下），且无金属损耗（与等离子体模式相比）。</li>
+</ul>
+
+<h3 class="relative group">2.8.2 应用场景
+    <div id="282-应用场景" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#282-%e5%ba%94%e7%94%a8%e5%9c%ba%e6%99%af" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ul>
+<li>亚波长光 confinement：用于片上光学器件（如波导、调制器），实现光的纳米尺度约束，提高器件集成度。</li>
+<li>透明亚衍射光学：无需金属即可实现光的亚波长局域，避免金属损耗，适用于高传输效率的光互连、生物成像（如超分辨显微镜）。</li>
+</ul>
+<p><strong>补充光学例子</strong>：</p>
+<ul>
+<li>超分辨显微镜：基于弛豫全反射原理的透明亚衍射透镜，可将光聚焦到$\lambda/20$的光斑，突破阿贝极限，用于观察细胞内的纳米结构（如细胞器、生物大分子），无需荧光标记，成像分辨率高且对生物样本无损伤。</li>
+<li>片上亚波长波导：由各向异性介质构成的弛豫全反射波导，芯层尺寸仅50nm（$\lambda=1550nm$时，$\lambda/30$），光场局域在芯层与包层界面，传输损耗低（&lt;0.1dB/cm），可用于高密度光芯片（如光子计算机的互连线路）。</li>
+</ul>
+<hr>
+
+<h2 class="relative group">期末复习题（简答+计算）
+    <div id="期末复习题简答计算" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%9c%9f%e6%9c%ab%e5%a4%8d%e4%b9%a0%e9%a2%98%e7%ae%80%e7%ad%94%e8%ae%a1%e7%ae%97" aria-label="锚点">#</a>
+    </span>
+    
+</h2>
+
+<h3 class="relative group">一、简答题
+    <div id="一简答题-1" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%b8%80%e7%ae%80%e7%ad%94%e9%a2%98-1" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p><strong>1. 简述光学谐振腔的玻尔量子化条件及物理意义。</strong><br>
+<strong>答案</strong>：</p>
+<ul>
+<li>条件：谐振腔内往返传播的电磁波需满足相位匹配，即$\delta\phi = 2m\pi$（$m$为整数，量子数），对应的光程差$\Delta L = m\lambda/2n$（$n$为介质折射率，$\lambda$为真空中波长）。</li>
+<li>物理意义：只有满足该条件的电磁波才能在腔内形成稳定驻波（谐振模式），不满足条件的电磁波因相消干涉被抑制；量子数$m$对应模式的阶数，决定谐振频率的大小。</li>
+</ul>
+<p><strong>2. 什么是谐振腔的品质因数（Q值）？其物理意义及影响因素是什么？</strong><br>
+<strong>答案</strong>：</p>
+<ul>
+<li>定义：$Q = \omega \times \frac{\text{腔内存储的场能量}}{\text{单位时间内损耗的能量}}$，是描述谐振腔损耗与频率选择性的核心参数。</li>
+<li>物理意义：Q值越高，腔内能量损耗越小，谐振峰越尖锐（线宽越窄），频率选择性越好（如激光腔的高Q值保证输出激光的单色性）。</li>
+<li>影响因素：
+<ol>
+<li>反射损耗：反射镜反射率$R$越低，损耗越大，Q值越小。</li>
+<li>吸收与散射损耗：腔内介质、镜面的吸收和散射，导致能量转化或泄漏，降低Q值。</li>
+<li>衍射损耗：腔尺寸越小（与波长可比），衍射损耗越大，Q值越小。</li>
+</ol>
+</li>
+</ul>
+<p><strong>3. 简述法布里-珀罗谐振腔的透射特性及谐振条件。</strong><br>
+<strong>答案</strong>：</p>
+<ul>
+<li>透射特性：透射率随入射光频率（或相位差）周期性变化，形成尖锐的透射峰（谐振峰）和谷（相消干涉），透射率公式为$\frac{I_t}{I_i} = \frac{(1-R)^2}{(1-R)^2 + 4R\sin^2(\delta/2)}$（$R$为反射率，$\delta$为往返相位差）。</li>
+<li>谐振条件：当往返相位差$\delta = 2m\pi$（$m$为整数）时，透射率达到最大值1（相干相长干涉），对应的谐振频率$\nu_m = m\frac{c}{2nl\cos\theta}$（$l$为镜间距，$\theta$为入射角度）。</li>
+<li>自由光谱范围：相邻谐振峰的频率间隔$\Delta\nu = \frac{c}{2nl\cos\theta}$，反映腔的频率分辨范围。</li>
+</ul>
+<p><strong>4. 区分瑞利散射与米氏散射的适用条件、散射特性及对应的物理现象。</strong>
+<strong>答案</strong>：</p>
+<table>
+  <thead>
+      <tr>
+          <th>特性</th>
+          <th>瑞利散射</th>
+          <th>米氏散射</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>适用条件</td>
+          <td>粒子尺寸参数$x = 2\pi a/\lambda \ll 1$（如空气分子、纳米颗粒）</td>
+          <td>粒子尺寸参数$x ≈ 1$（如云层小水滴、花粉）</td>
+      </tr>
+      <tr>
+          <td>散射光强</td>
+          <td>$I_s ∝ 1/\lambda^4$（强烈依赖波长）</td>
+          <td>$I_s ∝ \lambda^0$（与波长无关）</td>
+      </tr>
+      <tr>
+          <td>散射图案</td>
+          <td>前后对称（偶极子散射）</td>
+          <td>前向散射强于后向散射（不对称）</td>
+      </tr>
+      <tr>
+          <td>物理现象</td>
+          <td>天空蓝色、日出红色、晚霞</td>
+          <td>云的白色、雾霾能见度下降</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>5. 简述光学定理的内容及物理意义。</strong><br>
+<strong>答案</strong>：</p>
+<ul>
+<li>内容：消光截面仅由前向散射振幅决定，公式为$C_{ext} = \frac{4\pi}{k} \text{Re}[f(0)]$（$k=2\pi/\lambda$，$f(0)$为前向散射振幅）。</li>
+<li>物理意义：消光是散射与吸收的总和，但消光截面可通过测量前向散射单独获得，无需测量所有方向的散射光；揭示了散射与吸收的内在关联，即使粒子有吸收，也可通过前向散射的干涉效应体现消光效应。</li>
+</ul>
+<p><strong>6. 什么是表面等离激元共振？简述金属纳米颗粒的表面等离激元共振特性及应用。</strong>
+<strong>答案</strong>：</p>
+<ul>
+<li>定义：金属表面的自由电子在电磁波照射下发生集体振荡，与入射光耦合形成的共振现象，是金属粒子谐振的核心机制。</li>
+<li>特性：共振时散射截面$C_{sca}$和吸收截面$C_{abs}$显著增大，局域电场增强，共振频率依赖于粒子尺寸（尺寸减小，共振频率蓝移）、形状和周围介质折射率。</li>
+<li>应用：生物标记（通过共振散射识别纳米颗粒位置）、表面增强拉曼散射（SERS）基底（局域场增强拉曼信号）、等离子体癌症治疗（共振吸收转化为热能杀死肿瘤细胞）、彩色显示（不同尺寸颗粒呈现不同颜色）。</li>
+</ul>
+<p><strong>7. 简述多腔谐振腔中布拉格反射器的工作原理及应用。</strong>
+<strong>答案</strong>：</p>
+<ul>
+<li>工作原理：由交替排列的高折射率和低折射率介质层组成，每层厚度为$\lambda/4$（中心波长），当入射光满足布拉格条件$2n_d d = m\lambda$（$n_d$为平均折射率，$d$为周期厚度，$m$为整数）时，各层反射光相干相长，反射率接近100%，形成布拉格禁带。</li>
+<li>应用：光纤布拉格光栅（FBG，用于波长选择、色散补偿、传感器）、分布式反馈激光器（DFB-LD，通过布拉格反射器实现波长锁定）、增透膜/高反膜（多层膜结构，实现特定波长的增透或高反）。</li>
+</ul>
+
+<h3 class="relative group">二、计算题
+    <div id="二计算题-1" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%ba%8c%e8%ae%a1%e7%ae%97%e9%a2%98-1" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p><strong>1. 已知法布里-珀罗谐振腔的镜间距$l=10cm$，介质折射率$n=1$（空气），反射率$R=0.9$，入射光为正入射（$\theta=0$），求：</strong>
+（1）谐振频率$\nu_m$（$m=10^6$时）；
+（2）自由光谱范围$\Delta\nu$；
+（3）谐振线宽$\Delta\nu_{1/2}$（忽略介质吸收，$\alpha=0$）。</p>
+<p><strong>答案</strong>：</p>
+<ul>
+<li>（1）正入射时$\cos\theta=1$，谐振频率公式$\nu_m = m\frac{c}{2nl}$，代入$c=3×10^8m/s$，$n=1$，$l=0.1m$，$m=10^6$：
+$$\nu_m = 10^6 × \frac{3×10^8}{2×1×0.1} = 1.5×10^{15}Hz$$</li>
+<li>（2）自由光谱范围$\Delta\nu = \frac{c}{2nl} = \frac{3×10^8}{2×1×0.1} = 1.5×10^9Hz = 1.5GHz$；</li>
+<li>（3）模式寿命$\tau_c = \frac{n}{c\left[-\frac{1}{l}\ln\sqrt{R^2}\right]} = \frac{1}{3×10^8 × \frac{1}{0.1}×\ln(1/0.9)} ≈ \frac{1}{3×10^8 × 1.05} ≈ 3.17×10^{-9}s$，
+谐振线宽$\Delta\nu_{1/2} = \frac{1}{2\pi\tau_c} ≈ \frac{1}{2×3.14×3.17×10^{-9}} ≈ 50MHz$。</li>
+</ul>
+<p><strong>2. 空气中的球形水滴（折射率$n=1.33$），半径$a=5\mu m$，入射光波长$\lambda=500nm$，计算尺寸参数$x$，并判断该水滴的散射类型（瑞利散射、米氏散射或几何散射）；若水滴半径$a=0.1nm$（空气分子），再判断散射类型。</strong></p>
+<p><strong>答案</strong>：</p>
+<ul>
+<li>尺寸参数$x = \frac{2\pi a}{\lambda}$，
+（1）$a=5\mu m=5000nm$时，$x = \frac{2×3.14×5000}{500} = 62.8$，$x\gg1$，属于<strong>几何散射</strong>；
+（2）$a=0.1nm$时，$x = \frac{2×3.14×0.1}{500} ≈ 1.26×10^{-3}$，$x\ll1$，属于<strong>瑞利散射</strong>。</li>
+</ul>
+<p><strong>3. 银纳米颗粒（相对折射率$m=0.1+3.5i$），半径$a=50nm$，入射光波长$\lambda=500nm$，尺寸参数$x=2\pi a/\lambda≈0.628$（$x\ll1$），近似为瑞利散射，求散射截面$C_{sca}$（已知瑞利散射截面公式$C_{sca} = \frac{8\pi}{3}k^4 a^6 \left|\frac{m^2 - 1}{m^2 + 2}\right|^2$，$k=2\pi/\lambda$）。</strong></p>
+<p><strong>答案</strong>：</p>
+<ul>
+<li>步骤1：计算$k = \frac{2\pi}{\lambda} = \frac{2×3.14}{500×10^{-9}} = 1.256×10^7 rad/m$；</li>
+</ul>
+
+          
+          
+          
+            <strong class="block mt-8">
+              <a
+                target="_blank"
+                class="m-1 rounded bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+                href="mailto:?subject=Reply%20to%20%e5%85%89%e7%94%b5%e5%ad%90%e5%ad%a6%ef%bc%9a%e7%ac%ac%e4%b8%80%e4%ba%8c%e7%ab%a0">
+                通过邮件回复
+              </a>
+            </strong>
+          
+        </div>
+        
+        
+
+        
+
+        
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/blog/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
+          integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
+          data-oid="views_posts\光电子学：第一二章\index.md"
+          data-oid-likes="likes_posts\光电子学：第一二章\index.md"></script>
+      
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/blog/posts/%E6%B7%B1%E5%BA%A6%E4%BF%A1%E5%BF%B5%E7%BD%91%E7%BB%9C/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;深度信念网络
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2026-01-06T10:43:17&#43;08:00">2026-01-06</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/blog/posts/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E9%A2%98%E7%9B%AE/">
+              <span class="leading-6">
+                神经网络题目&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2026-01-18T21:43:40&#43;08:00">2026-01-18</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="返回顶部"
+    title="返回顶部">
+    &uarr;
+  </a>
+</div>
+
+      </main>
+<footer class="site-footer">
+  <div class="footer-row">
+    
+    <span class="footer-item copyright">© 2025 Ray's Blog</span>
+
+    
+    <a class="beian footer-item"
+        href="https://beian.mps.gov.cn/#/query/webSearch?code=43010502001935"
+        rel="noreferrer" target="_blank">
+        <img src="https://raychaux.space/img/common/20251214144754_f8096af8ad53bdea.png"
+              width="20" height="20" alt="备案图标">
+        湘公网安备43010502001935号
+    </a>
+
+    
+    <a class="footer-item icp" href="https://beian.miit.gov.cn/#/Integrated/index" rel="noreferrer" target="_blank">
+      湘ICP备2025149166号
+    </a>
+
+    
+    <span class="footer-item powered-by">
+      Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> &
+      <a href="https://github.com/nunocoracao/blowfish" target="_blank" rel="noopener">Blowfish</a>
+    </span>
+  </div>
+</footer>
+
+<style>
+ 
+.site-footer {
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+  padding: 1.5rem 0;
+}
+
+.footer-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem 2.5rem;  
+  max-width: 100%;
+}
+
+.footer-item {
+  white-space: nowrap;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+ 
+.beian {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.beian img {
+  vertical-align: middle;
+}
+
+.beian:hover,
+.footer-item.icp:hover {
+  color: #666;
+  text-decoration: underline;
+}
+
+ 
+.powered-by a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.powered-by a:hover {
+  color: #666;
+  text-decoration: underline;
+}
+
+ 
+
+ 
+@media (max-width: 768px) {
+  .footer-row {
+    gap: 1.2rem 1.5rem;
+    justify-content: center;
+  }
+}
+
+ 
+@media (max-width: 480px) {
+  .footer-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .footer-item {
+    white-space: normal;
+    text-align: center;
+    justify-content: center;
+  }
+  
+   
+  @media (max-width: 360px) {
+    .site-footer {
+      font-size: 12px;
+    }
+    
+    .footer-row {
+      gap: 0.8rem;
+    }
+    
+    .beian img {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+
+ 
+.footer-item a {
+  color: inherit;
+}
+
+ 
+@media (max-width: 320px) {
+  .footer-row {
+    padding: 0 10px;
+  }
+  
+  .footer-item {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-break: keep-all;
+  }
+}
+</style><div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1313/blog/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="搜索"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="关闭 (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

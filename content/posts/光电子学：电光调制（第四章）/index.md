@@ -1,7 +1,7 @@
 +++
 date = '2025-11-29T17:02:54+08:00'
 draft = false
-title = '光电子学：调制'
+title = '光电子学：电光调制（第四章）'
 tags = ["课程总结", "光学"]
 author = 'RayChaux'
 math = true

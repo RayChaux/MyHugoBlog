@@ -6,23 +6,13 @@
     <description>Recent content in 文章标签 on RayChaux&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <copyright>© 2025 RayChaux</copyright>
-    <lastBuildDate>Sun, 28 Dec 2025 10:48:45 +0800</lastBuildDate><atom:link href="http://localhost:1313/blog/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>光电子学</title>
-      <link>http://localhost:1313/blog/tags/%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6/</link>
-      <pubDate>Sun, 28 Dec 2025 10:48:45 +0800</pubDate>
-      
-      <guid>http://localhost:1313/blog/tags/%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6/</guid>
-      <description></description>
-      
-    </item>
+    <copyright>© 2026 RayChaux</copyright>
+    <lastBuildDate>Tue, 06 Jan 2026 10:43:17 +0800</lastBuildDate><atom:link href="http://localhost:1313/blog/tags/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>课程笔记</title>
       <link>http://localhost:1313/blog/tags/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/</link>
-      <pubDate>Sun, 28 Dec 2025 10:48:45 +0800</pubDate>
+      <pubDate>Tue, 06 Jan 2026 10:43:17 +0800</pubDate>
       
       <guid>http://localhost:1313/blog/tags/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/</guid>
       <description></description>
@@ -32,9 +22,19 @@
     <item>
       <title>神经网络</title>
       <link>http://localhost:1313/blog/tags/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</link>
-      <pubDate>Tue, 23 Dec 2025 15:28:07 +0800</pubDate>
+      <pubDate>Tue, 06 Jan 2026 10:43:17 +0800</pubDate>
       
       <guid>http://localhost:1313/blog/tags/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>光电子学</title>
+      <link>http://localhost:1313/blog/tags/%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6/</link>
+      <pubDate>Sun, 28 Dec 2025 10:48:45 +0800</pubDate>
+      
+      <guid>http://localhost:1313/blog/tags/%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6/</guid>
       <description></description>
       
     </item>

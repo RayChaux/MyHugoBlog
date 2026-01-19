@@ -6,8 +6,28 @@
     <description>Recent content in 神经网络 on RayChaux&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <copyright>© 2025 RayChaux</copyright>
-    <lastBuildDate>Tue, 23 Dec 2025 15:28:07 +0800</lastBuildDate><atom:link href="http://localhost:1313/blog/tags/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© 2026 RayChaux</copyright>
+    <lastBuildDate>Tue, 06 Jan 2026 10:43:17 +0800</lastBuildDate><atom:link href="http://localhost:1313/blog/tags/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>深度信念网络</title>
+      <link>http://localhost:1313/blog/posts/%E6%B7%B1%E5%BA%A6%E4%BF%A1%E5%BF%B5%E7%BD%91%E7%BB%9C/</link>
+      <pubDate>Tue, 06 Jan 2026 10:43:17 +0800</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/%E6%B7%B1%E5%BA%A6%E4%BF%A1%E5%BF%B5%E7%BD%91%E7%BB%9C/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>图神经网络</title>
+      <link>http://localhost:1313/blog/posts/%E5%9B%BE%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</link>
+      <pubDate>Tue, 30 Dec 2025 10:26:35 +0800</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/%E5%9B%BE%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>浅层神经网络</title>
@@ -25,6 +45,16 @@
       <pubDate>Fri, 05 Dec 2025 17:02:54 +0800</pubDate>
       
       <guid>http://localhost:1313/blog/posts/transformer/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>循环神经网络</title>
+      <link>http://localhost:1313/blog/posts/%E5%BE%AA%E7%8E%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</link>
+      <pubDate>Fri, 05 Dec 2025 17:02:54 +0800</pubDate>
+      
+      <guid>http://localhost:1313/blog/posts/%E5%BE%AA%E7%8E%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</guid>
       <description></description>
       
     </item>

@@ -253,7 +253,7 @@
     "keywords": ["课程笔记","神经网络"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "772"
+    "wordCount": "1009"
   }]
   </script>
 
@@ -911,7 +911,7 @@ window.MathJax = {
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-12-23T15:28:07&#43;08:00">2025-12-23</time><span class="px-2 text-primary-500">&middot;</span><span>772 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">2 分钟</span><span class="px-2 text-primary-500">&middot;</span><span class="mb-[2px]">
+      <time datetime="2025-12-23T15:28:07&#43;08:00">2025-12-23</time><span class="px-2 text-primary-500">&middot;</span><span>1009 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">3 分钟</span><span class="px-2 text-primary-500">&middot;</span><span class="mb-[2px]">
   <span
     id="zen-mode-button"
     class="text-lg hover:text-primary-500"
@@ -1091,7 +1091,8 @@ window.MathJax = {
         <li><a href="#12-基本bp算法">1.2 基本BP算法</a>
           <ul>
             <li><a href="#121-权值确定方法">1.2.1 权值确定方法</a></li>
-            <li><a href="#122-bp算法的特点">1.2.2 BP算法的特点</a></li>
+            <li><a href="#122-核心内容总结">1.2.2 核心内容总结</a></li>
+            <li><a href="#123-bp算法的特点">1.2.3 BP算法的特点</a></li>
           </ul>
         </li>
       </ul>
@@ -1295,25 +1296,65 @@ $$\begin{cases}
 -\frac{\partial E}{\partial W_{k j}^{K J}}=\left(d_k-O_k^K\right) f^{\prime}\left(n e t_k^K\right) \cdot O_j^J\\
 -\frac{\partial E}{\partial W_{j i}^{J I}}=\sum_{k=1}^K\left(d_k-O_k^K\right) f^{\prime}\left(n e t_k^K\right) W_{k j}^{K J} f^{\prime}\left(n e t_j^J\right) O_i^I
 \end{cases}$$<p><br>
-两式对照可得，本层误差信号 = 下一层误差信号累加和 * 本层激励函数的导数。<br>
+两式对照可得，<strong>本层误差信号 = 下一层误差信号累加和 * 本层激励函数的导数</strong>。<br>
 定义输出层第k个神经元的误差信号：$\delta_k=-\frac{\partial E}{\partial n e t_k^K}=\left(d_k-O_k^K\right)f^{\prime}\left(n e t_k^K\right)$<br>
+<strong>（误差信号的形式由激活函数决定）</strong><br>
 隐含层第j个神经元的误差信号为：$\delta_j=-\frac{\partial E}{\partial n e t_j^J}$<br>
 将$\delta_k$带入$-\frac{\partial E}{\partial W_{k j}^{K J}}$，再带入$W_{k j}^{K J}(n+1)$，得到<br>
 </p>
-$$\begin{aligned} & W_{k j}^{K J}(n+1)=W_{k j}^{K J}(n)+\eta_k \cdot\delta_k O_j^J \\ & k=1,2 \cdots K ; j=1,2 \cdots J\end{aligned}$$
-<h4 class="relative group">1.2.2 BP算法的特点
-    <div id="122-bp算法的特点" class="anchor"></div>
+$$\begin{aligned} & W_{k j}^{K J}(n+1)=W_{k j}^{K J}(n)+\eta_k \cdot\delta_k\cdot O_j^J \\ & k=1,2 \cdots K ; j=1,2 \cdots J\end{aligned}$$<p><br>
+有<br>
+</p>
+$$\begin{aligned}&\delta_{k}=-\frac{\partial E}{\partial net_{k}^{K}};{\frac{\partial net_{k}^{K}}{\partial O_{j}^{J}}=W_{kj}^{KJ}}\\&\frac{\partial O_{j}^{J}}{\partial net_{j}^{J}}=f^{^{\prime}}(net_{j}^{J});{\frac{\partial net_{j}^{J}}{\partial W_{ji}^{JI}}=O_{i}^{I}}\end{aligned}$$<p>
+对于隐含层：<br>
+</p>
+$$\begin{aligned}\delta_{j}&=-\frac{\partial E}{\partial net_{j}^{J}}=-\sum_{k=1}^{K}\left(\frac{\partial E}{\partial net_{k}^{K}}\right)\frac{\partial net_{k}^{K}}{\partial O_{i}^{J}}\frac{\partial O_{j}}{\partial net_{j}^{J}}\\&=f^{^{\prime}}(net_{j}^{J})\left(\sum_{k=1}^{K}\delta_{k}W_{kj}^{KJ}\right)\end{aligned}$$<p>
+在MLP网络中，误差是反向传播的，于是<br>
+</p>
+$$\begin{aligned}-\frac{\partial E}{\partial W_{ji}^{JI}}=&\left(-\sum_{k=1}^{K}\frac{\partial E}{\partial net_{k}^{K}}\bullet\frac{\partial net_{k}^{K}}{\partial O_{j}^{J}}\bullet\frac{\partial O_{j}^{J}}{\partial net_{j}^{J}}\right)\bullet\frac{\partial net_{j}^{J}}{\partial W_{ji}^{JI}}\\&=\delta_{j}\bullet O_{i}^{I}\end{aligned}$$
+<h4 class="relative group">1.2.2 核心内容总结
+    <div id="122-核心内容总结" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#122-bp%e7%ae%97%e6%b3%95%e7%9a%84%e7%89%b9%e7%82%b9" aria-label="锚点">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#122-%e6%a0%b8%e5%bf%83%e5%86%85%e5%ae%b9%e6%80%bb%e7%bb%93" aria-label="锚点">#</a>
+    </span>
+    
+</h4>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="alt text"
+    width="1478"
+    height="588"
+    src="/blog/posts/%E6%B5%85%E5%B1%82%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/image-2_hu_a1c97b14231a0e04.png"
+    srcset="/blog/posts/%E6%B5%85%E5%B1%82%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/image-2_hu_a1c97b14231a0e04.png 800w, /blog/posts/%E6%B5%85%E5%B1%82%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/image-2_hu_a9f6963118517363.png 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/blog/posts/%E6%B5%85%E5%B1%82%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/image-2.png"></figure>
+
+输出层学习算法：
+</p>
+$$\begin{aligned}&W_{kj}^{KJ}(n+1)=W_{kj}^{KJ}(n)+\eta_{k}\cdot\delta_{k}\cdot O_{j}^{J}\\&k=1,2,\cdots,K;j=1,2,\cdots,J\\&\delta_{k}=(d_{k}-O_{k}^{K})f^{\prime}\left(net_{k}^{K}\right)\end{aligned}$$<p>
+隐含层学习算法：
+</p>
+$$\begin{aligned}&W_{ji}^{JI}(n+1)=W_{ji}^{JI}(n)+\eta_{j}\cdot\delta_j\cdot O_{i}^{I}\\&i=1,2,\cdots,I;j=1,2,\cdots,J\\&\delta_{j}=f^{^{\prime}}(net_{j}^{J})\left(\sum_{k=1}^{K}\delta_{k}W_{kj}^{KJ}\right)\end{aligned}$$
+<h4 class="relative group">1.2.3 BP算法的特点
+    <div id="123-bp算法的特点" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#123-bp%e7%ae%97%e6%b3%95%e7%9a%84%e7%89%b9%e7%82%b9" aria-label="锚点">#</a>
     </span>
     
 </h4>
 <ul>
-<li>前馈式的：信号从前往后传播</li>
-<li>误差从后往前传播</li>
-<li>并行的：硬件实现速度快</li>
+<li><strong>工作信号正向传播</strong>。在信号的向后传递过程中网络的权值是固定不变的，每一层神经元的状态只影响下一层神经元的状态。如果在输出层不能得到期望的输出，则转入误差信号反向传输。</li>
+<li><strong>误差从后往前传播</strong>。误差信号由输出层开始逐层向前传播，在反向传播
+的过程中，网络的权值由误差反馈进行调节，通过权值的不断修正使网
+络的实际输出更接近期望输出。</li>
+<li><strong>并行的</strong>：硬件实现速度快</li>
 <li>层内无神经元连接</li>
 </ul>
 
@@ -1417,9 +1458,9 @@ $$\begin{aligned} & W_{k j}^{K J}(n+1)=W_{k j}^{K J}(n)+\eta_k \cdot\delta_k O_j
           
             <a
               class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/blog/posts/%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6%E5%85%89%E6%B3%A2%E5%AF%BC/">
+              href="/blog/posts/%E5%85%89%E7%94%B5%E5%AD%90%E5%AD%A6%E5%85%89%E6%B3%A2%E5%AF%BC%E7%AC%AC%E4%B8%89%E7%AB%A0/">
               <span class="leading-6">
-                光电子学：光波导&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+                光电子学：光波导（第三章）&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
               </span>
             </a>
             

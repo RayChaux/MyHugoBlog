@@ -253,7 +253,7 @@
     "keywords": ["课程笔记","光电子学"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "570"
+    "wordCount": "5363"
   }]
   </script>
 
@@ -911,7 +911,7 @@ window.MathJax = {
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-12-28T10:48:45&#43;08:00">2025-12-28</time><span class="px-2 text-primary-500">&middot;</span><span>570 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">2 分钟</span><span class="px-2 text-primary-500">&middot;</span><span class="mb-[2px]">
+      <time datetime="2025-12-28T10:48:45&#43;08:00">2025-12-28</time><span class="px-2 text-primary-500">&middot;</span><span>5363 字</span><span class="px-2 text-primary-500">&middot;</span><span title="预计阅读">11 分钟</span><span class="px-2 text-primary-500">&middot;</span><span class="mb-[2px]">
   <span
     id="zen-mode-button"
     class="text-lg hover:text-primary-500"
@@ -1093,10 +1093,16 @@ window.MathJax = {
     class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#一平面光波导">一、平面光波导</a>
+    <li><a href="#31-平面光波导">3.1 平面光波导</a>
       <ul>
-        <li><a href="#11-平面光波导结构">1.1 平面光波导结构</a></li>
-        <li><a href="#12-平面光波导内的光线传播">1.2 平面光波导内的光线传播</a></li>
+        <li><a href="#311-平面光波导结构">3.1.1 平面光波导结构</a></li>
+        <li><a href="#312-全反射">3.1.2 全反射</a></li>
+        <li><a href="#313-平板波导的模式">3.1.3 平板波导的模式</a></li>
+        <li><a href="#314-平板波导的本征方程">3.1.4 平板波导的本征方程</a></li>
+        <li><a href="#315-有效折射率与参数范围">3.1.5 有效折射率与参数范围</a></li>
+        <li><a href="#316-传播常数的求解与特性">3.1.6 传播常数的求解与特性</a></li>
+        <li><a href="#317-穿透深度与有效波导厚度">3.1.7 穿透深度与有效波导厚度</a></li>
+        <li><a href="#318-归一化波导参数">3.1.8 归一化波导参数</a></li>
       </ul>
     </li>
   </ul>
@@ -1227,22 +1233,23 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="article-content max-w-prose mb-20">
           <p>光波导是一种利用“全反射”原理，把光信号限定在特定介质层内传输的光学结构，横向尺寸远大于光波长时，可忽略衍射，用几何光学就能描述其折线传播路径。通俗来说，就是有“导向”的光波，将光波限制在特定的区域内传播。</p>
 
-<h2 class="relative group">一、平面光波导
-    <div id="一平面光波导" class="anchor"></div>
+<h2 class="relative group">3.1 平面光波导
+    <div id="31-平面光波导" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%b8%80%e5%b9%b3%e9%9d%a2%e5%85%89%e6%b3%a2%e5%af%bc" aria-label="锚点">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#31-%e5%b9%b3%e9%9d%a2%e5%85%89%e6%b3%a2%e5%af%bc" aria-label="锚点">#</a>
     </span>
     
 </h2>
+<p>研究光波导常用的两种理论分别是射线光学理论和电磁理论。本节将围绕平板波导中光传播的射线光学模型展开探讨与推导，借助射线光学理论介绍平板波导的基本概念与相关理论，涉及光波导的传播模式（导模）、传播常数、有效波导厚度、波导截止波长、归一化频率等核心内容。</p>
 
-<h3 class="relative group">1.1 平面光波导结构
-    <div id="11-平面光波导结构" class="anchor"></div>
+<h3 class="relative group">3.1.1 平面光波导结构
+    <div id="311-平面光波导结构" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#11-%e5%b9%b3%e9%9d%a2%e5%85%89%e6%b3%a2%e5%af%bc%e7%bb%93%e6%9e%84" aria-label="锚点">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#311-%e5%b9%b3%e9%9d%a2%e5%85%89%e6%b3%a2%e5%af%bc%e7%bb%93%e6%9e%84" aria-label="锚点">#</a>
     </span>
     
 </h3>
@@ -1256,22 +1263,224 @@ document.addEventListener('DOMContentLoaded', function() {
 <strong>衬底（substrate）</strong>：折射率 n₂，略低于 n₁，起机械支撑作用，也是下包层。<br>
 芯包入射角为：$\theta_{3c}=sin^{-1}\frac{n_3}{n_1}$；芯衬入射角为$\theta_{2c}=sin^{-1}\frac{n_2}{n_1}$，且有$\theta_{2c}&gt;=\theta_{3c}$。</p>
 
-<h3 class="relative group">1.2 平面光波导内的光线传播
-    <div id="12-平面光波导内的光线传播" class="anchor"></div>
+<h3 class="relative group">3.1.2 全反射
+    <div id="312-全反射" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#12-%e5%b9%b3%e9%9d%a2%e5%85%89%e6%b3%a2%e5%af%bc%e5%86%85%e7%9a%84%e5%85%89%e7%ba%bf%e4%bc%a0%e6%92%ad" aria-label="锚点">#</a>
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#312-%e5%85%a8%e5%8f%8d%e5%b0%84" aria-label="锚点">#</a>
     </span>
     
 </h3>
-<p>为了求解麦克斯韦方程，把电场/磁场按垂直于界面的分量来分类，于是出现了两种最干净的纯偏振：<br>
-<strong>TE极化</strong>：电场<span style="color:#D6000F;">垂直</span>于界面（y方向）<br>
-</p>
-$$r_{TE}=\frac{n_1\cos\theta_i-i\sqrt{n_1^2\sin^2\theta_i-n_2^2}}{n_1\cos\theta_i+i\sqrt{n_1^2\sin^2\theta_i-n_2^2}}=e^{-i2\phi_{TE}}\longrightarrow\tan\phi_{TE}=\frac{\sqrt{n_1^2\sin^2\theta_i-n_2^2}}{n_1\cos\theta_i}=\frac{\sqrt{\beta^2-k_0^2n_2^2}}{\sqrt{k_0^2n_1^2-\beta^2}}\quad,\beta=k_0n_1\sin\theta_i$$<p>
-<strong>TM极化</strong>：电场<span style="color:#D6000F;">平行</span>于界面（y方向）
-</p>
-$$r_{TM}=\frac{n_2^2\cos\theta_i-in_1\sqrt{n_1^2\sin^2\theta_i-n_2^2}}{n_2^2\cos\theta_i+in_1\sqrt{n_1^2\sin^2\theta_i-n_2^2}}=e^{-i2\phi_{TM}}\longrightarrow\tan\phi_{TM}=\frac{n_1^2}{n_2^2}\cdot\frac{\sqrt{n_1^2\sin^2\theta_i-n_2^2}}{n_1\cos\theta_i}=\frac{n_1^2}{n_2^2}\cdot\frac{\sqrt{\beta^2-k_0^2n_2^2}}{\sqrt{k_0^2n_1^2-\beta^2}}$$
+<p>当光从光密介质（折射率高）射向光疏介质（折射率低）时，会发生反射和折射现象。当入射角满足特定条件时，将出现全反射现象，这是光波导能够约束光传播的核心物理机制。</p>
+<ol>
+<li>关键条件
+<ul>
+<li>折射率关系：$n_1 &gt; n_2$（芯层为光密介质，相邻介质为光疏介质）；</li>
+<li>临界角：$\theta_c = \sin^{-1}\frac{n_2}{n_1}$，即刚好发生全反射时的入射角；</li>
+<li>全反射条件：入射角$\theta_i &gt; \theta_c$，此时反射系数的模$|r| = 1$，光几乎全部反射，无折射光（折射光退化为倏逝波）；</li>
+<li>非全反射情况：$\theta_i &lt; \theta_c$时，反射系数$r$为实数，反射率$0 &lt; R &lt; 1$，部分光反射，部分光折射。</li>
+</ul>
+</li>
+<li>偏振相关的反射特性
+为了求解麦克斯韦方程，把电场/磁场按垂直于界面的分量来分类，于是出现了两种最干净的纯偏振，对应的反射系数为：（由菲涅尔公式推导）
+<ul>
+<li>TE偏振（横电波）：电场方向垂直于入射面，反射系数为
+$$r_{TE} = \frac{n_1 \cos\theta_i - i\sqrt{n_1^2 \sin^2\theta_i - n_2^2}}{n_1 \cos\theta_i + i\sqrt{n_1^2 \sin^2\theta_i - n_2^2}} = e^{-i2\phi_{TE}},$$<br>
+其中相位偏移$\phi_{TE}$满足$\tan\phi_{TE} = \frac{\sqrt{\beta^2 - k_0^2 n_2^2}}{\sqrt{k_0^2 n_1^2 - \beta^2}}$（$\beta = k_0 n_1 \sin\theta_i$为传播常数，$k_0 = \frac{2\pi}{\lambda}$为自由空间波数）；</li>
+<li>TM偏振（横磁波）：电场方向平行于入射面，反射系数为<br>
+$$r_{TM} = \frac{n_2^2 \cos\theta_i - i n_1\sqrt{n_1^2 \sin^2\theta_i - n_2^2}}{n_2^2 \cos\theta_i + i n_1\sqrt{n_1^2 \sin^2\theta_i - n_2^2}} = e^{-i2\phi_{TM}},$$<br>
+相位偏移$\phi_{TM}$满足$\tan\phi_{TM} = \frac{n_1^2}{n_2^2} \cdot \frac{\sqrt{\beta^2 - k_0^2 n_2^2}}{\sqrt{k_0^2 n_1^2 - \beta^2}}$。</li>
+</ul>
+</li>
+<li>波场分布
+<ul>
+<li>导波（芯层内）：沿z方向（波导纵向）为行波，x方向（波导横向）为驻波，场表达式为$E_g = 2E_i \cos(hx - \delta_s) \exp i(\beta z - \omega t)$；</li>
+<li>倏逝波（衬底层/覆盖层内）：沿x方向（远离芯层方向）振幅指数衰减，无能量传播，场表达式为$E_e = E_i \exp(-\alpha x) \exp i(\beta z - \omega t)$。</li>
+</ul>
+</li>
+</ol>
+<p><strong>补充知识点</strong>：倏逝波是全反射时的特殊现象，其振幅随远离分界面的距离指数衰减，穿透深度极浅（通常在波长量级），不会向外辐射能量，这一特性保证了光在波导芯层内的有效约束。</p>
+
+<h3 class="relative group">3.1.3 平板波导的模式
+    <div id="313-平板波导的模式" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#313-%e5%b9%b3%e6%9d%bf%e6%b3%a2%e5%af%bc%e7%9a%84%e6%a8%a1%e5%bc%8f" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>波导模式是指在波导纵向（z方向）振幅保持恒定的横向场分布，不同模式对应不同的场分布和传播特性。</p>
+<ol>
+<li>模式的数学描述
+<ul>
+<li>对于平板波导，模式场不依赖于y坐标（横向一维约束），电场和磁场可表示为：$E_v(r,t) = \mathcal{E}_v(x) \exp i(\beta_v z - \omega t)$，$H_v(r,t) = \mathcal{H}_v(x) \exp i(\beta_v z - \omega t)$，其中$\mathcal{E}_v(x)$、$\mathcal{H}_v(x)$为横向场分布，$\beta_v$为该模式的传播常数，$v$为模式序号；</li>
+<li>传播常数范围：导模的传播常数满足$k_1 &gt; \beta &gt; k_2 \geq k_3$（$k_1 = k_0 n_1$、$k_2 = k_0 n_2$、$k_3 = k_0 n_3$分别为各层介质中的波数）。</li>
+</ul>
+</li>
+<li>模式分类
+<ul>
+<li>导模：满足$\theta_{3c} &lt; \theta_{2c} &lt; \theta_i$，光在芯层内通过全反射沿z方向锯齿形传播，无能量辐射到衬底层和覆盖层；</li>
+<li>衬底辐射模：满足$\theta_{3c} &lt; \theta_i &lt; \theta_{2c}$，光在芯层-覆盖层界面发生全反射，但在芯层-衬底层界面发生折射，能量辐射到衬底层；</li>
+<li>衬底-覆盖层辐射模：满足$\theta_i &lt; \theta_{3c} &lt; \theta_{2c}$，光在两个界面均发生折射，能量辐射到衬底层和覆盖层。</li>
+</ul>
+</li>
+</ol>
+<p><strong>补充知识点</strong>：模式是波导的固有属性，不同模式的场分布、传播常数、截止特性均不同。导模是光波导中有用的传播模式，而辐射模会导致能量泄漏，不属于有效传播模式。</p>
+
+<h3 class="relative group">3.1.4 平板波导的本征方程
+    <div id="314-平板波导的本征方程" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#314-%e5%b9%b3%e6%9d%bf%e6%b3%a2%e5%af%bc%e7%9a%84%e6%9c%ac%e5%be%81%e6%96%b9%e7%a8%8b" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>导模的传播需要满足相位匹配条件，即光在芯层内锯齿形传播一周后，总相位变化为$2m\pi$（$m$为非负整数），由此可推导得到本征方程，它决定了允许存在的导模及对应的传播常数。</p>
+<ol>
+<li>物理本质
+光在芯层内沿锯齿形路径传播，从一点出发经过两次全反射（芯层-衬底层、芯层-覆盖层）后回到等效位置，总相位变化需为$2m\pi$（相长干涉条件），否则无法形成稳定的导模。</li>
+<li>本征方程推导
+总相位变化包括光在芯层内传播的几何相位变化和全反射时的相位偏移，即：$k_0 n_1 \cdot 2d \cos\theta - 2\phi_{12} - 2\phi_{13} = 2m\pi$，化简后得到：$k_0 n_1 d \cos\theta - \phi_{12} - \phi_{13} = m\pi$（$m = 0,1,2,&hellip;$），其中$d$为芯层厚度，$\phi_{12}$、$\phi_{13}$分别为芯层-衬底层、芯层-覆盖层全反射时的相位偏移。</li>
+<li>简化形式
+结合$h_1 = k_0 n_1 \cos\theta$（横向相位常数）、$\gamma_2 = \sqrt{\beta^2 - k_0^2 n_2^2}$（衬底层衰减常数）、$\gamma_3 = \sqrt{\beta^2 - k_0^2 n_3^2}$（覆盖层衰减常数），以及相位偏移与$h_1$、$\gamma_2$、$\gamma_3$的关系，本征方程可表示为：
+<ul>
+<li>TE模式：$h_1 d = m\pi + \tan^{-1}\left(\frac{\gamma_2}{h_1}\right) + \tan^{-1}\left(\frac{\gamma_3}{h_1}\right)$，进一步化简为$\tan(h_1 d) = \frac{h_1(\gamma_2 + \gamma_3)}{h_1^2 - \gamma_2 \gamma_3}$；</li>
+<li>TM模式：$h_1 d = m\pi + \tan^{-1}\left(\frac{n_1^2}{n_2^2} \cdot \frac{\gamma_2}{h_1}\right) + \tan^{-1}\left(\frac{n_1^2}{n_3^2} \cdot \frac{\gamma_3}{h_1}\right)$，进一步化简为$\tan(h_1 d) = \frac{n_1^2 h_1(n_3^2 \gamma_2 + n_2^2 \gamma_3)}{n_2^2 n_3^2 h_1^2 - n_1^4 \gamma_2 \gamma_3}$。</li>
+</ul>
+</li>
+<li>模式序号的物理意义
+$m$为模式序号，$m = 0$对应基模（最低阶模式），$m \geq 1$对应高阶模式。$m$的取值为离散整数，表明只有特定入射角$\theta$和传播常数$\beta$的导模能够存在，即导模具有离散性。</li>
+</ol>
+<p><strong>补充知识点</strong>：本征方程是求解波导模式特性的核心方程，通过求解本征方程可得到各模式的传播常数、场分布等关键参数，其解的离散性源于相位匹配条件的严格约束。</p>
+
+<h3 class="relative group">3.1.5 有效折射率与参数范围
+    <div id="315-有效折射率与参数范围" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#315-%e6%9c%89%e6%95%88%e6%8a%98%e5%b0%84%e7%8e%87%e4%b8%8e%e5%8f%82%e6%95%b0%e8%8c%83%e5%9b%b4" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ol>
+<li>有效折射率
+定义有效折射率$n_\beta = \frac{\beta}{k_0}$，它是描述导模传播特性的重要参数，物理意义是导模在波导中传播的等效折射率。由$\beta = k_0 n_1 \sin\theta$可得$n_\beta = n_1 \sin\theta$，结合导模的入射角范围$\theta_2c &lt; \theta &lt; \frac{\pi}{2}$，有效折射率满足$n_1 &gt; n_\beta &gt; n_2 \geq n_3$。</li>
+<li>参数范围关联</li>
+</ol>
+<ul>
+<li>芯层厚度$d$影响：$d$增大时，$n_\beta$增大并趋近于$n_1$，可支持更多高阶模式；$d$减小时，$n_\beta$减小并趋近于$n_2$，高阶模式逐渐被截止；</li>
+<li>模式序号$m$影响：$m$增大时，$n_\beta$减小，对应的入射角$\theta$减小，模式的横向场分布振荡次数增多。</li>
+</ul>
+<p><strong>补充知识点</strong>：有效折射率是连接波导结构参数与传播特性的桥梁，通过测量有效折射率可反推波导的芯层折射率、厚度等关键参数，在波导设计和表征中具有重要应用。</p>
+
+<h3 class="relative group">3.1.6 传播常数的求解与特性
+    <div id="316-传播常数的求解与特性" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#316-%e4%bc%a0%e6%92%ad%e5%b8%b8%e6%95%b0%e7%9a%84%e6%b1%82%e8%a7%a3%e4%b8%8e%e7%89%b9%e6%80%a7" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>传播常数$\beta$是导模的核心参数，其值由波导结构参数（$n_1,n_2,n_3,d$）和光的波长（或频率）决定，可通过图形法或数值法求解。</p>
+<ol>
+<li>求解方法
+<ul>
+<li>图形法：通过绘制$h_1 d$（与入射角$\theta$相关）和$\phi_{12} + \phi_{13}$（相位偏移之和）随$\theta$的变化曲线，曲线交点对应的$\theta$即为允许的入射角，进而可计算出$\beta$；</li>
+<li>数值法：利用迭代法、牛顿法等数值算法，代入波导结构参数和光的波长，直接求解本征方程得到$\beta$。</li>
+</ul>
+</li>
+<li>关键特性
+<ul>
+<li>$\beta$与频率$\omega$的关系：$\omega$增大（波长$\lambda$减小）时，$\beta$增大并趋近于$k_1$，可支持的导模数量增多；$\omega$减小（波长$\lambda$增大）时，$\beta$减小并趋近于$k_2$，高阶模式逐渐被截止；</li>
+<li>截止特性：当$\beta = k_2$（即$n_\beta = n_2$）时，模式发生截止，对应的频率、波长、芯层厚度分别称为截止频率$\omega_c$、截止波长$\lambda_c$、截止厚度$d_c$；当$\omega &lt; \omega_c$（或$\lambda &gt; \lambda_c$、$d &lt; d_c$）时，该模式为辐射模，无法在波导中稳定传播。</li>
+</ul>
+</li>
+</ol>
+<p><strong>补充知识点</strong>：传播常数的大小直接反映了导模的传播速度（相速度$v_p = \frac{\omega}{\beta}$）和场分布特性，其截止特性是设计单模波导（仅支持基模）或多模波导（支持多个模式）的关键依据。</p>
+
+<h3 class="relative group">3.1.7 穿透深度与有效波导厚度
+    <div id="317-穿透深度与有效波导厚度" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#317-%e7%a9%bf%e9%80%8f%e6%b7%b1%e5%ba%a6%e4%b8%8e%e6%9c%89%e6%95%88%e6%b3%a2%e5%af%bc%e5%8e%9a%e5%ba%a6" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<ol>
+<li>穿透深度
+由于倏逝波的存在，导模的能量会少量渗透到衬底层和覆盖层中，穿透深度定义为倏逝波振幅衰减到表面振幅$\frac{1}{e}$时的距离，反映了能量渗透的程度。
+<ul>
+<li>TE模式：衬底层穿透深度$x_2 = \frac{1}{\gamma_2} = \frac{1}{\sqrt{\beta^2 - k_0^2 n_2^2}}$，覆盖层穿透深度$x_3 = \frac{1}{\gamma_3} = \frac{1}{\sqrt{\beta^2 - k_0^2 n_3^2}}$；</li>
+<li>TM模式：衬底层穿透深度$x_2 = \frac{1}{q_2 \gamma_2}$，覆盖层穿透深度$x_3 = \frac{1}{q_3 \gamma_3}$，其中$q_2 = \frac{n_\beta^2}{n_1^2} + \frac{n_\beta^2}{n_2^2} - 1$，$q_3 = \frac{n_\beta^2}{n_1^2} + \frac{n_\beta^2}{n_3^2} - 1$。</li>
+</ul>
+</li>
+<li>有效波导厚度
+有效波导厚度是指导模能量主要集中的区域厚度，考虑了芯层厚度和穿透深度，即：
+<ul>
+<li>TE模式：$d_{eff} = d + x_2 + x_3 = d + \frac{1}{\gamma_2} + \frac{1}{\gamma_3}$；</li>
+<li>TM模式：$d_{eff} = d + \frac{1}{q_2 \gamma_2} + \frac{1}{q_3 \gamma_3}$。</li>
+</ul>
+</li>
+<li>影响因素
+有效波导厚度与模式序号相关：$m$增大（高阶模式）时，$n_\beta$减小，$\gamma_2$、$\gamma_3$减小，穿透深度增大，有效波导厚度增大，光的约束效果变差。</li>
+</ol>
+<p><strong>补充知识点</strong>：穿透深度和有效波导厚度是波导设计中需要考虑的重要参数，例如在集成光学中，有效波导厚度会影响器件的耦合效率和串扰特性，需通过优化波导结构减小能量渗透。</p>
+
+<h3 class="relative group">3.1.8 归一化波导参数
+    <div id="318-归一化波导参数" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#318-%e5%bd%92%e4%b8%80%e5%8c%96%e6%b3%a2%e5%af%bc%e5%8f%82%e6%95%b0" aria-label="锚点">#</a>
+    </span>
+    
+</h3>
+<p>为了简化波导特性的分析和设计，引入归一化频率、归一化折射率和非对称因子三个关键归一化参数，使不同结构波导的特性具有可比性。</p>
+<ol>
+<li>归一化参数定义
+<ul>
+<li>归一化频率$V$：$V = k_0 d \sqrt{n_1^2 - n_2^2} = \frac{2\pi d}{\lambda} \sqrt{n_1^2 - n_2^2}$，综合反映了芯层厚度、折射率差和光波长的影响，是决定波导支持模式数量的核心参数；</li>
+<li>归一化折射率$b$：$b = \frac{n_\beta^2 - n_2^2}{n_1^2 - n_2^2}$，描述有效折射率相对于衬底层折射率的提升程度，导模的$b$满足$0 &lt; b &lt; 1$；</li>
+<li>非对称因子$a$：$a = \frac{n_2^2 - n_3^2}{n_1^2 - n_2^2}$，反映波导衬底层与覆盖层的折射率不对称程度，对称波导的$a = 0$。</li>
+</ul>
+</li>
+<li>归一化本征方程
+将$h_1 = \frac{V \sqrt{1 - b}}{d}$、$\gamma_2 = \frac{V \sqrt{b}}{d}$、$\gamma_3 = \frac{V \sqrt{b + a}}{d}$代入原本征方程，得到归一化形式：
+<ul>
+<li>TE模式：$V \sqrt{1 - b} = m\pi + \tan^{-1}\left(\sqrt{\frac{b}{1 - b}}\right) + \tan^{-1}\left(\sqrt{\frac{b + a}{1 - b}}\right)$；</li>
+<li>TM模式：$V \sqrt{1 - b} = m\pi + \tan^{-1}\left(\frac{n_1^2}{n_2^2} \sqrt{\frac{b}{1 - b}}\right) + \tan^{-1}\left(\frac{n_1^2}{n_3^2} \sqrt{\frac{b + a}{1 - b}}\right)$。</li>
+</ul>
+</li>
+<li>截止条件与模式数量
+<ul>
+<li>截止时$b = 0$，对应的归一化频率称为截止归一化频率$V_m^c$：
+<ul>
+<li>TE模式：$V_m^c = m\pi + \tan^{-1}\sqrt{a}$；</li>
+<li>TM模式：$V_m^c = m\pi + \tan^{-1}\left(\frac{n_1^2}{n_3^2} \sqrt{a}\right)$。</li>
+</ul>
+</li>
+<li>波导支持的模式数量：
+<ul>
+<li>TE模式：$M_{TE} = \left[\frac{V}{\pi} - \frac{1}{\pi} \tan^{-1}\sqrt{a}\right]<em>{int}$（$[\cdot]</em>{int}$表示取整数部分）；</li>
+<li>TM模式：$M_{TM} = \left[\frac{V}{\pi} - \frac{1}{\pi} \tan^{-1}\left(\frac{n_1^2}{n_3^2} \sqrt{a}\right)\right]_{int}$。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>单模与多模波导
+<ul>
+<li>单模波导：仅支持基模（$m = 0$），需满足$V_0^c &lt; V &lt; V_1^c$，其中$V_0^c$为基模截止归一化频率（对称波导$V_0^c = 0$）；</li>
+<li>多模波导：支持多个模式，满足$V &gt; V_1^c$，$V$越大，支持的模式数量越多。</li>
+</ul>
+</li>
+</ol>
+<p><strong>补充知识点</strong>：归一化参数是光波导分析的重要工具，通过$b-V$曲线可直观反映不同归一化频率下归一化折射率的变化，进而快速判断波导的模式数量和截止特性，广泛应用于波导设计和优化中。例如，设计单模光纤时，需将归一化频率$V$控制在2.405以下（对应圆波导的基模截止条件）。</p>
+
           
           
           
@@ -1339,6 +1548,19 @@ $$r_{TM}=\frac{n_2^2\cos\theta_i-in_1\sqrt{n_1^2\sin^2\theta_i-n_2^2}}{n_2^2\cos
           
         </span>
         <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/blog/posts/%E5%9B%BE%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/">
+              <span class="leading-6">
+                图神经网络&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2025-12-30T10:26:35&#43;08:00">2025-12-30</time>
+              </span>
+            
           
         </span>
       </div>
