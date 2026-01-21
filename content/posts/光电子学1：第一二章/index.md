@@ -3,7 +3,9 @@ title = '光电子学：第一二章'
 date = '2026-01-18T12:13:44+08:00'
 author = 'RayChaux'
 draft = false
-tags = []
+tags = ["课程笔记","光电子学"]
+series: ["光电子学"]
+series_order: 1
 math = true
 +++
 

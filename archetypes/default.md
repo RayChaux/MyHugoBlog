@@ -2,7 +2,9 @@
 title = '{{ replace .File.ContentBaseName "-" " " | title }}'
 date = '{{ .Date }}'
 author = 'RayChaux'
-draft = true
-tags = []
+draft = false
 math = true
+tags = []
+series: []
+series_order: 1
 +++
