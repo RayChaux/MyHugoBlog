@@ -3,8 +3,8 @@ date = '2025-11-29T17:02:54+08:00'
 draft = false
 title = '人工神经网络(ANN)'
 tags = ["课程笔记", "神经网络"]
-series: ["神经网络"]
-series_order: 1
+series = ["神经网络"]
+series_order = 1
 author = 'RayChaux'
 math = true
 +++

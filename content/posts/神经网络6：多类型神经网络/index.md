@@ -4,8 +4,8 @@ date = '2026-01-06T10:43:17+08:00'
 author = 'RayChaux'
 draft = true
 tags = ["神经网络","课程笔记"]
-series: ["神经网络"]
-series_order: 6
+series = ["神经网络"]
+series_order = 6
 math = true
 +++
 

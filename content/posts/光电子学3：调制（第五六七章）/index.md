@@ -4,8 +4,8 @@ date = '2026-01-21T11:41:53+08:00'
 author = 'RayChaux'
 draft = false
 tags = ["课程笔记","光电子学"]
-series: ["光电子学"]
-series_order: 3
+series = ["光电子学"]
+series_order = 3
 math = true
 +++
 

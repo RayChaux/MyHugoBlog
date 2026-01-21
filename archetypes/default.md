@@ -5,6 +5,6 @@ author = 'RayChaux'
 draft = false
 math = true
 tags = []
-series: []
-series_order: 1
+series = []
+series_order = 1
 +++

@@ -4,8 +4,8 @@ draft = false
 title = '循环神经网络'
 author = 'RayChaux'
 tags = ["课程笔记", "神经网络"]
-series: ["神经网络"]
-series_order: 4
+series = ["神经网络"]
+series_order = 4
 math = true
 +++
 
