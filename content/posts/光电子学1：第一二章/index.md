@@ -576,3 +576,4 @@ $$E_x = A_x \cos(\omega t + \delta_x), \quad E_y = A_y \cos(\omega t + \delta_y)
 
 **答案**：
 - 步骤1：计算$k = \frac{2\pi}{\lambda} = \frac{2×3.14}{500×10^{-9}} = 1.256×10^7 rad/m$；
+
