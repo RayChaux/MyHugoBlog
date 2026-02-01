@@ -24,7 +24,7 @@ math = true
      | 0 | 1 | 1 |
      | 1 | 0 | 1 |
      | 1 | 1 | 0 |
-   - 数学矛盾：需满足 \(\begin{cases} b \leq 0 \\ w_2 + b > 0 \\ w_1 + b > 0 \\ w_1 + w_2 + b \leq 0 \end{cases}\)，无可行解。
+   - 数学矛盾：需满足 $\begin{cases} b \leq 0 \\ w_2 + b > 0 \\ w_1 + b > 0 \\ w_1 + w_2 + b \leq 0 \end{cases}$，无可行解。
    - 几何意义：异或样本无法用直线（超平面）分割，属于**线性不可分**问题。
 3. **关键批评**：Minsky和Papert（1969）证明其无法泛化到奇偶校验等问题，且推测多层网络也有局限，导致神经网络研究陷入低谷。
 4. **突破关键**：缺乏有效的多层网络权值学习算法，直到BP算法出现。
@@ -41,24 +41,24 @@ math = true
 
 ### 2.2 核心原理：梯度下降+链式求导
 #### 2.2.1 损失函数
-\[ E = \frac{1}{2} \sum_{k=1}^K (d_k - O_k^K)^2 \]
-- \(d_k\)：输出层第k个神经元的期望输出，\(O_k^K\)：实际输出。
+$E = \frac{1}{2} \sum_{k=1}^K (d_k - O_k^K)^2$
+- $d_k$：输出层第k个神经元的期望输出，$O_k^K$：实际输出。
 
 #### 2.2.2 权值更新公式
 1. **输出层权值更新**：
-   \[ W_{kj}^{KJ}(n+1) = W_{kj}^{KJ}(n) + \eta_k \cdot \delta_k \cdot O_j^J \]
-   - 误差信号：\(\delta_k = (d_k - O_k^K) \cdot f'(net_k^K)\)
-   - \(net_k^K = \sum_{j=1}^J W_{kj}^{KJ} \cdot O_j^J + b_k^K\)（神经元加权和）
-   - \(O_k^K = f(net_k^K)\)（激活函数输出）
+   $W_{kj}^{KJ}(n+1) = W_{kj}^{KJ}(n) + \eta_k \cdot \delta_k \cdot O_j^J$
+   - 误差信号：$\delta_k = (d_k - O_k^K) \cdot f'(net_k^K)$
+   - $net_k^K = \sum_{j=1}^J W_{kj}^{KJ} \cdot O_j^J + b_k^K$（神经元加权和）
+   - $O_k^K = f(net_k^K)$（激活函数输出）
 
 2. **隐含层权值更新**：
-   \[ W_{ji}^{JI}(n+1) = W_{ji}^{JI}(n) + \eta_j \cdot \delta_j \cdot O_i^I \]
-   - 误差信号：\(\delta_j = f'(net_j^J) \cdot \sum_{k=1}^K \delta_k \cdot W_{kj}^{KJ}\)
+   $W_{ji}^{JI}(n+1) = W_{ji}^{JI}(n) + \eta_j \cdot \delta_j \cdot O_i^I$
+   - 误差信号：$\delta_j = f'(net_j^J) \cdot \sum_{k=1}^K \delta_k \cdot W_{kj}^{KJ}$
 
 3. **任意S层MLP通用公式**：
-   \[ W_{ji}^s(n+1) = W_{ji}^s(n) + \eta^s \cdot \delta_j^s \cdot O_i^{s-1} \]
-   - 输出层（s=S）：\(\delta_j^s = (d_j - O_j^s) \cdot f'(net_j^s)\)
-   - 隐含层（s<S）：\(\delta_j^s = \left( \sum_{h=1}^{N_{s+1}} \delta_h^{s+1} \cdot W_{hj}^{s+1} \right) \cdot f'(net_j^s)\)
+   $W_{ji}^s(n+1) = W_{ji}^s(n) + \eta^s \cdot \delta_j^s \cdot O_i^{s-1}$
+   - 输出层（s=S）：$\delta_j^s = (d_j - O_j^s) \cdot f'(net_j^s)$
+   - 隐含层（s<S）：$\delta_j^s = \left( \sum_{h=1}^{N_{s+1}} \delta_h^{s+1} \cdot W_{hj}^{s+1} \right) \cdot f'(net_j^s)$
 
 ### 2.3 信号流与激活函数
 #### 2.3.1 信号传播
@@ -68,8 +68,8 @@ math = true
 #### 2.3.2 常用激活函数
 | 函数类型       | 表达式                                  | 导数                                  |
 |----------------|---------------------------------------|---------------------------------------|
-| Logistic函数   | \( f(x) = \frac{b}{1+exp(-ax)} \)      | \( f'(x) = ab \cdot f(x) \cdot (1-f(x)) \) |
-| 双曲正切函数   | \( f(x) = a \cdot tanh(bx) \)          | \( f'(x) = \frac{b}{a} \cdot (a-f(x)) \cdot (a+f(x)) \) |
+| Logistic函数   | $f(x) = \frac{b}{1+exp(-ax)}$      | $f'(x) = ab \cdot f(x) \cdot (1-f(x))$ |
+| 双曲正切函数   | $f(x) = a \cdot tanh(bx)$          | $f'(x) = \frac{b}{a} \cdot (a-f(x)) \cdot (a+f(x))$ |
 
 ### 2.4 训练方式与停止准则
 - **训练方式**：
@@ -97,18 +97,18 @@ math = true
 
 #### 3.2.2 极化学习法则（中国学者提出）
 - 核心思想：结合Hebbian学习法则，在隐含层引入极化项，加速稳定收敛。
-- 极化学习法则：\(\Delta W = cxy(1-y^2)^2\)（x为输入，y为输出，c为学习强度）。
+- 极化学习法则：$\Delta W = cxy(1-y^2)^2$（x为输入，y为输出，c为学习强度）。
 - MLP应用：
-  - 损失函数：\( E = E_1 + E_2 \)（\(E_1\)为原始损失，\(E_2 = \frac{1}{2}\sum_{j=1}^J (1-(O_j^J)^2)^2\)为极化损失）。
+  - 损失函数：$E = E_1 + E_2$（$E_1$为原始损失，$E_2 = \frac{1}{2}\sum_{j=1}^J (1-(O_j^J)^2)^2$为极化损失）。
   - 隐含层权值更新：
-    \[ W_{ji}^{JI}(n+1) = W_{ji}^{JI}(n) + \eta \delta_j O_i^I + \eta O_i^I O_j^J (1-(O_j^J)^2)^2 \]
+    $W_{ji}^{JI}(n+1) = W_{ji}^{JI}(n) + \eta \delta_j O_i^I + \eta O_i^I O_j^J (1-(O_j^J)^2)^2$
   - 优势：极化项使隐含层输出趋于±1，加速稳定。
 
 #### 3.2.3 遗传算法优化MLP
 - 核心逻辑：用遗传算法全局搜索最优权值和偏置，解决局部极小值问题。
 - 算法流程：
   1. 编码：实数编码个体（含网络所有权值和偏置）。
-  2. 适应度函数：\( F = k \sum_{i=1}^n |d_i - o_i| \)（k为系数，\(d_i\)为期望输出，\(o_i\)为预测输出）。
+  2. 适应度函数：$F = k \sum_{i=1}^n |d_i - o_i|$（k为系数，$d_i$为期望输出，$o_i$为预测输出）。
   3. 遗传操作：选择（轮盘赌法）、交叉（实数交叉）、变异（自适应变异）。
   4. 网络训练：用优化后的权值/偏置初始化MLP，再局部微调。
 - 优势：全局寻优能力强；劣势：大规模问题速度较慢。
@@ -117,7 +117,7 @@ math = true
 - 任务：区分两类重叠二维高斯分布（贝叶斯分类器正确率81.51%）。
 - 最优网络设置：
   - 隐含层神经元数：2（最小满足精度的数量）。
-  - 学习率\(\eta=0.1\)，动量常数\(\alpha=0.5\)。
+  - 学习率$\eta=0.1$，动量常数$\alpha=0.5$。
 - 结果：MLP分类正确率达80.3%~80.8%，接近贝叶斯分类器性能。
 
 ---
@@ -128,41 +128,41 @@ math = true
 
 ### 4.1 理论基础
 #### 4.1.1 近似问题定义
-寻找近似函数 \( F(W,x) \) 逼近 \( f(x) \)，等价于最小化代价函数：
-\[ J[F(W,x)] = \int_{-\infty}^{+\infty} (f(x)-F(W,x))^2 dx \]
+寻找近似函数 $F(W,x)$ 逼近 $f(x)$，等价于最小化代价函数：
+$J[F(W,x)] = \int_{-\infty}^{+\infty} (f(x)-F(W,x))^2 dx$
 
 #### 4.1.2 基于内插理论的RBF模型
-\[ F(W,x) = \sum_{i=1}^N w_i \phi\left( \frac{\|x - c_i\|^2}{\sigma_i} \right) \]
-- \( W = \{c_i, \sigma_i, w_i\} \)：中心、宽度、权值。
-- 严格内插条件：\( F(x_i) = d_i \)（\(d_i\)为期望输出），矩阵形式：\( \vec{d} = \Phi \cdot \vec{W} \)。
-- 可逆性：输入点互不相同则内插矩阵\(\Phi\)非奇异（Micchelli定理），解为\( \vec{W} = \Phi^{-1} \cdot \vec{d} \)。
+$F(W,x) = \sum_{i=1}^N w_i \phi\left( \frac{\|x - c_i\|^2}{\sigma_i} \right)$
+- $W = \{c_i, \sigma_i, w_i\}$：中心、宽度、权值。
+- 严格内插条件：$F(x_i) = d_i$（$d_i$为期望输出），矩阵形式：$\vec{d} = \Phi \cdot \vec{W}$。
+- 可逆性：输入点互不相同则内插矩阵$\Phi$非奇异（Micchelli定理），解为$\vec{W} = \Phi^{-1} \cdot \vec{d}$。
 
 #### 4.1.3 基于正则理论的RBF模型
 - 解决离散化后的**不适定问题**（存在性、唯一性、连续性不满足）。
 - 正则化代价函数：
-  \[ J(F(W,x)) = \sum_{i=1}^N (f(x_i)-F(W,x_i))^2 + \lambda \|P F(W,x)\|^2 \]
-  - \(\lambda\)为正则参数，\(P\)为微分算子（体现先验知识）。
-- 解的形式与内插理论一致：\( F(W,x) = \sum_{i=1}^N w_i \cdot G(x,x_i) \)（\(G\)为格林函数）。
+  $J(F(W,x)) = \sum_{i=1}^N (f(x_i)-F(W,x_i))^2 + \lambda \|P F(W,x)\|^2$
+  - $\lambda$为正则参数，$P$为微分算子（体现先验知识）。
+- 解的形式与内插理论一致：$F(W,x) = \sum_{i=1}^N w_i \cdot G(x,x_i)$（$G$为格林函数）。
 
 ### 4.2 常用径向基函数
 | 函数类型       | 表达式                                  | 特性                                  |
 |----------------|---------------------------------------|---------------------------------------|
-| 高斯函数       | \( \phi(r) = exp\left\{ -\frac{r^2}{2\sigma^2} \right\} \) | 局部化，\(r \to \infty\)时\(\phi(r) \to 0\)（最常用） |
-| 逆二次函数     | \( \phi(r) = (c^2 + r^2)^\beta \)（\(0<\beta<1\)） | 全局特性，光滑性好                    |
-| 多二次函数     | \( \phi(r) = \frac{1}{(c^2 + r^2)^\alpha} \)（\(\alpha>0,c>0\)） | 全局特性，逼近精度高                  |
-| 多重调和样条   | \( \phi(r) = r \)（\(r = \|x - c_i\|\)） | 简单易计算，适用于低维问题            |
+| 高斯函数       | $\phi(r) = exp\left\{ -\frac{r^2}{2\sigma^2} \right\}$ | 局部化，$r \to \infty$时$\phi(r) \to 0$（最常用） |
+| 逆二次函数     | $\phi(r) = (c^2 + r^2)^\beta$（$0<\beta<1$） | 全局特性，光滑性好                    |
+| 多二次函数     | $\phi(r) = \frac{1}{(c^2 + r^2)^\alpha}$（$\alpha>0,c>0$） | 全局特性，逼近精度高                  |
+| 多重调和样条   | $\phi(r) = r$（$r = \|x - c_i\|$） | 简单易计算，适用于低维问题            |
 
 ### 4.3 学习方法
-#### 4.3.1 隐含层参数学习（中心\(c_i\)+宽度\(\sigma_i\)）
+#### 4.3.1 隐含层参数学习（中心$c_i$+宽度$\sigma_i$）
 1. **K-均值聚类算法**：
-   - 初始化中心\(c_i(0)\)，迭代匹配样本与中心，更新中心：\( c_i(n+1) = c_i(n) + \eta(x(n)-c_i(n)) \)（仅匹配中心更新）。
-   - 宽度计算：\( \sigma_i^2 = \frac{1}{N_i} \sum_{x \in 聚类(i)} (x - c_i)^T(x - c_i) \)（\(N_i\)为聚类样本数）。
+   - 初始化中心$c_i(0)$，迭代匹配样本与中心，更新中心：$c_i(n+1) = c_i(n) + \eta(x(n)-c_i(n))$（仅匹配中心更新）。
+   - 宽度计算：$\sigma_i^2 = \frac{1}{N_i} \sum_{x \in 聚类(i)} (x - c_i)^T(x - c_i)$（$N_i$为聚类样本数）。
 
-2. **随机选取固定中心**：从训练数据中随机选中心，宽度\( \sigma = \frac{d_{max}}{\sqrt{2M}} \)（\(d_{max}\)为中心间最大距离，M为中心数）。
+2. **随机选取固定中心**：从训练数据中随机选中心，宽度$\sigma = \frac{d_{max}}{\sqrt{2M}}$（$d_{max}$为中心间最大距离，M为中心数）。
 
 #### 4.3.2 输出层权值学习
-1. **线性最小二乘法**：封闭解 \( w_k = (Y^T Y)^{-1} Y^T d_k = Y^+ d_k \)（\(Y\)为隐含层输出矩阵）。
-2. **LMS学习方法**：迭代公式 \( \Delta w_{ki}(n) = \eta_k \cdot \delta_k \cdot y_i \)（\(\delta_k = d_k - F_k\)）。
+1. **线性最小二乘法**：封闭解 $w_k = (Y^T Y)^{-1} Y^T d_k = Y^+ d_k$（$Y$为隐含层输出矩阵）。
+2. **LMS学习方法**：迭代公式 $\Delta w_{ki}(n) = \eta_k \cdot \delta_k \cdot y_i$（$\delta_k = d_k - F_k$）。
 
 ### 4.4 RBF与MLP的核心差异
 | 对比维度       | RBF神经网络                              | MLP神经网络（BP算法）                  |
@@ -179,42 +179,42 @@ math = true
 将权值归一化为概率，输出为类后验概率，适合模式分类、信息融合等场景。
 
 ### 5.1 理论基础：贝叶斯定理
-\[ p(A|B) = \frac{p(B|A) \cdot p(A)}{p(B)} \]
-- 分类核心：\( \max_k p(k|X) = \max_k \frac{p(X|k)p(k)}{\sum_l p(X|l)p(l)} \)，需估计\(p(X|k)\)和\(p(k)\)。
+$p(A|B) = \frac{p(B|A) \cdot p(A)}{p(B)}$
+- 分类核心：$\max_k p(k|X) = \max_k \frac{p(X|k)p(k)}{\sum_l p(X|l)p(l)}$，需估计$p(X|k)$和$p(k)$。
 
 ### 5.2 PRBF网络结构与描述
 1. **高斯核函数（类条件密度）**：
-   \[ p(X|j) = \frac{1}{\sqrt{(2\pi\sigma_j^2)^d}} exp\left\{ -\frac{\|X - u_j\|^2}{2\sigma_j^2} \right\} \]
-   - \(u_j\)：核j的中心，\(\sigma_j^2\)：方差，d：输入维度。
+   $p(X|j) = \frac{1}{\sqrt{(2\pi\sigma_j^2)^d}} exp\left\{ -\frac{\|X - u_j\|^2}{2\sigma_j^2} \right\}$
+   - $u_j$：核j的中心，$\sigma_j^2$：方差，d：输入维度。
 
 2. **类k的条件密度（高斯混合模型）**：
-   \[ p(X|k) = \sum_{j=1}^M \pi_{jk} \cdot p(X|j) \]
-   - 权值约束：\( \sum_{j=1}^M \pi_{jk} = 1, \pi_{jk} \geq 0 \)（\(\pi_{jk} = p(j|k)\)，核j属于类k的先验概率）。
+   $p(X|k) = \sum_{j=1}^M \pi_{jk} \cdot p(X|j)$
+   - 权值约束：$\sum_{j=1}^M \pi_{jk} = 1, \pi_{jk} \geq 0$（$\pi_{jk} = p(j|k)$，核j属于类k的先验概率）。
 
-3. **可学习参数**：\( \theta = \{u_j, \sigma_j^2, \pi_{jk}\} \)（\(k=1,...,C; j=1,...,M\)）。
+3. **可学习参数**：$\theta = \{u_j, \sigma_j^2, \pi_{jk}\}$（$k=1,...,C; j=1,...,M$）。
 
 ### 5.3 学习算法：EM算法
 #### 5.3.1 核心思想
-通过“期望（E步）-最大化（M步）”迭代，处理含隐变量（核响应决策\(Z_j^n\)）的最大似然估计。
+通过“期望（E步）-最大化（M步）”迭代，处理含隐变量（核响应决策$Z_j^n$）的最大似然估计。
 
 #### 5.3.2 具体步骤
 1. **E步（计算隐变量期望）**：
-   \[ \langle Z_j^n \rangle = p^{(t)}(j|k^{(n)}, X^{(n)}) = \frac{\pi_{jk} \cdot p(X^{(n)}|j)}{\sum_{j'} \pi_{j'k} p(X^{(n)}|j')} \]
+   $\langle Z_j^n \rangle = p^{(t)}(j|k^{(n)}, X^{(n)}) = \frac{\pi_{jk} \cdot p(X^{(n)}|j)}{\sum_{j'} \pi_{j'k} p(X^{(n)}|j')}$
 
 2. **M步（参数更新）**：
-   - 先验概率：\( \pi_{jk}^{(t+1)} = \frac{1}{N_k} \sum_{n=1}^{N_k} p^{(t)}(j|k, X^{(n)}) \)（\(N_k\)为类k样本数）。
-   - 中心：\( u_j^{(t+1)} = \frac{\sum_{k=1}^C \sum_{n=1}^{N_k} p^{(t)}(j|k, X^{(n)}) \cdot X^{(n)}}{\sum_{k=1}^C \sum_{n=1}^{N_k} p^{(t)}(j|k, X^{(n)})} \)。
-   - 方差：\( (\sigma_j^2)^{(t+1)} = \frac{1}{d} \cdot \frac{\sum_{k=1}^C \sum_{n=1}^{N_k} p^{(t)}(j|k, X^{(n)}) \cdot \|X^{(n)} - u_j^{(t+1)}\|^2}{\sum_{k=1}^C \sum_{n=1}^{N_k} p^{(t)}(j|k, X^{(n)})} \)。
+   - 先验概率：$\pi_{jk}^{(t+1)} = \frac{1}{N_k} \sum_{n=1}^{N_k} p^{(t)}(j|k, X^{(n)})$（$N_k$为类k样本数）。
+   - 中心：$u_j^{(t+1)} = \frac{\sum_{k=1}^C \sum_{n=1}^{N_k} p^{(t)}(j|k, X^{(n)}) \cdot X^{(n)}}{\sum_{k=1}^C \sum_{n=1}^{N_k} p^{(t)}(j|k, X^{(n)})}$。
+   - 方差：$(\sigma_j^2)^{(t+1)} = \frac{1}{d} \cdot \frac{\sum_{k=1}^C \sum_{n=1}^{N_k} p^{(t)}(j|k, X^{(n)}) \cdot \|X^{(n)} - u_j^{(t+1)}\|^2}{\sum_{k=1}^C \sum_{n=1}^{N_k} p^{(t)}(j|k, X^{(n)})}$。
 
-3. **收敛判断**：\( |L^{(t+1)}(\theta) - L^{(t)}(\theta)| < \varepsilon \)（\(L(\theta)\)为对数似然函数）。
+3. **收敛判断**：$|L^{(t+1)}(\theta) - L^{(t)}(\theta)| < \varepsilon$（$L(\theta)$为对数似然函数）。
 
 ### 5.4 PRBF与RBF的差异
 | 对比维度       | RBF网络                                  | PRBF网络                              |
 |----------------|-------------------------------------------|---------------------------------------|
-| 权值约束       | 无概率约束                                | \( \sum_j \pi_{jk}=1 \)，为概率值      |
+| 权值约束       | 无概率约束                                | $\sum_j \pi_{jk}=1$，为概率值      |
 | 优化准则       | 最小均方误差（MSE）                       | 最大似然估计（MLE）                   |
 | 学习算法       | K-均值+LMS/最小二乘法                     | EM算法                                |
-| 输出含义       | 连续值/分类标签                           | 类后验概率\(p(k|X)\)                  |
+| 输出含义       | 连续值/分类标签                           | 类后验概率$p(k|X)$                  |
 
 ---
 
@@ -224,35 +224,35 @@ math = true
 
 ### 6.1 基础理论：Lyapunov稳定性定理
 #### 6.1.1 核心概念
-- 梯度动力学系统：\( \dot{X} = -\nabla V(X) \)（\(V(X)\)为能量函数）。
+- 梯度动力学系统：$\dot{X} = -\nabla V(X)$（$V(X)$为能量函数）。
 - Lyapunov函数判定：
-  1. 正定：\(V(0)=0\)，\(X≠0\)时\(V(X)>0\)。
-  2. 能量衰减：\( \dot{V}(X) < 0 \)，系统渐进稳定（\( \lim_{t \to \infty} \|X - \bar{X}\| = 0 \)）。
+  1. 正定：$V(0)=0$，$X≠0$时$V(X)>0$。
+  2. 能量衰减：$\dot{V}(X) < 0$，系统渐进稳定（$\lim_{t \to \infty} \|X - \bar{X}\| = 0$）。
 
 ### 6.2 时间连续Hopfield网络（CHNN）
 #### 6.2.1 神经元模型与数学描述
 - 核心微分方程（Kirchoff电流定律推导）：
-  \[ c_i \frac{dy_i}{dt} = \sum_{j=1}^N w_{ij} u_j - G_i y_i + I_i \]
-  - \(u_j = f(y_j)\)（激活函数），\(G_i = \sum_{j=1}^N w_{ij} + \frac{1}{R_i}\)（电导总和）。
-- 简化形式（令\(\tau_i = \frac{c_i}{G_i}=1\)）：
-  \[ \frac{dy_i}{dt} = \sum_{j=1}^N W_{ij} f(y_j) - y_i + b_i \]
+  $c_i \frac{dy_i}{dt} = \sum_{j=1}^N w_{ij} u_j - G_i y_i + I_i$
+  - $u_j = f(y_j)$（激活函数），$G_i = \sum_{j=1}^N w_{ij} + \frac{1}{R_i}$（电导总和）。
+- 简化形式（令$\tau_i = \frac{c_i}{G_i}=1$）：
+  $\frac{dy_i}{dt} = \sum_{j=1}^N W_{ij} f(y_j) - y_i + b_i$
 
 #### 6.2.2 能量函数与稳定性
 - 能量函数：
-  \[ E = -\frac{1}{2} U^T W U - U^T I + \sum_{i=1}^N G_i \int_0^{U_i} f^{-1}(z) dz \]
-- 稳定性：\( \dot{E} = -\sum_{i=1}^N c_i \left( \frac{dU_i}{dt} \right)^2 \cdot \frac{d}{dU_i} f^{-1}(U_i) \leq 0 \)，系统渐进稳定。
+  $E = -\frac{1}{2} U^T W U - U^T I + \sum_{i=1}^N G_i \int_0^{U_i} f^{-1}(z) dz$
+- 稳定性：$\dot{E} = -\sum_{i=1}^N c_i \left( \frac{dU_i}{dt} \right)^2 \cdot \frac{d}{dU_i} f^{-1}(U_i) \leq 0$，系统渐进稳定。
 
 #### 6.2.3 应用：TSP问题优化
-- 能量函数构造：\( E_{TSP} = E_H + E_d \)
-  - 约束项\(E_H\)：保证每行/每列仅1个城市，总元素和为n。
-  - 距离项\(E_d\)：最小化路径总长度：\( E_d = \frac{\lambda_4}{2} \sum_{i=1}^n \sum_{x=1}^n \sum_{y≠x}^n v_{xi} d_{xy}(v_{y,i-1}+v_{y,i+1}) \)。
+- 能量函数构造：$E_{TSP} = E_H + E_d$
+  - 约束项$E_H$：保证每行/每列仅1个城市，总元素和为n。
+  - 距离项$E_d$：最小化路径总长度：$E_d = \frac{\lambda_4}{2} \sum_{i=1}^n \sum_{x=1}^n \sum_{y≠x}^n v_{xi} d_{xy}(v_{y,i-1}+v_{y,i+1})$。
 - 网络稳态对应TSP最优路径。
 
 ### 6.3 时间离散Hopfield网络（DHNN）
 #### 6.3.1 神经元模型与数学描述
 - 状态更新公式：
-  \[ y_i(k) = \sum_{j=1}^N W_{ij} u_j(k) + I_i - T_i \]
-  \[ u_i(k+1) = sgn(y_i(k)) \]（激活函数为符号函数，\(y_i=0\)时状态不变）。
+  $y_i(k) = \sum_{j=1}^N W_{ij} u_j(k) + I_i - T_i$
+  $u_i(k+1) = sgn(y_i(k))$（激活函数为符号函数，$y_i=0$时状态不变）。
 
 #### 6.3.2 工作方式与稳定性
 | 工作方式       | 逻辑                                  | 稳定性要求                          |
@@ -262,27 +262,27 @@ math = true
 
 #### 6.3.3 核心应用：自联想记忆
 - 权值学习（Hebbian法则）：
-  \[ W_{ij} = \begin{cases} \frac{1}{N} \sum_{m=1}^M X_{mi} X_{mj} & i≠j \\ 0 & i=j \end{cases} \]
-  - \(X_m\)为待记忆模式，\(N\)为神经元数。
+  $W_{ij} = \begin{cases} \frac{1}{N} \sum_{m=1}^M X_{mi} X_{mj} & i≠j \\ 0 & i=j \end{cases}$
+  - $X_m$为待记忆模式，$N$为神经元数。
 - 联想过程：输入含噪声/残缺模式，网络迭代收敛到吸引子（完整记忆模式），实现纠错和回忆。
-- 信息容量：约为\(0.15N\)，超过易出现伪吸引子（联想错误）。
+- 信息容量：约为$0.15N$，超过易出现伪吸引子（联想错误）。
 
 ---
 
 ## 七、编程实现关键要点
 ### 7.1 数据归一化
-- 最大最小法：\( x_k = \frac{x_k - x_{min}}{x_{max} - x_{min}} \)（映射至[0,1]）。
-- 平均数方差法：\( x_k = \frac{x_k - x_{mean}}{x_{opt}} \)（消除数量级差异）。
+- 最大最小法：$x_k = \frac{x_k - x_{min}}{x_{max} - x_{min}}$（映射至[0,1]）。
+- 平均数方差法：$x_k = \frac{x_k - x_{mean}}{x_{opt}}$（消除数量级差异）。
 
 ### 7.2 隐含层节点数选择
 - 参考公式：
-  1. \( l < n - 1 \)（n为输入层节点数）。
-  2. \( l < \sqrt{|m - n|} + a \)（m为输出层节点数，a为0~10的常数）。
-  3. \( l = log_2 n \)。
+  1. $l < n - 1$（n为输入层节点数）。
+  2. $l < \sqrt{|m - n|} + a$（m为输出层节点数，a为0~10的常数）。
+  3. $l = log_2 n$。
 - 实践建议：公式确定范围，试凑法找到最优值。
 
 ### 7.3 附加动量方法
-- 权值更新公式：\( w(k+1) = w(k) + \eta \cdot \Delta w(k) + \alpha \cdot [w(k) - w(k-1)] \)。
+- 权值更新公式：$w(k+1) = w(k) + \eta \cdot \Delta w(k) + \alpha \cdot [w(k) - w(k-1)]$。
 - 作用：利用历史权值变化趋势，加速收敛，缓解震荡。
 
 ---
